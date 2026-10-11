@@ -811,6 +811,7 @@ function setupEventListeners() {
         if (confirm("Are you sure you want to clear all questions from the test paper?")) {
             appState.testPaperQuestions = [];
             isTimeManuallyEdited = false;
+            document.querySelectorAll(".random-time-btn").forEach(b => b.classList.remove("active"));
             saveTestToLocalStorage();
             updateTestTray();
             updateAddAllButtonState();
@@ -818,6 +819,162 @@ function setupEventListeners() {
             renderQuestionsList(currentQuestionsData);
         }
     });
+
+    // Quick Random Paper by Time buttons
+    document.querySelectorAll(".random-time-btn").forEach(btn => {
+        btn.addEventListener("click", async () => {
+            const minutes = parseInt(btn.dataset.minutes, 10);
+            if (!minutes || minutes <= 0) return;
+            document.querySelectorAll(".random-time-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            await generateRandomPaperByDuration(minutes);
+        });
+    });
+}
+
+async function generateRandomPaperByDuration(targetMinutes) {
+    try {
+        const db = await ensureSubjectDatabaseLoaded(appState.subject);
+
+        // Read all currently checked filter boxes from the sidebar
+        let years = Array.from(document.querySelectorAll(".year-checkbox:checked")).map(cb => parseInt(cb.value));
+        let months = Array.from(document.querySelectorAll(".month-checkbox:checked")).map(cb => cb.value);
+        let tiers = Array.from(document.querySelectorAll(".tier-checkbox:checked")).map(cb => cb.value);
+        let paperTypes = Array.from(document.querySelectorAll(".paper-type-checkbox:checked")).map(cb => cb.value);
+        let chapters = Array.from(document.querySelectorAll(".chapter-checkbox:checked")).map(cb => parseInt(cb.dataset.chapter));
+        let subtopics = Array.from(document.querySelectorAll(".subtopic-checkbox:checked")).map(cb => cb.dataset.subtopic);
+
+        // If the user hasn't checked any chapters/subtopics yet, auto-select all syllabus chapters so random generation works seamlessly
+        let autoCheckedAllChapters = false;
+        if (chapters.length === 0 && subtopics.length === 0) {
+            document.querySelectorAll(".chapter-checkbox, .subtopic-checkbox").forEach(cb => {
+                cb.checked = true;
+                cb.indeterminate = false;
+            });
+            chapters = Array.from(document.querySelectorAll(".chapter-checkbox:checked")).map(cb => parseInt(cb.dataset.chapter));
+            subtopics = Array.from(document.querySelectorAll(".subtopic-checkbox:checked")).map(cb => cb.dataset.subtopic);
+            appState.selectedChapters = chapters;
+            appState.selectedSubtopics = subtopics;
+            updateMobileFilterBadge();
+            fetchQuestions();
+            autoCheckedAllChapters = true;
+        }
+
+        const payload = {
+            subject: appState.subject,
+            years,
+            months,
+            tiers,
+            paper_types: paperTypes,
+            chapters,
+            subtopics,
+            search_query: appState.searchQuery,
+            get_all: true
+        };
+
+        const data = searchQuestionsStatic(db, payload);
+        const pool = (data && data.questions) ? data.questions.slice() : [];
+
+        if (pool.length === 0) {
+            showToast("⚠️ No questions match the currently checked filters! Please check more years, papers, or chapters.");
+            return;
+        }
+
+        // Target marks using the app's 1.125 mins/mark ratio (Time = round(Marks * 1.125))
+        const targetMarks = Math.max(1, Math.round(targetMinutes / 1.125));
+
+        // Fisher-Yates shuffle
+        for (let i = pool.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            const tmp = pool[i];
+            pool[i] = pool[j];
+            pool[j] = tmp;
+        }
+
+        const selected = [];
+        const selectedIds = new Set();
+        let currentMarks = 0;
+
+        // Pass 1: Pick questions across distinct subtopics/chapters first for topical variety
+        const usedSubtopics = new Set();
+        for (const q of pool) {
+            const m = Math.max(1, q.marks || 1);
+            const subKey = String(q.subtopic_id || q.chapter_id || "");
+            if (!usedSubtopics.has(subKey) && currentMarks + m <= targetMarks) {
+                selected.push(q);
+                selectedIds.add(q.id);
+                usedSubtopics.add(subKey);
+                currentMarks += m;
+                if (currentMarks === targetMarks) break;
+            }
+        }
+
+        // Pass 2: Fill remaining marks from the shuffled pool
+        if (currentMarks < targetMarks) {
+            for (const q of pool) {
+                if (selectedIds.has(q.id)) continue;
+                const m = Math.max(1, q.marks || 1);
+                if (currentMarks + m <= targetMarks) {
+                    selected.push(q);
+                    selectedIds.add(q.id);
+                    currentMarks += m;
+                    if (currentMarks === targetMarks) break;
+                }
+            }
+        }
+
+        // Pass 3: If still short by a small gap, try a 1-for-1 swap with an unselected question to hit exact targetMarks
+        const gap = targetMarks - currentMarks;
+        if (gap > 0 && selected.length > 0) {
+            let swapped = false;
+            for (let sIdx = selected.length - 1; sIdx >= 0 && !swapped; sIdx--) {
+                const sMarks = Math.max(1, selected[sIdx].marks || 1);
+                const neededMarks = sMarks + gap;
+                const replacement = pool.find(q => !selectedIds.has(q.id) && Math.max(1, q.marks || 1) === neededMarks);
+                if (replacement) {
+                    selectedIds.delete(selected[sIdx].id);
+                    selectedIds.add(replacement.id);
+                    selected[sIdx] = replacement;
+                    currentMarks += gap;
+                    swapped = true;
+                }
+            }
+            // If no exact swap and selected is empty (e.g., all questions have marks > targetMarks), pick the closest single question
+            if (selected.length === 0 && pool.length > 0) {
+                pool.sort((a, b) => Math.abs((a.marks || 1) - targetMarks) - Math.abs((b.marks || 1) - targetMarks));
+                selected.push(pool[0]);
+                currentMarks = Math.max(1, pool[0].marks || 1);
+            }
+        }
+
+        // Order selected questions nicely: MCQs first (if any), then theory questions
+        selected.sort((a, b) => {
+            if (Boolean(a.is_mc) !== Boolean(b.is_mc)) return a.is_mc ? -1 : 1;
+            return 0;
+        });
+
+        appState.testPaperQuestions = selected;
+        isTimeManuallyEdited = false;
+        const timeInput = document.getElementById("customTimeAllowed");
+        if (timeInput) {
+            timeInput.value = calculateAutoTime(currentMarks);
+        }
+
+        saveTestToLocalStorage();
+        updateTestTray();
+        updateAddAllButtonState();
+        renderTestModalList();
+        renderQuestionsList(currentQuestionsData);
+
+        const timeLabel = targetMinutes >= 60
+            ? (targetMinutes === 60 ? "1 hr (60 mins)" : `${targetMinutes / 60} hrs (${targetMinutes} mins)`)
+            : `${targetMinutes} mins`;
+        const chNote = autoCheckedAllChapters ? " (all chapters selected)" : "";
+        showToast(`🎲 Generated ${timeLabel} paper: ${selected.length} Questions • ${currentMarks} Marks${chNote}`);
+    } catch (err) {
+        console.error("Error generating random paper:", err);
+        alert("Error generating random paper: " + err.message);
+    }
 }
 
 function handleFilterChange() {
