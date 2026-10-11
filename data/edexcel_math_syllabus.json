@@ -1,0 +1,134 @@
+[
+  {
+    "id": 1,
+    "name": "Topic 1: Number",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "1.1 Place value, operations, negative numbers and BIDMAS"
+      },
+      {
+        "id": "1.2",
+        "name": "1.2 Factors, multiples, primes, HCF, LCM, powers and roots"
+      },
+      {
+        "id": "1.3",
+        "name": "1.3 Fractions, decimals and recurring decimals"
+      },
+      {
+        "id": "1.4",
+        "name": "1.4 Standard form, indices and surds"
+      },
+      {
+        "id": "1.5",
+        "name": "1.5 Rounding, estimation, error intervals and bounds"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Topic 2: Algebra",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "2.1 Algebraic expressions, expanding, factorising and algebraic fractions"
+      },
+      {
+        "id": "2.2",
+        "name": "2.2 Linear and quadratic equations and inequalities"
+      },
+      {
+        "id": "2.3",
+        "name": "2.3 Sequences (nth term, arithmetic, geometric and quadratic)"
+      },
+      {
+        "id": "2.4",
+        "name": "2.4 Coordinates, linear graphs, quadratic graphs and functions"
+      },
+      {
+        "id": "2.5",
+        "name": "2.5 Simultaneous equations, iteration and kinematic graphs"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Topic 3: Ratio, proportion and rates of change",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "3.1 Ratio, sharing and scale drawings"
+      },
+      {
+        "id": "3.2",
+        "name": "3.2 Percentages, compound interest, depreciation and reverse percentages"
+      },
+      {
+        "id": "3.3",
+        "name": "3.3 Compound measures: speed, density, pressure and exchange rates"
+      },
+      {
+        "id": "3.4",
+        "name": "3.4 Direct and inverse proportion & growth and decay"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Topic 4: Geometry and measures",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "4.1 Angles, parallel lines, polygons and circle theorems"
+      },
+      {
+        "id": "4.2",
+        "name": "4.2 Perimeter, area, circles, sectors, volume and surface area"
+      },
+      {
+        "id": "4.3",
+        "name": "4.3 Pythagoras' theorem, SOHCAHTOA, sine/cosine rules and 3D trigonometry"
+      },
+      {
+        "id": "4.4",
+        "name": "4.4 Transformations, congruence, similarity, loci and bearings"
+      },
+      {
+        "id": "4.5",
+        "name": "4.5 Vectors and geometric proof"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Topic 5: Probability",
+    "subtopics": [
+      {
+        "id": "5.1",
+        "name": "5.1 Probability scale, mutually exclusive events, relative frequency and sample spaces"
+      },
+      {
+        "id": "5.2",
+        "name": "5.2 Tree diagrams, Venn diagrams, set notation and conditional probability"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Topic 6: Statistics",
+    "subtopics": [
+      {
+        "id": "6.1",
+        "name": "6.1 Sampling, capture-recapture, questionnaires and two-way tables"
+      },
+      {
+        "id": "6.2",
+        "name": "6.2 Averages (mean, median, mode), range, quartiles and box plots"
+      },
+      {
+        "id": "6.3",
+        "name": "6.3 Cumulative frequency, histograms, scatter graphs and time series"
+      }
+    ]
+  }
+]

@@ -1,0 +1,208 @@
+[
+  {
+    "id": 1,
+    "name": "Topic 1: Key concepts of physics",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "1.1 SI units, prefixes, conversions and standard form"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Topic 2: Motion and forces",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "2.1 Vectors, scalars, speed, velocity and acceleration"
+      },
+      {
+        "id": "2.2",
+        "name": "2.2 Newton's laws, weight, circular motion and terminal velocity"
+      },
+      {
+        "id": "2.3",
+        "name": "2.3 Momentum, conservation of momentum and stopping distances"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Topic 3: Conservation of energy",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "3.1 Energy stores, transfers, GPE and kinetic energy"
+      },
+      {
+        "id": "3.2",
+        "name": "3.2 Efficiency, thermal insulation and energy resources"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Topic 4: Waves",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "4.1 Transverse & longitudinal waves, wave equation and ripple tank"
+      },
+      {
+        "id": "4.2",
+        "name": "4.2 Wave behaviour at boundaries, ultrasound, infrasound and the ear"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Topic 5: Light and the electromagnetic spectrum",
+    "subtopics": [
+      {
+        "id": "5.1",
+        "name": "5.1 Reflection, refraction, total internal reflection, lenses and colour"
+      },
+      {
+        "id": "5.2",
+        "name": "5.2 Electromagnetic spectrum, uses, dangers and thermal radiation"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Topic 6: Radioactivity",
+    "subtopics": [
+      {
+        "id": "6.1",
+        "name": "6.1 Atomic models, isotopes and ionising radiation"
+      },
+      {
+        "id": "6.2",
+        "name": "6.2 Nuclear equations, half-life, uses, contamination and fission/fusion"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Topic 7: Astronomy",
+    "subtopics": [
+      {
+        "id": "7.1",
+        "name": "7.1 Solar system, orbits, satellites and life cycle of stars"
+      },
+      {
+        "id": "7.2",
+        "name": "7.2 Red-shift, Big Bang theory and Steady State theory"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Topic 8: Energy - Forces doing work",
+    "subtopics": [
+      {
+        "id": "8.1",
+        "name": "8.1 Work done, energy transfers and power"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Topic 9: Forces and their effects",
+    "subtopics": [
+      {
+        "id": "9.1",
+        "name": "9.1 Contact and non-contact forces, free-body diagrams and vector resolution"
+      },
+      {
+        "id": "9.2",
+        "name": "9.2 Rotational forces: moments, principle of moments, levers and gears"
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Topic 10: Electricity and circuits",
+    "subtopics": [
+      {
+        "id": "10.1",
+        "name": "10.1 Electric charge, current, potential difference and resistance"
+      },
+      {
+        "id": "10.2",
+        "name": "10.2 Circuit components: filament lamps, diodes, LDRs and thermistors"
+      },
+      {
+        "id": "10.3",
+        "name": "10.3 Electrical energy, power, AC/DC and domestic electrical safety"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Topic 11: Static electricity",
+    "subtopics": [
+      {
+        "id": "11.1",
+        "name": "11.1 Charging by friction, electrostatic forces, uses, dangers and electric fields"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Topic 12: Magnetism and the motor effect",
+    "subtopics": [
+      {
+        "id": "12.1",
+        "name": "12.1 Permanent and induced magnets, magnetic fields and electromagnetism"
+      },
+      {
+        "id": "12.2",
+        "name": "12.2 Motor effect, Fleming's left-hand rule and electric motors"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Topic 13: Electromagnetic induction",
+    "subtopics": [
+      {
+        "id": "13.1",
+        "name": "13.1 Electromagnetic induction, alternators, dynamos, microphones and loudspeakers"
+      },
+      {
+        "id": "13.2",
+        "name": "13.2 Transformers and the National Grid"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Topic 14: Particle model",
+    "subtopics": [
+      {
+        "id": "14.1",
+        "name": "14.1 Density, states of matter, specific heat capacity and latent heat"
+      },
+      {
+        "id": "14.2",
+        "name": "14.2 Gas temperature, pressure, absolute zero and Boyle's law"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Topic 15: Forces and matter",
+    "subtopics": [
+      {
+        "id": "15.1",
+        "name": "15.1 Elastic and inelastic distortion, Hooke's law and springs"
+      },
+      {
+        "id": "15.2",
+        "name": "15.2 Atmospheric pressure, pressure in fluids and upthrust"
+      }
+    ]
+  }
+]

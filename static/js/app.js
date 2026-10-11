@@ -1,8 +1,9 @@
-// Cioal Tutors IGCSE Test Builder - Static Serverless Frontend (GitHub Pages Edition)
-// Supports Physics (0625), Chemistry (0620), Biology (0610) & Mathematics (0580) completely client-side
+// Cioal Tutors IGCSE & GCSE Test Builder - Static Serverless Frontend (GitHub Pages Edition)
+// Supports Cambridge IGCSE (0625, 0620, 0610, 0580) & Edexcel GCSE 9–1 (1PH0, 1CH0, 1BI0, 1MA1) completely client-side
 
 const SUBJECT_CONFIG = {
     Physics: {
+        board: "Cambridge",
         code: "0625",
         badge: "IGCSE Physics 0625",
         docTitle: "Cioal Tutor Topical Questions • IGCSE Physics (0625)",
@@ -15,6 +16,7 @@ const SUBJECT_CONFIG = {
         questionsUrl: "data/questions.json",
         jsBundleUrl: "data/physics_db.js",
         catDir: "Categorized_Questions",
+        tiers: ["Core", "Extended"],
         papers: [
             { value: "1", label: "Paper 1 (MCQ Core)", tier: "Core" },
             { value: "2", label: "Paper 2 (MCQ Extended)", tier: "Extended" },
@@ -25,6 +27,7 @@ const SUBJECT_CONFIG = {
         ]
     },
     Chemistry: {
+        board: "Cambridge",
         code: "0620",
         badge: "IGCSE Chemistry 0620",
         docTitle: "Cioal Tutor Topical Questions • IGCSE Chemistry (0620)",
@@ -37,6 +40,7 @@ const SUBJECT_CONFIG = {
         questionsUrl: "data/chemistry_questions.json",
         jsBundleUrl: "data/chemistry_db.js",
         catDir: "Categorized_Questions_Chemistry",
+        tiers: ["Core", "Extended"],
         papers: [
             { value: "1", label: "Paper 1 (MCQ Core)", tier: "Core" },
             { value: "2", label: "Paper 2 (MCQ Extended)", tier: "Extended" },
@@ -47,6 +51,7 @@ const SUBJECT_CONFIG = {
         ]
     },
     Biology: {
+        board: "Cambridge",
         code: "0610",
         badge: "IGCSE Biology 0610",
         docTitle: "Cioal Tutor Topical Questions • IGCSE Biology (0610)",
@@ -59,6 +64,7 @@ const SUBJECT_CONFIG = {
         questionsUrl: "data/biology_questions.json",
         jsBundleUrl: "data/biology_db.js",
         catDir: "Categorized_Questions_Biology",
+        tiers: ["Core", "Extended"],
         papers: [
             { value: "1", label: "Paper 1 (MCQ Core)", tier: "Core" },
             { value: "2", label: "Paper 2 (MCQ Extended)", tier: "Extended" },
@@ -69,6 +75,7 @@ const SUBJECT_CONFIG = {
         ]
     },
     Math: {
+        board: "Cambridge",
         code: "0580",
         badge: "IGCSE Math 0580",
         docTitle: "Cioal Tutor Topical Questions • IGCSE Mathematics (0580)",
@@ -81,11 +88,102 @@ const SUBJECT_CONFIG = {
         questionsUrl: "data/math_questions.json",
         jsBundleUrl: "data/math_db.js",
         catDir: "Categorized_Questions_Math",
+        tiers: ["Core", "Extended"],
         papers: [
             { value: "1", label: "Paper 1 (Core • Non-Calc / Short)", tier: "Core" },
             { value: "2", label: "Paper 2 (Extended • Non-Calc / Short)", tier: "Extended" },
             { value: "3", label: "Paper 3 (Core • Calculator / Long)", tier: "Core" },
             { value: "4", label: "Paper 4 (Extended • Calculator / Long)", tier: "Extended" }
+        ]
+    },
+    Edexcel_Physics: {
+        board: "Edexcel",
+        code: "1PH0",
+        badge: "Edexcel GCSE Physics 1PH0",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel GCSE Physics (1PH0)",
+        subtitle: "Pearson Edexcel GCSE (9–1) Physics Specification Question Bank & Test Builder",
+        examLabel: "Pearson Edexcel GCSE (9–1) Physics (1PH0)",
+        defaultTestTitle: "Weekly Edexcel Physics Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. velocity, radioactivity, circuit, 1PH0)...",
+        storageKey: "cioal_test_paper_edexcel_physics",
+        syllabusUrl: "data/edexcel_physics_syllabus.json",
+        questionsUrl: "data/edexcel_physics_questions.json",
+        jsBundleUrl: "data/edexcel_physics_db.js",
+        catDir: "Categorized_Questions_Edexcel_Physics",
+        tiers: ["Foundation", "Higher"],
+        papers: [
+            { value: "1F", label: "Paper 1F (Foundation)", tier: "Foundation" },
+            { value: "1H", label: "Paper 1H (Higher)", tier: "Higher" },
+            { value: "2F", label: "Paper 2F (Foundation)", tier: "Foundation" },
+            { value: "2H", label: "Paper 2H (Higher)", tier: "Higher" }
+        ]
+    },
+    Edexcel_Chemistry: {
+        board: "Edexcel",
+        code: "1CH0",
+        badge: "Edexcel GCSE Chemistry 1CH0",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel GCSE Chemistry (1CH0)",
+        subtitle: "Pearson Edexcel GCSE (9–1) Chemistry Specification Question Bank & Test Builder",
+        examLabel: "Pearson Edexcel GCSE (9–1) Chemistry (1CH0)",
+        defaultTestTitle: "Weekly Edexcel Chemistry Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. electrolysis, titration, alkene, 1CH0)...",
+        storageKey: "cioal_test_paper_edexcel_chemistry",
+        syllabusUrl: "data/edexcel_chemistry_syllabus.json",
+        questionsUrl: "data/edexcel_chemistry_questions.json",
+        jsBundleUrl: "data/edexcel_chemistry_db.js",
+        catDir: "Categorized_Questions_Edexcel_Chemistry",
+        tiers: ["Foundation", "Higher"],
+        papers: [
+            { value: "1F", label: "Paper 1F (Foundation)", tier: "Foundation" },
+            { value: "1H", label: "Paper 1H (Higher)", tier: "Higher" },
+            { value: "2F", label: "Paper 2F (Foundation)", tier: "Foundation" },
+            { value: "2H", label: "Paper 2H (Higher)", tier: "Higher" }
+        ]
+    },
+    Edexcel_Biology: {
+        board: "Edexcel",
+        code: "1BI0",
+        badge: "Edexcel GCSE Biology 1BI0",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel GCSE Biology (1BI0)",
+        subtitle: "Pearson Edexcel GCSE (9–1) Biology Specification Question Bank & Test Builder",
+        examLabel: "Pearson Edexcel GCSE (9–1) Biology (1BI0)",
+        defaultTestTitle: "Weekly Edexcel Biology Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. osmosis, enzyme, mitosis, 1BI0)...",
+        storageKey: "cioal_test_paper_edexcel_biology",
+        syllabusUrl: "data/edexcel_biology_syllabus.json",
+        questionsUrl: "data/edexcel_biology_questions.json",
+        jsBundleUrl: "data/edexcel_biology_db.js",
+        catDir: "Categorized_Questions_Edexcel_Biology",
+        tiers: ["Foundation", "Higher"],
+        papers: [
+            { value: "1F", label: "Paper 1F (Foundation)", tier: "Foundation" },
+            { value: "1H", label: "Paper 1H (Higher)", tier: "Higher" },
+            { value: "2F", label: "Paper 2F (Foundation)", tier: "Foundation" },
+            { value: "2H", label: "Paper 2H (Higher)", tier: "Higher" }
+        ]
+    },
+    Edexcel_Math: {
+        board: "Edexcel",
+        code: "1MA1",
+        badge: "Edexcel GCSE Maths 1MA1",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel GCSE Mathematics (1MA1)",
+        subtitle: "Pearson Edexcel GCSE (9–1) Mathematics Specification Question Bank & Test Builder",
+        examLabel: "Pearson Edexcel GCSE (9–1) Mathematics (1MA1)",
+        defaultTestTitle: "Weekly Edexcel Mathematics Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. trigonometry, vector, probability, 1MA1)...",
+        storageKey: "cioal_test_paper_edexcel_math",
+        syllabusUrl: "data/edexcel_math_syllabus.json",
+        questionsUrl: "data/edexcel_math_questions.json",
+        jsBundleUrl: "data/edexcel_math_db.js",
+        catDir: "Categorized_Questions_Edexcel_Math",
+        tiers: ["Foundation", "Higher"],
+        papers: [
+            { value: "1F", label: "Paper 1F (Foundation • Non-Calc)", tier: "Foundation" },
+            { value: "1H", label: "Paper 1H (Higher • Non-Calc)", tier: "Higher" },
+            { value: "2F", label: "Paper 2F (Foundation • Calculator)", tier: "Foundation" },
+            { value: "2H", label: "Paper 2H (Higher • Calculator)", tier: "Higher" },
+            { value: "3F", label: "Paper 3F (Foundation • Calculator)", tier: "Foundation" },
+            { value: "3H", label: "Paper 3H (Higher • Calculator)", tier: "Higher" }
         ]
     }
 };
@@ -260,8 +358,9 @@ function searchQuestionsStatic(db, payload) {
         if (!years.includes(parseInt(q.year))) continue;
         if (!months.includes(q.month)) continue;
         if (!tiers.includes(q.tier) && q.tier !== "Both") continue;
-        const qPaperType = String(q.paper_type ?? q.paper_num ?? "");
-        if (!paperTypes.includes(qPaperType)) continue;
+        const pNum = String(q.paper_type ?? q.paper_num ?? "");
+        const pComp = String(q.component ?? "");
+        if (!paperTypes.includes(pNum) && !paperTypes.includes(pComp)) continue;
 
         let matchedSub = null;
         if (subtopicSet.size > 0) {
@@ -340,24 +439,57 @@ function updateSplashSubjectTags() {
     const chemTag = document.getElementById("chemistryStatusTag");
     const bioTag = document.getElementById("biologyStatusTag");
     const mathTag = document.getElementById("mathStatusTag");
-    const isCaieIgcse = (splashState.board === "Cambridge" && splashState.level === "IGCSE / O Level");
+    const isCaie = (splashState.board === "Cambridge" && splashState.level === "IGCSE / O Level");
+    const isEdexcel = (splashState.board === "Edexcel" && splashState.level === "IGCSE / O Level");
+    const isReady = isCaie || isEdexcel;
 
     if (physTag) {
-        physTag.textContent = isCaieIgcse ? "0625 • Ready ▶" : "Coming Soon";
-        physTag.className = isCaieIgcse ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+        physTag.textContent = isCaie ? "0625 • Ready ▶" : (isEdexcel ? "1PH0 • Ready ▶" : "Coming Soon");
+        physTag.className = isReady ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
     }
     if (chemTag) {
-        chemTag.textContent = isCaieIgcse ? "0620 • Ready ▶" : "Coming Soon";
-        chemTag.className = isCaieIgcse ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+        chemTag.textContent = isCaie ? "0620 • Ready ▶" : (isEdexcel ? "1CH0 • Ready ▶" : "Coming Soon");
+        chemTag.className = isReady ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
     }
     if (bioTag) {
-        bioTag.textContent = isCaieIgcse ? "0610 • Ready ▶" : "Coming Soon";
-        bioTag.className = isCaieIgcse ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+        bioTag.textContent = isCaie ? "0610 • Ready ▶" : (isEdexcel ? "1BI0 • Ready ▶" : "Coming Soon");
+        bioTag.className = isReady ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
     }
     if (mathTag) {
-        mathTag.textContent = isCaieIgcse ? "0580 • Ready ▶" : "Coming Soon";
-        mathTag.className = isCaieIgcse ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+        mathTag.textContent = isCaie ? "0580 • Ready ▶" : (isEdexcel ? "1MA1 • Ready ▶" : "Coming Soon");
+        mathTag.className = isReady ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
     }
+}
+
+function renderTierCheckboxes(subject) {
+    const cfg = SUBJECT_CONFIG[subject] || SUBJECT_CONFIG.Physics;
+    const container = document.getElementById("curriculumTiersGroup");
+    if (!container) return;
+
+    const tiers = cfg.tiers || ["Core", "Extended"];
+    container.innerHTML = tiers.map(t => `
+        <label class="custom-checkbox">
+            <input type="checkbox" class="tier-checkbox" value="${t}" checked>
+            <span>${t}</span>
+        </label>
+    `).join("");
+
+    container.querySelectorAll(".tier-checkbox").forEach(cb => {
+        cb.addEventListener("change", () => {
+            const checkedTiers = new Set(
+                Array.from(document.querySelectorAll(".tier-checkbox:checked")).map(el => el.value)
+            );
+            document.querySelectorAll(".paper-type-checkbox").forEach(pcb => {
+                const paperObj = cfg.papers.find(p => String(p.value) === String(pcb.value));
+                if (paperObj) {
+                    pcb.checked = (paperObj.tier === "Both")
+                        ? checkedTiers.size > 0
+                        : checkedTiers.has(paperObj.tier);
+                }
+            });
+            handleFilterChange();
+        });
+    });
 }
 
 function renderPaperComponentCheckboxes(subject) {
@@ -365,11 +497,14 @@ function renderPaperComponentCheckboxes(subject) {
     const container = document.getElementById("paperComponentsGroup");
     if (!container) return;
 
-    const coreChecked = document.querySelector('.tier-checkbox[value="Core"]')?.checked ?? true;
-    const extChecked = document.querySelector('.tier-checkbox[value="Extended"]')?.checked ?? true;
+    const checkedTiers = new Set(
+        Array.from(document.querySelectorAll(".tier-checkbox:checked")).map(el => el.value)
+    );
 
     container.innerHTML = cfg.papers.map(p => {
-        const isChecked = p.tier === "Core" ? coreChecked : (p.tier === "Extended" ? extChecked : (coreChecked || extChecked));
+        const isChecked = (p.tier === "Both")
+            ? checkedTiers.size > 0
+            : (checkedTiers.size === 0 || checkedTiers.has(p.tier));
         return `
             <label class="custom-checkbox">
                 <input type="checkbox" class="paper-type-checkbox" value="${p.value}" ${isChecked ? "checked" : ""}>
@@ -435,6 +570,7 @@ async function switchSubject(subject) {
         titleInput.value = cfg.defaultTestTitle;
     }
 
+    renderTierCheckboxes(subject);
     renderPaperComponentCheckboxes(subject);
     await loadSyllabusAndFilters();
     await loadSavedTestPaperForSubject(subject);
@@ -481,10 +617,12 @@ function setupSplashScreenListeners() {
     document.querySelectorAll("#splashSubjectGroup .splash-subject-card").forEach(card => {
         card.addEventListener("click", async () => {
             const subject = card.dataset.subject;
-            if (splashState.board === "Cambridge" && splashState.level === "IGCSE / O Level" && (subject === "Physics" || subject === "Chemistry" || subject === "Biology" || subject === "Math")) {
+            const validBase = ["Physics", "Chemistry", "Biology", "Math"].includes(subject);
+            if (splashState.level === "IGCSE / O Level" && validBase && (splashState.board === "Cambridge" || splashState.board === "Edexcel")) {
+                const targetSubject = (splashState.board === "Edexcel") ? `Edexcel_${subject}` : subject;
                 splashScreen.classList.add("hidden");
                 comingSoonScreen.classList.add("hidden");
-                await switchSubject(subject);
+                await switchSubject(targetSubject);
             } else {
                 comingSoonBadge.textContent = `${splashState.board} • ${splashState.level} • ${subject}`;
                 comingSoonMessage.textContent = `Topical past paper questions and mark schemes for ${splashState.board} ${splashState.level} ${subject} are currently being prepared and will be available soon!`;
@@ -559,6 +697,13 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupSplashScreenListeners();
     setupEventListeners();
     const initialSubject = localStorage.getItem("cioal_active_subject") || "Physics";
+    if (initialSubject.startsWith("Edexcel_")) {
+        splashState.board = "Edexcel";
+        document.querySelectorAll("#splashBoardGroup .splash-option-btn").forEach(b => {
+            b.classList.toggle("active", b.dataset.board === "Edexcel");
+        });
+        updateSplashSubjectTags();
+    }
     await switchSubject(initialSubject);
 });
 
@@ -712,31 +857,6 @@ function setupEventListeners() {
 
     // Month checkboxes
     document.querySelectorAll(".month-checkbox").forEach(cb => {
-        cb.addEventListener("change", handleFilterChange);
-    });
-
-    // Tier checkboxes: automatically check/uncheck relevant Paper Components
-    document.querySelectorAll(".tier-checkbox").forEach(cb => {
-        cb.addEventListener("change", () => {
-            const coreChecked = document.querySelector('.tier-checkbox[value="Core"]')?.checked || false;
-            const extChecked = document.querySelector('.tier-checkbox[value="Extended"]')?.checked || false;
-
-            document.querySelectorAll(".paper-type-checkbox").forEach(pcb => {
-                if (pcb.value === "1" || pcb.value === "3") {
-                    pcb.checked = coreChecked;
-                } else if (pcb.value === "2" || pcb.value === "4") {
-                    pcb.checked = extChecked;
-                } else if (pcb.value === "5" || pcb.value === "6") {
-                    pcb.checked = (coreChecked || extChecked);
-                }
-            });
-
-            handleFilterChange();
-        });
-    });
-
-    // Paper type checkboxes
-    document.querySelectorAll(".paper-type-checkbox").forEach(cb => {
         cb.addEventListener("change", handleFilterChange);
     });
 

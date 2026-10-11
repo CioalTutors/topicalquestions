@@ -1,0 +1,236 @@
+[
+  {
+    "id": 1,
+    "name": "Topic 1: Key concepts in biology",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "1.1 Eukaryotic and prokaryotic cells & microscopy"
+      },
+      {
+        "id": "1.2",
+        "name": "1.2 Specialised cells"
+      },
+      {
+        "id": "1.3",
+        "name": "1.3 Enzymes and nutrition"
+      },
+      {
+        "id": "1.4",
+        "name": "1.4 Factors affecting enzyme action"
+      },
+      {
+        "id": "1.5",
+        "name": "1.5 Transport in and out of cells"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Topic 2: Cells and control",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "2.1 Mitosis and the cell cycle"
+      },
+      {
+        "id": "2.2",
+        "name": "2.2 Growth and differentiation in plants and animals"
+      },
+      {
+        "id": "2.3",
+        "name": "2.3 Stem cells"
+      },
+      {
+        "id": "2.4",
+        "name": "2.4 The nervous system and synapses"
+      },
+      {
+        "id": "2.5",
+        "name": "2.5 The brain and the eye"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Topic 3: Genetics",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "3.1 Sexual and asexual reproduction & meiosis"
+      },
+      {
+        "id": "3.2",
+        "name": "3.2 DNA structure and protein synthesis"
+      },
+      {
+        "id": "3.3",
+        "name": "3.3 Mendel and monohybrid inheritance"
+      },
+      {
+        "id": "3.4",
+        "name": "3.4 Sex determination, blood groups and sex-linked disorders"
+      },
+      {
+        "id": "3.5",
+        "name": "3.5 Variation, mutations and the Human Genome Project"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Topic 4: Natural selection and genetic modification",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "4.1 Evolution, Darwin, Wallace and human evolution"
+      },
+      {
+        "id": "4.2",
+        "name": "4.2 Pentadactyl limb and classification"
+      },
+      {
+        "id": "4.3",
+        "name": "4.3 Selective breeding and tissue culture"
+      },
+      {
+        "id": "4.4",
+        "name": "4.4 Genetic engineering and GM crops"
+      },
+      {
+        "id": "4.5",
+        "name": "4.5 Fertilisers and biological control"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Topic 5: Health, disease and the development of medicines",
+    "subtopics": [
+      {
+        "id": "5.1",
+        "name": "5.1 Health, communicable and non-communicable diseases"
+      },
+      {
+        "id": "5.2",
+        "name": "5.2 Cardiovascular disease, obesity and BMI"
+      },
+      {
+        "id": "5.3",
+        "name": "5.3 Pathogens and lifecycle of viruses"
+      },
+      {
+        "id": "5.4",
+        "name": "5.4 Plant defences and plant diseases"
+      },
+      {
+        "id": "5.5",
+        "name": "5.5 Physical barriers, immune system and vaccination"
+      },
+      {
+        "id": "5.6",
+        "name": "5.6 Antibiotics, aseptic technique and monoclonal antibodies"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Topic 6: Plant structures and their functions",
+    "subtopics": [
+      {
+        "id": "6.1",
+        "name": "6.1 Photosynthesis and limiting factors"
+      },
+      {
+        "id": "6.2",
+        "name": "6.2 Root hair cells, xylem and phloem"
+      },
+      {
+        "id": "6.3",
+        "name": "6.3 Transpiration, stomata and plant adaptations"
+      },
+      {
+        "id": "6.4",
+        "name": "6.4 Plant hormones: auxins, gibberellins and ethene"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Topic 7: Animal coordination, control and homeostasis",
+    "subtopics": [
+      {
+        "id": "7.1",
+        "name": "7.1 Endocrine system, adrenaline and thyroxine"
+      },
+      {
+        "id": "7.2",
+        "name": "7.2 Menstrual cycle, contraception and fertility"
+      },
+      {
+        "id": "7.3",
+        "name": "7.3 Homeostasis and thermoregulation"
+      },
+      {
+        "id": "7.4",
+        "name": "7.4 Blood glucose regulation and diabetes"
+      },
+      {
+        "id": "7.5",
+        "name": "7.5 Urinary system, kidneys, nephrons and ADH"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Topic 8: Exchange and transport in animals",
+    "subtopics": [
+      {
+        "id": "8.1",
+        "name": "8.1 Gas exchange, alveoli and Fick's law"
+      },
+      {
+        "id": "8.2",
+        "name": "8.2 Blood and blood vessels"
+      },
+      {
+        "id": "8.3",
+        "name": "8.3 The heart and circulatory system"
+      },
+      {
+        "id": "8.4",
+        "name": "8.4 Cellular respiration"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Topic 9: Ecosystems and material cycles",
+    "subtopics": [
+      {
+        "id": "9.1",
+        "name": "9.1 Ecosystems, sampling, quadrats and transects"
+      },
+      {
+        "id": "9.2",
+        "name": "9.2 Trophic levels, pyramids of biomass and energy transfer"
+      },
+      {
+        "id": "9.3",
+        "name": "9.3 Parasitism and mutualism"
+      },
+      {
+        "id": "9.4",
+        "name": "9.4 Biodiversity, eutrophication, fish farming and conservation"
+      },
+      {
+        "id": "9.5",
+        "name": "9.5 Food security and sustainability"
+      },
+      {
+        "id": "9.6",
+        "name": "9.6 Carbon, water and nitrogen cycles & indicator species"
+      }
+    ]
+  }
+]
