@@ -233,15 +233,35 @@ function searchQuestionsStatic(db, payload) {
     const subtopicSet = new Set(subtopics);
     const chapterSet = new Set(chapters);
 
+    // If all chapters/subtopics are unchecked (or any core filter group is completely unchecked),
+    // no questions should be selected.
+    if (
+        (subtopicSet.size === 0 && chapterSet.size === 0) ||
+        years.length === 0 ||
+        months.length === 0 ||
+        tiers.length === 0 ||
+        paperTypes.length === 0
+    ) {
+        const perPage = payload.per_page || 15;
+        return {
+            status: "success",
+            total: 0,
+            page: 1,
+            per_page: perPage,
+            total_pages: 1,
+            questions: []
+        };
+    }
+
     const results = [];
     for (let i = 0; i < db.questions.length; i++) {
         const q = db.questions[i];
 
-        if (years.length > 0 && !years.includes(parseInt(q.year))) continue;
-        if (months.length > 0 && !months.includes(q.month)) continue;
-        if (tiers.length > 0 && !tiers.includes(q.tier) && q.tier !== "Both") continue;
+        if (!years.includes(parseInt(q.year))) continue;
+        if (!months.includes(q.month)) continue;
+        if (!tiers.includes(q.tier) && q.tier !== "Both") continue;
         const qPaperType = String(q.paper_type ?? q.paper_num ?? "");
-        if (paperTypes.length > 0 && !paperTypes.includes(qPaperType)) continue;
+        if (!paperTypes.includes(qPaperType)) continue;
 
         let matchedSub = null;
         if (subtopicSet.size > 0) {
@@ -427,6 +447,7 @@ async function switchSubject(subject) {
     appState.selectedPaperTypes = Array.from(document.querySelectorAll(".paper-type-checkbox:checked")).map(cb => cb.value);
     appState.currentPage = 1;
 
+    updateMobileFilterBadge();
     await fetchQuestions();
 }
 
@@ -588,17 +609,25 @@ function renderSyllabusCheckboxes(syllabus) {
         });
 
         // Toggle accordion body
-        header.querySelector(".chapter-toggle-icon").addEventListener("click", (e) => {
-            e.stopPropagation();
+        const toggleAccordion = () => {
             const isOpen = body.style.display !== "none";
             body.style.display = isOpen ? "none" : "flex";
             header.querySelector(".chapter-toggle-icon").textContent = isOpen ? "▶" : "▼";
+        };
+        header.querySelector(".chapter-toggle-icon").addEventListener("click", (e) => {
+            e.stopPropagation();
+            toggleAccordion();
+        });
+        header.addEventListener("click", (e) => {
+            if (e.target.tagName === "INPUT" || e.target.tagName === "LABEL") return;
+            toggleAccordion();
         });
 
         // Chapter checkbox toggle child subtopics
         const chBox = header.querySelector(".chapter-checkbox");
         chBox.addEventListener("change", () => {
             const checked = chBox.checked;
+            chBox.indeterminate = false;
             body.querySelectorAll(".subtopic-checkbox").forEach(sb => {
                 sb.checked = checked;
             });
@@ -608,8 +637,11 @@ function renderSyllabusCheckboxes(syllabus) {
         // Subtopic checkbox update
         body.querySelectorAll(".subtopic-checkbox").forEach(sb => {
             sb.addEventListener("change", () => {
-                const anyChecked = Array.from(body.querySelectorAll(".subtopic-checkbox")).some(s => s.checked);
+                const allSubs = Array.from(body.querySelectorAll(".subtopic-checkbox"));
+                const anyChecked = allSubs.some(s => s.checked);
+                const allChecked = allSubs.every(s => s.checked);
                 chBox.checked = anyChecked;
+                chBox.indeterminate = anyChecked && !allChecked;
                 handleFilterChange();
             });
         });
@@ -620,17 +652,58 @@ function renderSyllabusCheckboxes(syllabus) {
     });
 }
 
+function openMobileSidebar() {
+    const sidebar = document.getElementById("appSidebar");
+    const backdrop = document.getElementById("sidebarBackdrop");
+    if (sidebar) sidebar.classList.add("mobile-open");
+    if (backdrop) backdrop.classList.add("active");
+    document.body.style.overflow = "hidden";
+}
+
+function closeMobileSidebar() {
+    const sidebar = document.getElementById("appSidebar");
+    const backdrop = document.getElementById("sidebarBackdrop");
+    if (sidebar) sidebar.classList.remove("mobile-open");
+    if (backdrop) backdrop.classList.remove("active");
+    document.body.style.overflow = "";
+}
+
+function updateMobileFilterBadge() {
+    const badge = document.getElementById("mobileChapterCountBadge");
+    if (!badge) return;
+    const chCount = appState.selectedChapters.length;
+    badge.textContent = `${chCount} Ch`;
+    badge.classList.toggle("active", chCount > 0);
+}
+
 function setupEventListeners() {
-    // Show Mark Scheme checkbox above Curriculum Tier
+    // Sync Show Mark Scheme checkboxes (sidebar & mobile bar)
     const showMsCb = document.getElementById("showMarkSchemeCheckbox");
-    if (showMsCb) {
-        showMsCb.addEventListener("change", () => {
-            appState.showMarkScheme = showMsCb.checked;
-            document.querySelectorAll(".question-ms-panel").forEach(panel => {
-                panel.style.display = appState.showMarkScheme ? "block" : "none";
-            });
+    const mobileShowMsCb = document.getElementById("mobileShowMarkSchemeCheckbox");
+    const applyMarkSchemeVisibility = (checked) => {
+        appState.showMarkScheme = checked;
+        if (showMsCb && showMsCb.checked !== checked) showMsCb.checked = checked;
+        if (mobileShowMsCb && mobileShowMsCb.checked !== checked) mobileShowMsCb.checked = checked;
+        document.querySelectorAll(".question-ms-panel").forEach(panel => {
+            panel.style.display = appState.showMarkScheme ? "block" : "none";
         });
+    };
+    if (showMsCb) {
+        showMsCb.addEventListener("change", () => applyMarkSchemeVisibility(showMsCb.checked));
     }
+    if (mobileShowMsCb) {
+        mobileShowMsCb.addEventListener("change", () => applyMarkSchemeVisibility(mobileShowMsCb.checked));
+    }
+
+    // Mobile filter drawer controls
+    const openSidebarBtn = document.getElementById("openMobileSidebarBtn");
+    if (openSidebarBtn) openSidebarBtn.addEventListener("click", openMobileSidebar);
+    const closeSidebarBtn = document.getElementById("closeMobileSidebarBtn");
+    if (closeSidebarBtn) closeSidebarBtn.addEventListener("click", closeMobileSidebar);
+    const applyMobileBtn = document.getElementById("applyMobileFiltersBtn");
+    if (applyMobileBtn) applyMobileBtn.addEventListener("click", closeMobileSidebar);
+    const backdrop = document.getElementById("sidebarBackdrop");
+    if (backdrop) backdrop.addEventListener("click", closeMobileSidebar);
 
     // Year checkboxes
     document.querySelectorAll(".year-checkbox").forEach(cb => {
@@ -699,11 +772,17 @@ function setupEventListeners() {
     });
 
     document.getElementById("selectAllChapters").addEventListener("click", () => {
-        document.querySelectorAll(".chapter-checkbox, .subtopic-checkbox").forEach(cb => cb.checked = true);
+        document.querySelectorAll(".chapter-checkbox, .subtopic-checkbox").forEach(cb => {
+            cb.checked = true;
+            cb.indeterminate = false;
+        });
         handleFilterChange();
     });
     document.getElementById("clearChapters").addEventListener("click", () => {
-        document.querySelectorAll(".chapter-checkbox, .subtopic-checkbox").forEach(cb => cb.checked = false);
+        document.querySelectorAll(".chapter-checkbox, .subtopic-checkbox").forEach(cb => {
+            cb.checked = false;
+            cb.indeterminate = false;
+        });
         handleFilterChange();
     });
 
@@ -751,6 +830,7 @@ function handleFilterChange() {
     appState.selectedChapters = Array.from(document.querySelectorAll(".chapter-checkbox:checked")).map(cb => parseInt(cb.dataset.chapter));
     appState.selectedSubtopics = Array.from(document.querySelectorAll(".subtopic-checkbox:checked")).map(cb => cb.dataset.subtopic);
 
+    updateMobileFilterBadge();
     appState.currentPage = 1;
     fetchQuestions();
 }
@@ -781,6 +861,10 @@ async function fetchQuestions() {
             currentQuestionsData = data.questions;
 
             document.getElementById("matchingCount").textContent = `${data.total.toLocaleString()} Questions Found`;
+            const applyMobileBtn = document.getElementById("applyMobileFiltersBtn");
+            if (applyMobileBtn) {
+                applyMobileBtn.textContent = `✓ Show ${data.total.toLocaleString()} Questions`;
+            }
             updateAddAllButtonState();
             renderQuestionsList(data.questions);
             renderPagination();
@@ -866,12 +950,42 @@ async function handleAddAllFiltered() {
 function renderQuestionsList(questions) {
     const listContainer = document.getElementById("questionsList");
     if (!questions || questions.length === 0) {
-        listContainer.innerHTML = `
-            <div style="text-align:center; padding:4rem; background:#fff; border-radius:12px; border:1px solid #e2e8f0;">
-                <p style="font-size:1.1rem; font-weight:700; color:#0f172a; margin-bottom:0.5rem;">No questions match your filter selection</p>
-                <p style="font-size:0.85rem; color:#64748b;">Try adjusting your selected years, month sessions, or syllabus chapters.</p>
-            </div>
-        `;
+        const noChaptersSelected = appState.selectedChapters.length === 0 && appState.selectedSubtopics.length === 0;
+        if (noChaptersSelected) {
+            listContainer.innerHTML = `
+                <div class="empty-state-card">
+                    <div class="empty-state-icon">📚</div>
+                    <p class="empty-state-title">No Syllabus Chapters Selected</p>
+                    <p class="empty-state-subtitle">Check one or more syllabus chapters or subtopics in the filter panel to display questions, or select all chapters below.</p>
+                    <div class="empty-state-actions">
+                        <button type="button" class="btn btn-accent" id="emptySelectAllChaptersBtn">✓ Select All Chapters</button>
+                        <button type="button" class="btn btn-outline mobile-only-btn" id="emptyOpenSidebarBtn">🎛️ Choose Chapters</button>
+                    </div>
+                </div>
+            `;
+            const selectAllBtn = document.getElementById("emptySelectAllChaptersBtn");
+            if (selectAllBtn) {
+                selectAllBtn.addEventListener("click", () => {
+                    document.querySelectorAll(".chapter-checkbox, .subtopic-checkbox").forEach(cb => {
+                        cb.checked = true;
+                        cb.indeterminate = false;
+                    });
+                    handleFilterChange();
+                });
+            }
+            const openDrawerBtn = document.getElementById("emptyOpenSidebarBtn");
+            if (openDrawerBtn) {
+                openDrawerBtn.addEventListener("click", openMobileSidebar);
+            }
+        } else {
+            listContainer.innerHTML = `
+                <div class="empty-state-card">
+                    <div class="empty-state-icon">🔍</div>
+                    <p class="empty-state-title">No questions match your filter selection</p>
+                    <p class="empty-state-subtitle">Try adjusting your selected years, exam sessions, paper components, or search query.</p>
+                </div>
+            `;
+        }
         return;
     }
 
@@ -998,54 +1112,109 @@ function saveTestToLocalStorage() {
 }
 
 function renderPagination() {
-    const container = document.getElementById("paginationControls");
-    container.innerHTML = "";
+    const containers = [
+        document.getElementById("paginationControls"),
+        document.getElementById("paginationControlsBottom")
+    ].filter(Boolean);
 
-    if (appState.totalPages <= 1) return;
+    const total = appState.totalMatching || 0;
+    const totalPages = appState.totalPages || 1;
+    const current = appState.currentPage || 1;
+    const perPage = appState.perPage || 15;
 
-    const prevBtn = document.createElement("button");
-    prevBtn.className = "page-btn";
-    prevBtn.textContent = "◀ Previous";
-    prevBtn.disabled = appState.currentPage === 1;
-    prevBtn.addEventListener("click", () => {
-        if (appState.currentPage > 1) {
-            appState.currentPage--;
-            fetchQuestions();
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        }
-    });
-    container.appendChild(prevBtn);
-
-    let startPage = Math.max(1, appState.currentPage - 3);
-    let endPage = Math.min(appState.totalPages, startPage + 6);
-    if (endPage - startPage < 6) {
-        startPage = Math.max(1, endPage - 6);
-    }
-
-    for (let p = startPage; p <= endPage; p++) {
-        const btn = document.createElement("button");
-        btn.className = `page-btn ${p === appState.currentPage ? "active" : ""}`;
-        btn.textContent = p;
-        btn.addEventListener("click", () => {
-            appState.currentPage = p;
-            fetchQuestions();
-            window.scrollTo({ top: 0, behavior: "smooth" });
+    if (total === 0 || totalPages <= 1) {
+        containers.forEach(c => {
+            c.innerHTML = "";
+            c.style.display = "none";
         });
-        container.appendChild(btn);
+        return;
     }
 
-    const nextBtn = document.createElement("button");
-    nextBtn.className = "page-btn";
-    nextBtn.textContent = "Next ▶";
-    nextBtn.disabled = appState.currentPage === appState.totalPages;
-    nextBtn.addEventListener("click", () => {
-        if (appState.currentPage < appState.totalPages) {
-            appState.currentPage++;
-            fetchQuestions();
+    const startIdx = (current - 1) * perPage + 1;
+    const endIdx = Math.min(total, current * perPage);
+
+    const goToPage = (targetPage) => {
+        if (targetPage < 1 || targetPage > totalPages || targetPage === appState.currentPage) return;
+        appState.currentPage = targetPage;
+        fetchQuestions();
+        const topAnchor = document.getElementById("paginationControls") || document.querySelector(".toolbar-card");
+        if (topAnchor) {
+            const y = Math.max(0, topAnchor.getBoundingClientRect().top + window.scrollY - 82);
+            window.scrollTo({ top: y, behavior: "smooth" });
+        } else {
             window.scrollTo({ top: 0, behavior: "smooth" });
         }
+    };
+
+    containers.forEach(container => {
+        container.innerHTML = "";
+        container.style.display = "flex";
+
+        const info = document.createElement("div");
+        info.className = "pagination-info";
+        info.innerHTML = `Page <strong>${current}</strong> of <strong>${totalPages}</strong> <span class="pagination-range">• Showing ${startIdx.toLocaleString()}–${endIdx.toLocaleString()} of ${total.toLocaleString()}</span>`;
+        container.appendChild(info);
+
+        const btnGroup = document.createElement("div");
+        btnGroup.className = "pagination-buttons";
+
+        const prevBtn = document.createElement("button");
+        prevBtn.type = "button";
+        prevBtn.className = "page-btn page-nav-btn";
+        prevBtn.innerHTML = `◀ <span>Prev</span>`;
+        prevBtn.disabled = current === 1;
+        prevBtn.addEventListener("click", () => goToPage(current - 1));
+        btnGroup.appendChild(prevBtn);
+
+        let startPage = Math.max(1, current - 2);
+        let endPage = Math.min(totalPages, startPage + 4);
+        if (endPage - startPage < 4) {
+            startPage = Math.max(1, endPage - 4);
+        }
+
+        const createPageBtn = (p) => {
+            const btn = document.createElement("button");
+            btn.type = "button";
+            btn.className = `page-btn ${p === current ? "active" : ""}`;
+            btn.textContent = p;
+            btn.addEventListener("click", () => goToPage(p));
+            return btn;
+        };
+
+        if (startPage > 1) {
+            btnGroup.appendChild(createPageBtn(1));
+            if (startPage > 2) {
+                const dots = document.createElement("span");
+                dots.className = "page-ellipsis";
+                dots.textContent = "…";
+                btnGroup.appendChild(dots);
+            }
+        }
+
+        for (let p = startPage; p <= endPage; p++) {
+            btnGroup.appendChild(createPageBtn(p));
+        }
+
+        if (endPage < totalPages) {
+            if (endPage < totalPages - 1) {
+                const dots = document.createElement("span");
+                dots.className = "page-ellipsis";
+                dots.textContent = "…";
+                btnGroup.appendChild(dots);
+            }
+            btnGroup.appendChild(createPageBtn(totalPages));
+        }
+
+        const nextBtn = document.createElement("button");
+        nextBtn.type = "button";
+        nextBtn.className = "page-btn page-nav-btn";
+        nextBtn.innerHTML = `<span>Next</span> ▶`;
+        nextBtn.disabled = current === totalPages;
+        nextBtn.addEventListener("click", () => goToPage(current + 1));
+        btnGroup.appendChild(nextBtn);
+
+        container.appendChild(btnGroup);
     });
-    container.appendChild(nextBtn);
 }
 
 // Modal Functions

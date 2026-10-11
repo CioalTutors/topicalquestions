@@ -144,17 +144,26 @@
         </div>
     </header>
 
+    <!-- Mobile Sidebar Backdrop Overlay -->
+    <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+
     <!-- Main Container -->
     <div class="app-container">
         
         <!-- Filter Sidebar -->
-        <aside class="app-sidebar">
+        <aside class="app-sidebar" id="appSidebar">
             
+            <!-- Mobile-only Drawer Header -->
+            <div class="mobile-sidebar-header">
+                <span class="mobile-sidebar-title">🎛️ Filters & Syllabus Chapters</span>
+                <button type="button" class="mobile-sidebar-close" id="closeMobileSidebarBtn" aria-label="Close Filters">&times;</button>
+            </div>
+
             <!-- Show Mark Scheme Toggle (Above Curriculum Tier) -->
             <div class="ms-toggle-section">
                 <label class="custom-checkbox ms-toggle-label" style="padding:0;">
                     <input type="checkbox" id="showMarkSchemeCheckbox">
-                    <span>✅ Show Mark Scheme</span>
+                    <span>📋 Show Mark Scheme</span>
                 </label>
             </div>
 
@@ -266,18 +275,36 @@
                 </div>
             </div>
 
+            <!-- Mobile-only Sticky Apply Button -->
+            <div class="mobile-sidebar-footer">
+                <button type="button" class="btn btn-accent" id="applyMobileFiltersBtn" style="width:100%; font-weight:800;">
+                    ✓ Apply & View Questions
+                </button>
+            </div>
+
         </aside>
 
         <!-- Main Workspace -->
         <main class="app-main">
             
+            <!-- Mobile Quick Filter & Mark Scheme Bar -->
+            <div class="mobile-filter-bar">
+                <button type="button" class="btn btn-outline mobile-filter-btn" id="openMobileSidebarBtn">
+                    🎛️ Chapters & Filters <span class="mobile-filter-badge" id="mobileChapterCountBadge">0</span>
+                </button>
+                <label class="custom-checkbox mobile-ms-QuickToggle">
+                    <input type="checkbox" id="mobileShowMarkSchemeCheckbox">
+                    <span>📋 Mark Scheme</span>
+                </label>
+            </div>
+
             <!-- Toolbar -->
             <div class="toolbar-card">
                 <div class="search-box">
                     <span style="color:#94a3b8;">🔍</span>
                     <input type="text" id="searchQuery" placeholder="Search questions by topic, keyword, or paper ID (e.g. refraction, density, s24)...">
                 </div>
-                <div class="toolbar-actions" style="display:flex; align-items:center; gap:0.75rem;">
+                <div class="toolbar-actions">
                     <span id="matchingCount" style="font-weight:700; color:#1e293b; font-size:0.85rem; white-space:nowrap;">Loading questions...</span>
                     <button class="btn btn-sm btn-accent" id="addAllFilteredBtn" title="Add all currently filtered questions to test">
                         + Add All to Test (<span id="addAllCount">0</span>)
@@ -285,13 +312,16 @@
                 </div>
             </div>
 
+            <!-- Clean Green Pagination Above Questions -->
+            <div class="pagination-controls" id="paginationControls" style="display:none;"></div>
+
             <!-- Questions List -->
             <div class="questions-list" id="questionsList">
                 <!-- Question cards populated here -->
             </div>
 
-            <!-- Pagination -->
-            <div class="pagination-controls" id="paginationControls"></div>
+            <!-- Bottom Pagination (synced) -->
+            <div class="pagination-controls" id="paginationControlsBottom" style="display:none;"></div>
 
         </main>
     </div>
@@ -323,7 +353,7 @@
                 
                 <!-- View 1: List and Configuration -->
                 <div id="testBuilderView">
-                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem; margin-bottom:1.5rem; background:#f8faf5; padding:1.25rem; border-radius:8px; border:1px solid #e2e8f0;">
+                    <div class="test-config-grid">
                         <div>
                             <label style="display:block; font-size:0.78rem; font-weight:700; text-transform:uppercase; color:#64748b; margin-bottom:0.35rem;">Test Title</label>
                             <input type="text" id="customTestTitle" value="Weekly Physics Assessment" style="width:100%; padding:0.45rem 0.65rem; border:1px solid #cbd5e1; border-radius:6px; font-size:0.88rem;">
@@ -332,13 +362,13 @@
                             <label style="display:block; font-size:0.78rem; font-weight:700; text-transform:uppercase; color:#64748b; margin-bottom:0.35rem;">Time Allowed <span style="font-size:0.72rem; color:#166534; font-weight:600;">(Auto: 1.125 × Marks)</span></label>
                             <input type="text" id="customTimeAllowed" value="45 minutes" placeholder="Auto-calculated (1.125 × Marks)" style="width:100%; padding:0.45rem 0.65rem; border:1px solid #cbd5e1; border-radius:6px; font-size:0.88rem;">
                         </div>
-                        <div style="grid-column: span 2;">
+                        <div class="test-config-full">
                             <label style="display:block; font-size:0.78rem; font-weight:700; text-transform:uppercase; color:#64748b; margin-bottom:0.35rem;">Instructions for Candidates</label>
                             <input type="text" id="customInstructions" value="Answer all questions in the spaces provided. Show all your working. Calculators may be used." style="width:100%; padding:0.45rem 0.65rem; border:1px solid #cbd5e1; border-radius:6px; font-size:0.88rem;">
                         </div>
                     </div>
 
-                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem; flex-wrap:wrap; gap:0.5rem;">
                         <h4 style="font-size:0.95rem; font-weight:700;" id="modalTestSummaryStats">Selected Questions</h4>
                         <button class="btn btn-sm btn-outline" id="clearAllTestQuestionsBtn" style="color:#ef4444; border-color:#fecaca;">Clear All</button>
                     </div>
@@ -370,7 +400,7 @@
             <!-- Footer Actions for Builder View -->
             <div class="modal-footer" id="modalFooterActionsBuilder">
                 <button class="btn btn-outline" onclick="closeTestModal()">Close</button>
-                <div style="display:flex; gap:0.5rem;">
+                <div class="modal-footer-right">
                     <button class="btn btn-outline" id="viewMarkSchemeBtn">📋 View Mark Scheme Mapping</button>
                     <button class="btn btn-accent" id="previewPaperBtn">📄 Preview & Print Test Paper ▶</button>
                 </div>
@@ -379,7 +409,7 @@
             <!-- Footer Actions for Preview View -->
             <div class="modal-footer" id="modalFooterActionsPreview" style="display:none;">
                 <button class="btn btn-outline" id="backToTestBuilderBtn">◀ Back to Builder</button>
-                <div style="display:flex; gap:0.5rem;">
+                <div class="modal-footer-right">
                     <button class="btn btn-outline" id="openNewTabPrintBtn" title="Open test paper in full new tab without modal restrictions">🔗 Open Full Page in New Tab</button>
                     <button class="btn btn-accent" id="printPaperBtn">🖨️ Print / Save as PDF</button>
                 </div>
@@ -391,6 +421,6 @@
     <!-- Standalone Print Container (outside all modals for perfect multi-page browser printing) -->
     <div id="printPaperRoot" style="display:none;"></div>
 
-    <script src="static/js/app.js?v=12"></script>
+    <script src="static/js/app.js?v=13"></script>
 </body>
 </html>
