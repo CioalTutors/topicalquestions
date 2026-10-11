@@ -256,19 +256,20 @@ async function ensureSubjectDatabaseLoaded(subject) {
             questionsData = window.CIOAL_STATIC_DB[subjKey].questions;
         }
     } else {
+        const cacheBuster = "?v=16";
         try {
             [syllabusData, questionsData] = await Promise.all([
-                fetch(cfg.syllabusUrl).then(r => {
+                fetch(`${cfg.syllabusUrl}${cacheBuster}`).then(r => {
                     if (!r.ok) throw new Error(`Failed to load ${cfg.syllabusUrl}`);
                     return r.json();
                 }),
-                fetch(cfg.questionsUrl).then(r => {
+                fetch(`${cfg.questionsUrl}${cacheBuster}`).then(r => {
                     if (!r.ok) throw new Error(`Failed to load ${cfg.questionsUrl}`);
                     return r.json();
                 })
             ]);
         } catch (fetchErr) {
-            await loadScriptBundle(cfg.jsBundleUrl);
+            await loadScriptBundle(`${cfg.jsBundleUrl}${cacheBuster}`);
             if (window.CIOAL_STATIC_DB && window.CIOAL_STATIC_DB[subjKey]) {
                 syllabusData = window.CIOAL_STATIC_DB[subjKey].syllabus;
                 questionsData = window.CIOAL_STATIC_DB[subjKey].questions;
@@ -293,17 +294,18 @@ async function ensureSubjectDatabaseLoaded(subject) {
         });
     });
 
+    const isFileProto = (window.location.protocol === "file:");
+    const imgCacheSuffix = isFileProto ? "" : "?v=16";
     const questionsById = {};
     questionsData.forEach(q => {
         q.paper_type = String(q.paper_type ?? q.paper_num ?? "");
-        // Ensure static relative image URLs are set
-        if (!q.image_url || q.image_url.startsWith("/") || q.image_url.endsWith("/")) {
-            const relImg = (q.image_rel_path || q.image_path || "").replace(/\\/g, "/");
-            q.image_url = relImg ? encodeURI(`${cfg.catDir}/${relImg}`) : "";
+        const relImg = (q.image_rel_path || q.image_path || "").replace(/\\/g, "/");
+        if (relImg) {
+            q.image_url = encodeURI(`${cfg.catDir}/${relImg}`) + imgCacheSuffix;
         }
-        if (!q.is_mc && (!q.ms_image_url || q.ms_image_url.startsWith("/") || q.ms_image_url.endsWith("/"))) {
+        if (!q.is_mc) {
             const relMs = (q.ms_image_rel_path || q.ms_image_path || "").replace(/\\/g, "/");
-            q.ms_image_url = relMs ? encodeURI(`${cfg.catDir}/${relMs}`) : null;
+            q.ms_image_url = relMs ? (encodeURI(`${cfg.catDir}/${relMs}`) + imgCacheSuffix) : null;
         }
         questionsById[q.id] = q;
     });
@@ -1592,6 +1594,180 @@ function showPrintPreview() {
     renderExamPaperView();
 }
 
+// Automatically slice any single <img> that loads taller than 1 page (fallback if qp_slices not precomputed)
+function computeClientImageSlices(imgEl) {
+    const w = imgEl.naturalWidth;
+    const h = imgEl.naturalHeight;
+    const maxSingleH = Math.round(w * 1.23);
+    if (!w || !h || h <= maxSingleH) return [[0, h, w, h]];
+
+    const maxFirstH = Math.round(w * 1.18);
+    const maxContH = Math.round(w * 1.35);
+
+    try {
+        const canvas = document.createElement("canvas");
+        canvas.width = w;
+        canvas.height = h;
+        const ctx = canvas.getContext("2d", { willReadFrequently: true });
+        ctx.drawImage(imgEl, 0, 0);
+        const data = ctx.getImageData(0, 0, w, h).data;
+
+        const baseCost = new Float32Array(h);
+        for (let y = 0; y < h; y++) {
+            let dc = 0;
+            let mrun = 0;
+            let cur = 0;
+            const rowOff = y * w * 4;
+            for (let x = 0; x < w; x++) {
+                const i = rowOff + x * 4;
+                if (data[i] < 200 || data[i + 1] < 200 || data[i + 2] < 200) {
+                    dc++;
+                    cur++;
+                    if (cur > mrun) mrun = cur;
+                } else {
+                    cur = 0;
+                }
+            }
+            if (dc === 0) baseCost[y] = 0;
+            else if (dc <= 12 && mrun <= 4) baseCost[y] = 45;
+            else baseCost[y] = 800 + dc;
+        }
+
+        const winCost = new Float32Array(h);
+        for (let y = 0; y < h; y++) {
+            const y0 = Math.max(0, y - 2);
+            const y1 = Math.min(h, y + 3);
+            let sum = 0;
+            for (let r = y0; r < y1; r++) sum += baseCost[r];
+            winCost[y] = sum / (y1 - y0);
+        }
+
+        const slices = [];
+        let curY = 0;
+        let isFirst = true;
+        while (curY < h) {
+            const rem = h - curY;
+            const limitH = isFirst ? maxFirstH : maxContH;
+            if (rem <= limitH) {
+                slices.push([curY, rem, w, h]);
+                break;
+            }
+            let minAllowed, maxAllowed, idealY;
+            if (rem <= limitH + maxContH) {
+                minAllowed = Math.max(curY + Math.round(limitH * 0.45), h - maxContH + 15);
+                maxAllowed = curY + limitH;
+                idealY = Math.min(maxAllowed - 15, Math.max(minAllowed, curY + Math.round(rem * 0.50)));
+            } else {
+                minAllowed = curY + Math.round(limitH * 0.55);
+                maxAllowed = curY + limitH;
+                idealY = curY + Math.round(limitH * 0.88);
+            }
+            minAllowed = Math.max(curY + 150, Math.min(minAllowed, maxAllowed - 10));
+            let bestY = idealY;
+            let bestScore = 1e18;
+            for (let y = minAllowed; y <= maxAllowed; y++) {
+                const score = winCost[y] + baseCost[y] * 2.0 + Math.abs(y - idealY) * 0.012;
+                if (score < bestScore) {
+                    bestScore = score;
+                    bestY = y;
+                }
+            }
+            slices.push([curY, bestY - curY, w, h]);
+            curY = bestY;
+            isFirst = false;
+        }
+        return slices;
+    } catch (e) {
+        const slices = [];
+        let curY = 0;
+        let isFirst = true;
+        while (curY < h) {
+            const rem = h - curY;
+            const limitH = isFirst ? maxFirstH : maxContH;
+            if (rem <= limitH) {
+                slices.push([curY, rem, w, h]);
+                break;
+            }
+            const splitH = (rem <= limitH + maxContH) ? Math.min(limitH, Math.round(rem * 0.5)) : Math.round(limitH * 0.88);
+            slices.push([curY, splitH, w, h]);
+            curY += splitH;
+            isFirst = false;
+        }
+        return slices;
+    }
+}
+
+function buildSvgSliceHtml(imgUrl, y0, sh, w, h) {
+    return `<svg viewBox="0 ${y0} ${w} ${sh}" width="${w}" height="${sh}" class="exam-q-svg-slice" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><image href="${imgUrl}" xlink:href="${imgUrl}" width="${w}" height="${h}" /></svg>`;
+}
+
+window.autoSliceTallExamImg = function(imgEl) {
+    if (!imgEl || !imgEl.naturalWidth || !imgEl.naturalHeight) return;
+    if (imgEl.naturalHeight <= Math.round(imgEl.naturalWidth * 1.23)) return;
+    const itemEl = imgEl.closest(".exam-question-item");
+    const firstBlockEl = imgEl.closest(".exam-q-first-block");
+    const firstWrapEl = imgEl.closest(".exam-q-seg-wrap");
+    if (!itemEl || !firstBlockEl || !firstWrapEl || itemEl.dataset.autoSliced === "1") return;
+    itemEl.dataset.autoSliced = "1";
+
+    const slices = computeClientImageSlices(imgEl);
+    if (!slices || slices.length <= 1) return;
+
+    const src = imgEl.getAttribute("src");
+    itemEl.classList.remove("single-seg");
+    itemEl.classList.add("multi-seg");
+
+    const [y0, sh0, w0, h0] = slices[0];
+    firstWrapEl.innerHTML = buildSvgSliceHtml(src, y0, sh0, w0, h0);
+
+    for (let i = 1; i < slices.length; i++) {
+        const [sy, ssh, sw, sh] = slices[i];
+        const contDiv = document.createElement("div");
+        contDiv.className = "exam-q-seg-wrap exam-q-continuation-seg";
+        contDiv.innerHTML = buildSvgSliceHtml(src, sy, ssh, sw, sh);
+        itemEl.appendChild(contDiv);
+    }
+};
+
+function renderSlicedExamItemHtml(imgUrl, slices, badgeText, marks, altText) {
+    const marksLabel = `[Total: ${marks} Mark${marks > 1 ? "s" : ""}]`;
+    if (slices && slices.length > 1) {
+        const [y0, sh0, w0, h0] = slices[0];
+        const restHtml = slices.slice(1).map(([sy, ssh, sw, sh]) => `
+            <div class="exam-q-seg-wrap exam-q-continuation-seg">
+                ${buildSvgSliceHtml(imgUrl, sy, ssh, sw, sh)}
+            </div>
+        `).join("");
+        return `
+            <div class="exam-question-item multi-seg" data-auto-sliced="1">
+                <div class="exam-q-first-block">
+                    <div class="exam-q-header">
+                        <span class="exam-q-num-badge">${badgeText}</span>
+                        <span class="exam-q-marks">${marksLabel}</span>
+                    </div>
+                    <div class="exam-q-seg-wrap">
+                        ${buildSvgSliceHtml(imgUrl, y0, sh0, w0, h0)}
+                    </div>
+                </div>
+                ${restHtml}
+            </div>
+        `;
+    }
+    return `
+        <div class="exam-question-item single-seg">
+            <div class="exam-q-first-block">
+                <div class="exam-q-header">
+                    <span class="exam-q-num-badge">${badgeText}</span>
+                    <span class="exam-q-marks">${marksLabel}</span>
+                </div>
+                <div class="exam-q-seg-wrap">
+                    <img src="${imgUrl}" alt="${altText}" class="exam-q-img" loading="eager" onload="window.autoSliceTallExamImg && window.autoSliceTallExamImg(this)">
+                </div>
+            </div>
+        </div>
+    `;
+}
+
 // Generate the Exam Paper HTML matching the clean test builder cards, with Mark Scheme at the end
 function buildExamPaperHtml() {
     const cfg = SUBJECT_CONFIG[appState.subject] || SUBJECT_CONFIG.Physics;
@@ -1609,22 +1785,13 @@ function buildExamPaperHtml() {
     let markSchemesHtml = "";
 
     appState.testPaperQuestions.forEach((q, idx) => {
-        const urls = [q.image_url];
-        const isMultiSeg = false;
-
-        questionsHtml += `
-            <div class="exam-question-item single-seg">
-                <div class="exam-q-first-block">
-                    <div class="exam-q-header">
-                        <span class="exam-q-num-badge">Question ${idx + 1}</span>
-                        <span class="exam-q-marks">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
-                    </div>
-                    <div class="exam-q-seg-wrap">
-                        <img src="${urls[0]}" alt="Question ${idx + 1}" class="exam-q-img" loading="eager">
-                    </div>
-                </div>
-            </div>
-        `;
+        questionsHtml += renderSlicedExamItemHtml(
+            q.image_url,
+            q.qp_slices,
+            `Question ${idx + 1}`,
+            q.marks || 1,
+            `Question ${idx + 1}`
+        );
 
         // Build Mark Scheme item for the end of the paper
         if (q.is_mc) {
@@ -1641,19 +1808,13 @@ function buildExamPaperHtml() {
                 </div>
             `;
         } else if (q.ms_image_url) {
-            markSchemesHtml += `
-                <div class="exam-question-item single-seg">
-                    <div class="exam-q-first-block">
-                        <div class="exam-q-header">
-                            <span class="exam-q-num-badge">Question ${idx + 1} — Mark Scheme</span>
-                            <span class="exam-q-marks">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
-                        </div>
-                        <div class="exam-q-seg-wrap">
-                            <img src="${q.ms_image_url}" alt="Mark Scheme Question ${idx + 1}" class="exam-q-img" loading="eager">
-                        </div>
-                    </div>
-                </div>
-            `;
+            markSchemesHtml += renderSlicedExamItemHtml(
+                q.ms_image_url,
+                q.ms_slices,
+                `Question ${idx + 1} — Mark Scheme`,
+                q.marks || 1,
+                `Mark Scheme Question ${idx + 1}`
+            );
         }
     });
 
@@ -1717,7 +1878,7 @@ function handleDirectPrint() {
 
 function openFullPagePrintTab() {
     renderExamPaperView();
-    const paperHtml = buildExamPaperHtml();
+    const paperHtml = document.getElementById("printPaperRoot").innerHTML || buildExamPaperHtml();
     const cfg = SUBJECT_CONFIG[appState.subject] || SUBJECT_CONFIG.Physics;
     const title = document.getElementById("customTestTitle").value || cfg.defaultTestTitle;
     const baseHref = window.location.href.split("?")[0].split("#")[0];
@@ -1734,7 +1895,7 @@ function openFullPagePrintTab() {
             <meta charset="UTF-8">
             <base href="${baseHref}">
             <title>${title} - Cioal Tutors</title>
-            <link rel="stylesheet" href="static/css/style.css?v=7">
+            <link rel="stylesheet" href="static/css/style.css?v=10">
             <style>
                 body {
                     background: #f8faf5;

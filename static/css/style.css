@@ -711,22 +711,22 @@ body {
   padding: 1rem;
   background: #ffffff;
   text-align: center;
-  break-inside: avoid !important;
-  page-break-inside: avoid !important;
 }
 
 .exam-q-continuation-seg {
   border-top: 1px dashed #e2e8f0;
+  break-inside: avoid !important;
+  page-break-inside: avoid !important;
 }
 
-.exam-q-img {
+.exam-q-img,
+.exam-q-svg-slice {
   width: 100% !important;
   max-width: 100% !important;
   height: auto !important;
   display: block !important;
   margin: 0 auto !important;
-  break-inside: avoid !important;
-  page-break-inside: avoid !important;
+  overflow: hidden;
 }
 
 /* =========================================================
@@ -1906,21 +1906,32 @@ body {
 
   .exam-q-seg-wrap,
   .exam-q-img-wrap {
-    padding: 0.15rem 0.3rem !important;
+    padding: 0.12rem 0.25rem !important;
     background: #ffffff !important;
     text-align: center !important;
+  }
+
+  .exam-q-first-block > .exam-q-seg-wrap {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+
+  .exam-q-continuation-seg {
+    border-top: none !important;
     break-inside: avoid !important;
     page-break-inside: avoid !important;
   }
 
-  .exam-q-img {
+  .exam-q-img,
+  .exam-q-svg-slice {
     width: 100% !important;
     max-width: 100% !important;
     height: auto !important;
     display: block !important;
     margin: 0 auto !important;
-    break-inside: avoid !important;
-    page-break-inside: avoid !important;
+    overflow: hidden !important;
+    break-inside: auto !important;
+    page-break-inside: auto !important;
   }
 
   .exam-mark-scheme-section {
