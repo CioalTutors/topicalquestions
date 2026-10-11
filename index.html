@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cioal Tutor Topical Questions • IGCSE Physics (0625)</title>
+    <link rel="stylesheet" href="static/css/style.css?v=7">
+    <link rel="icon" type="image/jpeg" href="static/cioaltutors.jpg">
+</head>
+<body>
+
+    <!-- Splash Screen (Lime Green Theme with Icon on Top) -->
+    <div class="splash-overlay" id="splashScreen">
+        <div class="splash-container">
+            <div class="splash-brand">
+                <div class="splash-logo-wrap">
+                    <img src="static/cioaltutors.jpg" alt="Cioal Tutors Icon" class="splash-logo">
+                </div>
+                <h1 class="splash-title">Cioal Tutor Topical Questions</h1>
+                <p class="splash-subtitle">Select your Examination Board, Qualification Level, and Subject to begin</p>
+            </div>
+
+            <!-- Step 1: Board -->
+            <div class="splash-step-group">
+                <div class="splash-step-label">
+                    <span class="splash-step-num">1</span> Select Examination Board
+                </div>
+                <div class="splash-options-grid-2" id="splashBoardGroup">
+                    <button type="button" class="splash-option-btn active" data-board="Cambridge">
+                        🏛️ Cambridge (CAIE)
+                    </button>
+                    <button type="button" class="splash-option-btn" data-board="Edexcel">
+                        🎓 Edexcel (Pearson)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 2: Level -->
+            <div class="splash-step-group">
+                <div class="splash-step-label">
+                    <span class="splash-step-num">2</span> Select Qualification Level
+                </div>
+                <div class="splash-options-grid-2" id="splashLevelGroup">
+                    <button type="button" class="splash-option-btn active" data-level="IGCSE / O Level">
+                        📘 IGCSE / O Level
+                    </button>
+                    <button type="button" class="splash-option-btn" data-level="A Level">
+                        📙 AS & A Level
+                    </button>
+                </div>
+            </div>
+
+            <!-- Step 3: Subject -->
+            <div class="splash-step-group" style="margin-bottom:0.5rem;">
+                <div class="splash-step-label">
+                    <span class="splash-step-num">3</span> Select Subject to Launch
+                </div>
+                <div class="splash-options-grid-3" id="splashSubjectGroup">
+                    <div class="splash-subject-card" data-subject="Physics">
+                        <span class="splash-subject-icon">⚛️</span>
+                        <span class="splash-subject-name">Physics</span>
+                        <span class="splash-subject-tag tag-ready" id="physicsStatusTag">0625 • Ready ▶</span>
+                    </div>
+                    <div class="splash-subject-card" data-subject="Chemistry">
+                        <span class="splash-subject-icon">🧪</span>
+                        <span class="splash-subject-name">Chemistry</span>
+                        <span class="splash-subject-tag tag-ready" id="chemistryStatusTag">0620 • Ready ▶</span>
+                    </div>
+                    <div class="splash-subject-card" data-subject="Math">
+                        <span class="splash-subject-icon">📐</span>
+                        <span class="splash-subject-name">Math</span>
+                        <span class="splash-subject-tag tag-ready" id="mathStatusTag">0580 • Ready ▶</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Coming Soon Screen (when other Board/Level is clicked) -->
+    <div class="splash-overlay hidden" id="comingSoonScreen">
+        <div class="splash-container" style="max-width:600px;">
+            <div class="splash-brand">
+                <div class="splash-logo-wrap">
+                    <img src="static/cioaltutors.jpg" alt="Cioal Tutors Icon" class="splash-logo">
+                </div>
+                <h1 class="splash-title">Cioal Tutor Topical Questions</h1>
+                <div style="margin-top:0.75rem; display:inline-block; background:#c6ff60; color:#14532d; font-weight:800; font-size:0.85rem; padding:0.3rem 0.9rem; border-radius:20px; border:1px solid #84cc16;" id="comingSoonBadge">
+                    Edexcel • IGCSE / O Level • Physics
+                </div>
+            </div>
+
+            <div style="background:#f8faf5; border:1.5px dashed #84cc16; border-radius:16px; padding:1.75rem 1.5rem; margin-bottom:1.5rem;">
+                <div style="font-size:2.5rem; margin-bottom:0.5rem;">🚧</div>
+                <h2 style="font-size:1.35rem; font-weight:800; color:#14532d; margin-bottom:0.4rem;">Coming Soon!</h2>
+                <p style="font-size:0.9rem; color:#475569; line-height:1.55;" id="comingSoonMessage">
+                    We are currently indexing and categorizing past papers and official mark schemes for this subject. Check back soon!
+                </p>
+            </div>
+
+            <div style="display:flex; justify-content:center; gap:0.55rem; flex-wrap:wrap;">
+                <button type="button" class="btn btn-outline" id="backToSplashBtn" style="font-weight:700; padding:0.55rem 0.95rem;">
+                    ◀ Back
+                </button>
+                <button type="button" class="btn btn-accent" id="launchPhysicsNowBtn" style="font-weight:800; padding:0.55rem 0.95rem;">
+                    ⚛️ Physics (0625) ▶
+                </button>
+                <button type="button" class="btn btn-accent" id="launchChemistryNowBtn" style="font-weight:800; padding:0.55rem 0.95rem;">
+                    🧪 Chemistry (0620) ▶
+                </button>
+                <button type="button" class="btn btn-accent" id="launchMathNowBtn" style="font-weight:800; padding:0.55rem 0.95rem;">
+                    📐 Math (0580) ▶
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="app-header">
+        <div class="header-brand" style="cursor:pointer;" id="headerBrandHome" title="Return to Subject & Board Selection">
+            <img src="static/cioaltutors.jpg" alt="Cioal Tutors Logo" class="header-logo">
+            <div class="header-title-box">
+                <h1>Cioal Tutor Topical Questions <span class="badge-tag" id="headerSubjectBadge">IGCSE Physics 0625</span></h1>
+                <p class="header-subtitle" id="headerSubtitle">Cambridge 2026–2028 Syllabus Question Bank & Test Builder</p>
+            </div>
+        </div>
+        <div class="header-actions">
+            <button class="btn btn-sm btn-outline" id="openSplashBtn" title="Switch Exam Board, Level, or Subject">
+                🎓 Switch Subject / Board
+            </button>
+            <span style="font-size:0.82rem; color:#64748b; background:#f1f5e9; padding:0.35rem 0.75rem; border-radius:20px; font-weight:600;">
+                📚 <span id="totalQuestionsIndexed">4,258</span> Questions Indexed
+            </span>
+            <button class="btn btn-accent" id="openTestTrayBtn">
+                📝 My Test Paper (<span id="testTrayCountTop">0</span>)
+            </button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <div class="app-container">
+        
+        <!-- Filter Sidebar -->
+        <aside class="app-sidebar">
+            
+            <!-- Show Mark Scheme Toggle (Above Curriculum Tier) -->
+            <div class="ms-toggle-section">
+                <label class="custom-checkbox ms-toggle-label" style="padding:0;">
+                    <input type="checkbox" id="showMarkSchemeCheckbox">
+                    <span>✅ Show Mark Scheme</span>
+                </label>
+            </div>
+
+            <!-- Tier Filter -->
+            <div class="filter-section">
+                <div class="filter-header">
+                    <span class="filter-title">Curriculum Tier</span>
+                </div>
+                <div class="checkbox-grid">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="tier-checkbox" value="Core" checked>
+                        <span>Core</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="tier-checkbox" value="Extended" checked>
+                        <span>Extended</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Paper Type Filter -->
+            <div class="filter-section">
+                <div class="filter-header">
+                    <span class="filter-title">Paper Component</span>
+                </div>
+                <div class="checkbox-group" id="paperComponentsGroup">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="paper-type-checkbox" value="1" checked>
+                        <span>Paper 1 (MCQ Core)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="paper-type-checkbox" value="2" checked>
+                        <span>Paper 2 (MCQ Extended)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="paper-type-checkbox" value="3" checked>
+                        <span>Paper 3 (Theory Core)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="paper-type-checkbox" value="4" checked>
+                        <span>Paper 4 (Theory Extended)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="paper-type-checkbox" value="5" checked>
+                        <span>Paper 5 (Practical Test)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="paper-type-checkbox" value="6" checked>
+                        <span>Paper 6 (Alt to Practical)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Years Filter -->
+            <div class="filter-section">
+                <div class="filter-header">
+                    <span class="filter-title">Exam Year</span>
+                    <div>
+                        <span class="filter-link" id="selectAllYears">All</span> | 
+                        <span class="filter-link" id="clearYears">Clear</span>
+                    </div>
+                </div>
+                <div class="checkbox-grid-3">
+                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2026" checked> <span>2026</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2025" checked> <span>2025</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2024" checked> <span>2024</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2023" checked> <span>2023</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2022" checked> <span>2022</span></label>
+                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2021" checked> <span>2021</span></label>
+                </div>
+            </div>
+
+            <!-- Month / Series Filter -->
+            <div class="filter-section">
+                <div class="filter-header">
+                    <span class="filter-title">Exam Session</span>
+                    <div>
+                        <span class="filter-link" id="selectAllMonths">All</span> | 
+                        <span class="filter-link" id="clearMonths">Clear</span>
+                    </div>
+                </div>
+                <div class="checkbox-group">
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="month-checkbox" value="Feb/March" checked>
+                        <span>Feb / March (m)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="month-checkbox" value="May/June" checked>
+                        <span>May / June (s)</span>
+                    </label>
+                    <label class="custom-checkbox">
+                        <input type="checkbox" class="month-checkbox" value="Oct/Nov" checked>
+                        <span>Oct / Nov (w)</span>
+                    </label>
+                </div>
+            </div>
+
+            <!-- Chapters Filter -->
+            <div class="filter-section">
+                <div class="filter-header">
+                    <span class="filter-title">Syllabus Chapters</span>
+                    <div>
+                        <span class="filter-link" id="selectAllChapters">All</span> | 
+                        <span class="filter-link" id="clearChapters">Clear</span>
+                    </div>
+                </div>
+                <div id="syllabusChaptersList">
+                    <!-- Populated dynamically by JS -->
+                </div>
+            </div>
+
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="app-main">
+            
+            <!-- Toolbar -->
+            <div class="toolbar-card">
+                <div class="search-box">
+                    <span style="color:#94a3b8;">🔍</span>
+                    <input type="text" id="searchQuery" placeholder="Search questions by topic, keyword, or paper ID (e.g. refraction, density, s24)...">
+                </div>
+                <div class="toolbar-actions" style="display:flex; align-items:center; gap:0.75rem;">
+                    <span id="matchingCount" style="font-weight:700; color:#1e293b; font-size:0.85rem; white-space:nowrap;">Loading questions...</span>
+                    <button class="btn btn-sm btn-accent" id="addAllFilteredBtn" title="Add all currently filtered questions to test">
+                        + Add All to Test (<span id="addAllCount">0</span>)
+                    </button>
+                </div>
+            </div>
+
+            <!-- Questions List -->
+            <div class="questions-list" id="questionsList">
+                <!-- Question cards populated here -->
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination-controls" id="paginationControls"></div>
+
+        </main>
+    </div>
+
+    <!-- Floating Test Tray -->
+    <div class="test-tray" id="testTray" style="display:none;" onclick="openTestModal()">
+        <div class="test-tray-count">
+            <span id="testTrayCountNumber">0</span> Questions Selected
+        </div>
+        <span style="font-size:0.8rem; font-weight:700; color:#365314;" id="testTrayTotalMarks">0 Marks</span>
+        <button class="btn btn-sm btn-accent" style="pointer-events:none;">
+            Build Test Paper ▶
+        </button>
+    </div>
+
+    <!-- Test Builder & Print Modal -->
+    <div class="modal-overlay" id="testModal">
+        <div class="modal-window">
+            
+            <div class="modal-header">
+                <div style="display:flex; align-items:center; gap:0.6rem;">
+                    <img src="static/cioaltutors.jpg" alt="Logo" style="width:28px; height:28px; border-radius:4px;">
+                    <h3 class="modal-title">Cioal Tutors • Test Builder</h3>
+                </div>
+                <button class="modal-close" id="closeModalBtn">&times;</button>
+            </div>
+
+            <div class="modal-body">
+                
+                <!-- View 1: List and Configuration -->
+                <div id="testBuilderView">
+                    <div style="display:grid; grid-template-columns: 1fr 1fr; gap:1rem; margin-bottom:1.5rem; background:#f8faf5; padding:1.25rem; border-radius:8px; border:1px solid #e2e8f0;">
+                        <div>
+                            <label style="display:block; font-size:0.78rem; font-weight:700; text-transform:uppercase; color:#64748b; margin-bottom:0.35rem;">Test Title</label>
+                            <input type="text" id="customTestTitle" value="Weekly Physics Assessment" style="width:100%; padding:0.45rem 0.65rem; border:1px solid #cbd5e1; border-radius:6px; font-size:0.88rem;">
+                        </div>
+                        <div>
+                            <label style="display:block; font-size:0.78rem; font-weight:700; text-transform:uppercase; color:#64748b; margin-bottom:0.35rem;">Time Allowed <span style="font-size:0.72rem; color:#166534; font-weight:600;">(Auto: 1.125 × Marks)</span></label>
+                            <input type="text" id="customTimeAllowed" value="45 minutes" placeholder="Auto-calculated (1.125 × Marks)" style="width:100%; padding:0.45rem 0.65rem; border:1px solid #cbd5e1; border-radius:6px; font-size:0.88rem;">
+                        </div>
+                        <div style="grid-column: span 2;">
+                            <label style="display:block; font-size:0.78rem; font-weight:700; text-transform:uppercase; color:#64748b; margin-bottom:0.35rem;">Instructions for Candidates</label>
+                            <input type="text" id="customInstructions" value="Answer all questions in the spaces provided. Show all your working. Calculators may be used." style="width:100%; padding:0.45rem 0.65rem; border:1px solid #cbd5e1; border-radius:6px; font-size:0.88rem;">
+                        </div>
+                    </div>
+
+                    <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:0.75rem;">
+                        <h4 style="font-size:0.95rem; font-weight:700;" id="modalTestSummaryStats">Selected Questions</h4>
+                        <button class="btn btn-sm btn-outline" id="clearAllTestQuestionsBtn" style="color:#ef4444; border-color:#fecaca;">Clear All</button>
+                    </div>
+
+                    <div class="test-questions-sortable" id="testQuestionsSortableList">
+                        <!-- Sorted question items -->
+                    </div>
+                </div>
+
+                <!-- View 2: Printable Exam Paper -->
+                <div id="testPaperPreviewView" style="display:none;">
+                    <div class="no-print" style="background:#f0fdf4; border:1px solid #bbf7d0; border-radius:8px; padding:0.65rem 1rem; margin-bottom:1rem; font-size:0.83rem; color:#166534; display:flex; align-items:center; gap:0.5rem;">
+                        <span>💡 <strong>Print Tip:</strong> For 100% clean pages without browser URLs or dates, make sure <strong>"Headers and footers"</strong> is <em>unchecked</em> in your browser print settings (under More settings).</span>
+                    </div>
+                    <div id="examPaperPrintArea">
+                        <!-- Generated Exam Paper -->
+                    </div>
+                </div>
+
+                <!-- View 3: Mark Scheme Reference -->
+                <div id="markSchemePreviewView" style="display:none;">
+                    <div id="markSchemeArea">
+                        <!-- Generated Mark Scheme Mapping -->
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Footer Actions for Builder View -->
+            <div class="modal-footer" id="modalFooterActionsBuilder">
+                <button class="btn btn-outline" onclick="closeTestModal()">Close</button>
+                <div style="display:flex; gap:0.5rem;">
+                    <button class="btn btn-outline" id="viewMarkSchemeBtn">📋 View Mark Scheme Mapping</button>
+                    <button class="btn btn-accent" id="previewPaperBtn">📄 Preview & Print Test Paper ▶</button>
+                </div>
+            </div>
+
+            <!-- Footer Actions for Preview View -->
+            <div class="modal-footer" id="modalFooterActionsPreview" style="display:none;">
+                <button class="btn btn-outline" id="backToTestBuilderBtn">◀ Back to Builder</button>
+                <div style="display:flex; gap:0.5rem;">
+                    <button class="btn btn-outline" id="openNewTabPrintBtn" title="Open test paper in full new tab without modal restrictions">🔗 Open Full Page in New Tab</button>
+                    <button class="btn btn-accent" id="printPaperBtn">🖨️ Print / Save as PDF</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Standalone Print Container (outside all modals for perfect multi-page browser printing) -->
+    <div id="printPaperRoot" style="display:none;"></div>
+
+    <script src="static/js/app.js?v=11"></script>
+</body>
+</html>
