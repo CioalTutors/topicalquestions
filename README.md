@@ -1,11 +1,12 @@
 # Cioal Tutors IGCSE Topical Question Bank & Test Builder (GitHub Pages Static Edition)
 
-A 100% static, serverless web application for browsing and building custom IGCSE topical test papers and mark schemes across:
+A 100% static, serverless web application for browsing and building custom IGCSE topical test papers and mark schemes across all 4 subjects:
 - **Cambridge IGCSE Physics (0625)** — 4,258 questions (2021–2026)
 - **Cambridge IGCSE Chemistry (0620)** — 3,933 questions (2021–2026)
+- **Cambridge IGCSE Biology (0610)** — 3,838 questions (2021–2026)
 - **Cambridge IGCSE Mathematics (0580)** — 2,973 questions (2021–2026)
 
-All **11,164 questions** and **20,761 question/mark-scheme images** are pre-indexed and optimized (~365 MB total) to fit comfortably within GitHub Pages' free 1 GB limit.
+All **15,002 questions** and **20,644 question/mark-scheme images** are pre-indexed and ultra-compressed (**~180 MB total**, down from **1.75 GB** raw — a **90% reduction**) to fit comfortably within GitHub Pages' free 1 GB limit.
 
 ---
 

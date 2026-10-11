@@ -1,5 +1,5 @@
 // Cioal Tutors IGCSE Test Builder - Static Serverless Frontend (GitHub Pages Edition)
-// Supports Physics (0625), Chemistry (0620) & Mathematics (0580) completely client-side
+// Supports Physics (0625), Chemistry (0620), Biology (0610) & Mathematics (0580) completely client-side
 
 const SUBJECT_CONFIG = {
     Physics: {
@@ -37,6 +37,28 @@ const SUBJECT_CONFIG = {
         questionsUrl: "data/chemistry_questions.json",
         jsBundleUrl: "data/chemistry_db.js",
         catDir: "Categorized_Questions_Chemistry",
+        papers: [
+            { value: "1", label: "Paper 1 (MCQ Core)", tier: "Core" },
+            { value: "2", label: "Paper 2 (MCQ Extended)", tier: "Extended" },
+            { value: "3", label: "Paper 3 (Theory Core)", tier: "Core" },
+            { value: "4", label: "Paper 4 (Theory Extended)", tier: "Extended" },
+            { value: "5", label: "Paper 5 (Practical Test)", tier: "Both" },
+            { value: "6", label: "Paper 6 (Alt to Practical)", tier: "Both" }
+        ]
+    },
+    Biology: {
+        code: "0610",
+        badge: "IGCSE Biology 0610",
+        docTitle: "Cioal Tutor Topical Questions • IGCSE Biology (0610)",
+        subtitle: "Cambridge 2026–2028 Syllabus Question Bank & Test Builder",
+        examLabel: "Cambridge IGCSE™ Biology (0610)",
+        defaultTestTitle: "Weekly Biology Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. osmosis, enzyme, photosynthesis, s26)...",
+        storageKey: "cioal_test_paper_biology",
+        syllabusUrl: "data/biology_syllabus.json",
+        questionsUrl: "data/biology_questions.json",
+        jsBundleUrl: "data/biology_db.js",
+        catDir: "Categorized_Questions_Biology",
         papers: [
             { value: "1", label: "Paper 1 (MCQ Core)", tier: "Core" },
             { value: "2", label: "Paper 2 (MCQ Extended)", tier: "Extended" },
@@ -217,7 +239,7 @@ function searchQuestionsStatic(db, payload) {
 
         if (years.length > 0 && !years.includes(parseInt(q.year))) continue;
         if (months.length > 0 && !months.includes(q.month)) continue;
-        if (tiers.length > 0 && !tiers.includes(q.tier)) continue;
+        if (tiers.length > 0 && !tiers.includes(q.tier) && q.tier !== "Both") continue;
         const qPaperType = String(q.paper_type ?? q.paper_num ?? "");
         if (paperTypes.length > 0 && !paperTypes.includes(qPaperType)) continue;
 
@@ -296,6 +318,7 @@ function searchQuestionsStatic(db, payload) {
 function updateSplashSubjectTags() {
     const physTag = document.getElementById("physicsStatusTag");
     const chemTag = document.getElementById("chemistryStatusTag");
+    const bioTag = document.getElementById("biologyStatusTag");
     const mathTag = document.getElementById("mathStatusTag");
     const isCaieIgcse = (splashState.board === "Cambridge" && splashState.level === "IGCSE / O Level");
 
@@ -306,6 +329,10 @@ function updateSplashSubjectTags() {
     if (chemTag) {
         chemTag.textContent = isCaieIgcse ? "0620 • Ready ▶" : "Coming Soon";
         chemTag.className = isCaieIgcse ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+    }
+    if (bioTag) {
+        bioTag.textContent = isCaieIgcse ? "0610 • Ready ▶" : "Coming Soon";
+        bioTag.className = isCaieIgcse ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
     }
     if (mathTag) {
         mathTag.textContent = isCaieIgcse ? "0580 • Ready ▶" : "Coming Soon";
@@ -433,7 +460,7 @@ function setupSplashScreenListeners() {
     document.querySelectorAll("#splashSubjectGroup .splash-subject-card").forEach(card => {
         card.addEventListener("click", async () => {
             const subject = card.dataset.subject;
-            if (splashState.board === "Cambridge" && splashState.level === "IGCSE / O Level" && (subject === "Physics" || subject === "Chemistry" || subject === "Math")) {
+            if (splashState.board === "Cambridge" && splashState.level === "IGCSE / O Level" && (subject === "Physics" || subject === "Chemistry" || subject === "Biology" || subject === "Math")) {
                 splashScreen.classList.add("hidden");
                 comingSoonScreen.classList.add("hidden");
                 await switchSubject(subject);
@@ -478,6 +505,11 @@ function setupSplashScreenListeners() {
     const launchChemistryBtn = document.getElementById("launchChemistryNowBtn");
     if (launchChemistryBtn) {
         launchChemistryBtn.addEventListener("click", () => launchSubjectFromSoon("Chemistry"));
+    }
+
+    const launchBiologyBtn = document.getElementById("launchBiologyNowBtn");
+    if (launchBiologyBtn) {
+        launchBiologyBtn.addEventListener("click", () => launchSubjectFromSoon("Biology"));
     }
 
     const launchMathBtn = document.getElementById("launchMathNowBtn");

@@ -839,8 +839,8 @@ body {
 
 .splash-options-grid-3 {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.85rem;
+  grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+  gap: 0.75rem;
 }
 
 .splash-option-btn {
