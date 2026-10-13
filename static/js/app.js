@@ -256,7 +256,7 @@ async function ensureSubjectDatabaseLoaded(subject) {
             questionsData = window.CIOAL_STATIC_DB[subjKey].questions;
         }
     } else {
-        const cacheBuster = "?v=17";
+        const cacheBuster = "?v=16";
         try {
             [syllabusData, questionsData] = await Promise.all([
                 fetch(`${cfg.syllabusUrl}${cacheBuster}`).then(r => {
@@ -283,9 +283,7 @@ async function ensureSubjectDatabaseLoaded(subject) {
         ? syllabusData
         : (syllabusData && syllabusData.chapters ? syllabusData.chapters : []);
     const subMetaMap = {};
-    const chMetaMap = {};
     syllabus.forEach(ch => {
-        chMetaMap[Number(ch.id)] = ch;
         (ch.subtopics || []).forEach(sub => {
             subMetaMap[String(sub.id)] = {
                 chapter_id: ch.id,
@@ -297,53 +295,17 @@ async function ensureSubjectDatabaseLoaded(subject) {
     });
 
     const isFileProto = (window.location.protocol === "file:");
-    const imgCacheSuffix = isFileProto ? "" : "?v=17";
+    const imgCacheSuffix = isFileProto ? "" : "?v=16";
     const questionsById = {};
     questionsData.forEach(q => {
         q.paper_type = String(q.paper_type ?? q.paper_num ?? "");
-
-        // Guarantee primary subtopic_id and chapter_id are included in all_subtopic_ids and all_chapter_ids
-        const rawSubs = Array.isArray(q.all_subtopic_ids) ? q.all_subtopic_ids.map(String) : [];
-        const primSub = String(q.subtopic_id || "");
-        const uniqSubs = [];
-        if (primSub) uniqSubs.push(primSub);
-        rawSubs.forEach(s => {
-            if (s && !uniqSubs.includes(s)) uniqSubs.push(s);
-        });
-        q.all_subtopic_ids = uniqSubs;
-
-        const rawChs = Array.isArray(q.all_chapter_ids) ? q.all_chapter_ids.map(Number) : [];
-        const primCh = Number(q.chapter_id || 1);
-        const uniqChs = [];
-        if (primCh) uniqChs.push(primCh);
-        uniqSubs.forEach(s => {
-            if (subMetaMap[s]) {
-                const cId = Number(subMetaMap[s].chapter_id);
-                if (cId && !uniqChs.includes(cId)) uniqChs.push(cId);
-            }
-        });
-        rawChs.forEach(c => {
-            if (c && !uniqChs.includes(c)) uniqChs.push(c);
-        });
-        q.all_chapter_ids = uniqChs;
-
         const relImg = (q.image_rel_path || q.image_path || "").replace(/\\/g, "/");
         if (relImg) {
             q.image_url = encodeURI(`${cfg.catDir}/${relImg}`) + imgCacheSuffix;
-        } else if (q.image_url) {
-            const baseImg = String(q.image_url).split("?")[0];
-            q.image_url = baseImg + imgCacheSuffix;
         }
         if (!q.is_mc) {
             const relMs = (q.ms_image_rel_path || q.ms_image_path || "").replace(/\\/g, "/");
-            if (relMs) {
-                q.ms_image_url = encodeURI(`${cfg.catDir}/${relMs}`) + imgCacheSuffix;
-            } else if (q.ms_image_url) {
-                const baseMs = String(q.ms_image_url).split("?")[0];
-                q.ms_image_url = baseMs + imgCacheSuffix;
-            } else {
-                q.ms_image_url = null;
-            }
+            q.ms_image_url = relMs ? (encodeURI(`${cfg.catDir}/${relMs}`) + imgCacheSuffix) : null;
         }
         questionsById[q.id] = q;
     });
@@ -352,8 +314,7 @@ async function ensureSubjectDatabaseLoaded(subject) {
         syllabus,
         questions: questionsData,
         questionsById,
-        subMetaMap,
-        chMetaMap
+        subMetaMap
     };
     SUBJECT_DB_CACHE[subjKey] = dbEntry;
     return dbEntry;
@@ -403,24 +364,24 @@ function searchQuestionsStatic(db, payload) {
         const pComp = String(q.component ?? "");
         if (!paperTypes.includes(pNum) && !paperTypes.includes(pComp)) continue;
 
-        const qSubs = (q.all_subtopic_ids && q.all_subtopic_ids.length > 0)
-            ? q.all_subtopic_ids.map(String)
-            : [String(q.subtopic_id)];
-        const qChs = (q.all_chapter_ids && q.all_chapter_ids.length > 0)
-            ? q.all_chapter_ids.map(Number)
-            : [Number(q.chapter_id)];
-
         let matchedSub = null;
         if (subtopicSet.size > 0) {
+            const qSubs = (q.all_subtopic_ids && q.all_subtopic_ids.length > 0)
+                ? q.all_subtopic_ids.map(String)
+                : [String(q.subtopic_id)];
             const matchingSubs = qSubs.filter(s => subtopicSet.has(s));
             if (matchingSubs.length === 0) continue;
             matchedSub = matchingSubs.includes(String(q.subtopic_id))
                 ? String(q.subtopic_id)
                 : matchingSubs[0];
         } else if (chapterSet.size > 0) {
+            const qChs = (q.all_chapter_ids && q.all_chapter_ids.length > 0)
+                ? q.all_chapter_ids.map(Number)
+                : [Number(q.chapter_id)];
             const matchingChs = qChs.filter(c => chapterSet.has(c));
             if (matchingChs.length === 0) continue;
             if (!matchingChs.includes(Number(q.chapter_id))) {
+                const qSubs = (q.all_subtopic_ids || []).map(String);
                 for (const sId of qSubs) {
                     const meta = db.subMetaMap[sId];
                     if (meta && chapterSet.has(Number(meta.chapter_id))) {
@@ -432,8 +393,7 @@ function searchQuestionsStatic(db, payload) {
         }
 
         if (searchQuery) {
-            const allSubNames = qSubs.map(s => db.subMetaMap[s] ? `${db.subMetaMap[s].subtopic_name} ${db.subMetaMap[s].chapter_name}` : "").join(" ");
-            const hay = `${q.summary || q.text_preview || ""} ${q.subtopic_name || ""} ${q.chapter_name || ""} ${allSubNames} ${q.id || ""} ${q.paper_file || q.paper_id || ""}`.toLowerCase();
+            const hay = `${q.summary || q.text_preview || ""} ${q.subtopic_name || ""} ${q.chapter_name || ""} ${q.id || ""} ${q.paper_file || q.paper_id || ""}`.toLowerCase();
             if (!hay.includes(searchQuery)) continue;
         }
 
@@ -1349,42 +1309,10 @@ function renderQuestionsList(questions) {
             `;
         }
 
-        // Build all topic pills & subtopic labels for multi-topic questions
-        const chNameMap = {};
-        const subNameMap = {};
-        (appState.syllabus || []).forEach(ch => {
-            chNameMap[Number(ch.id)] = ch.name;
-            (ch.subtopics || []).forEach(sub => {
-                subNameMap[String(sub.id)] = sub.name;
-            });
-        });
-
-        const orderedChIds = [Number(q.chapter_id)];
-        (q.all_chapter_ids || []).forEach(cid => {
-            const cNum = Number(cid);
-            if (cNum && !orderedChIds.includes(cNum)) orderedChIds.push(cNum);
-        });
-        const chapterPillsHtml = orderedChIds.map((cid, idx) => {
-            const fullName = chNameMap[cid] || (idx === 0 ? q.chapter_name : `Topic ${cid}`);
-            const shortLabel = fullName.split(":")[0];
-            return `<span class="meta-pill pill-chapter" title="${fullName}">${shortLabel}</span>`;
-        }).join("");
-
-        const orderedSubIds = [String(q.subtopic_id)];
-        (q.all_subtopic_ids || []).forEach(sid => {
-            const sStr = String(sid);
-            if (sStr && !orderedSubIds.includes(sStr)) orderedSubIds.push(sStr);
-        });
-        const primarySubLabel = subNameMap[orderedSubIds[0]] || q.subtopic_name;
-        const extraSubLabels = orderedSubIds.slice(1).map(sid => subNameMap[sid] || sid).filter(Boolean);
-        const subtopicFooterHtml = extraSubLabels.length > 0
-            ? `📌 <strong>${primarySubLabel}</strong> <span style="color:#475569; font-weight:500;">• Also in: ${extraSubLabels.join(" • ")}</span>`
-            : `📌 <strong>${primarySubLabel}</strong>`;
-
         card.innerHTML = `
             <div class="question-header">
                 <div class="question-meta">
-                    ${chapterPillsHtml}
+                    <span class="meta-pill pill-chapter">${q.chapter_name.split(":")[0]}</span>
                     <span class="meta-pill pill-source">${paperInfo} • Q${q.q_num}</span>
                     <span class="meta-pill pill-tier">${q.tier}</span>
                     ${marksLabel ? `<span class="meta-pill pill-marks">${marksLabel}</span>` : ""}
@@ -1398,7 +1326,7 @@ function renderQuestionsList(questions) {
             </div>
             ${msContentHtml}
             <div class="question-footer">
-                <span class="question-subtopic">${subtopicFooterHtml}</span>
+                <span class="question-subtopic">📌 <strong>${q.subtopic_name}</strong></span>
                 <span style="font-size:0.75rem; color:#64748b;">ID: ${q.id}</span>
             </div>
         `;
