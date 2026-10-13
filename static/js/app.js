@@ -1266,112 +1266,6 @@ async function handleAddAllFiltered() {
     }
 }
 
-function typesetMathInElement(container) {
-    if (!container) return;
-    if (window.renderMathInElement) {
-        try {
-            renderMathInElement(container, {
-                delimiters: [
-                    { left: "$$", right: "$$", display: true },
-                    { left: "$", right: "$", display: false },
-                    { left: "\\[", right: "\\]", display: true },
-                    { left: "\\(", right: "\\)", display: false }
-                ],
-                throwOnError: false
-            });
-        } catch (e) {
-            console.warn("KaTeX typeset error:", e);
-        }
-    }
-}
-
-function renderQuestionContentHtml(q) {
-    if (q.blocks && q.blocks.length > 0) {
-        return q.blocks.map(b => {
-            if (b.type === "diagram") {
-                return `
-                    <div class="question-diagram-wrap">
-                        <img src="${b.url}" alt="Diagram" class="question-diagram-img" style="max-width:${Math.min(100, Math.round(b.w * 0.95))}%;" loading="lazy">
-                    </div>
-                `;
-            } else if (b.type === "text") {
-                const linesHtml = (b.lines || []).map(l => {
-                    const marksHtml = l.marks ? `<span class="q-line-marks">${l.marks}</span>` : "";
-                    return `<div class="q-line q-line-${l.kind || 'body'}">${l.html || ''}${marksHtml}</div>`;
-                }).join("");
-                return `<div class="question-text-block">${linesHtml}</div>`;
-            }
-            return "";
-        }).join("");
-    } else if (q.image_url) {
-        return `<img src="${q.image_url}" alt="Question ${q.q_num}" class="question-img" loading="lazy">`;
-    } else {
-        return `<div class="question-text-block"><div class="q-line q-line-body">${q.summary || ''}</div></div>`;
-    }
-}
-
-function renderQuestionMsHtml(q, paperInfo) {
-    if (q.is_mc) {
-        const ans = q.ms_answer || "A";
-        return `
-            <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
-                <div class="ms-panel-header">
-                    <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
-                </div>
-                <div class="ms-mcq-badge">
-                    <span>Correct Answer:</span>
-                    <span class="ms-mcq-letter" style="${ans.length > 2 ? "width:auto; padding:0 0.6rem; font-size:0.85rem;" : ""}">${ans}</span>
-                    <span style="font-size:0.8rem; color:#64748b; font-weight:600;">[1 Mark]</span>
-                </div>
-            </div>
-        `;
-    } else if (q.ms_rows && q.ms_rows.length > 0) {
-        const hasGuidance = q.ms_rows.some(r => r.guidance && r.guidance.trim());
-        const rowsHtml = q.ms_rows.map(r => `
-            <tr>
-                <td class="ms-col-part">${r.part || ''}</td>
-                <td class="ms-col-ans">${r.answer || ''}</td>
-                <td class="ms-col-marks">${r.marks || ''}</td>
-                ${hasGuidance ? `<td class="ms-col-guidance">${r.guidance || ''}</td>` : ''}
-            </tr>
-        `).join("");
-        return `
-            <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
-                <div class="ms-panel-header">
-                    <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
-                    <span style="font-size:0.78rem; font-weight:700; color:#166534;">[Total: ${q.marks || 1} Mark${(q.marks || 1) > 1 ? "s" : ""}]</span>
-                </div>
-                <div class="ms-table-wrap">
-                    <table class="ms-table">
-                        <thead>
-                            <tr>
-                                <th>Question</th>
-                                <th>Answer</th>
-                                <th>Marks</th>
-                                ${hasGuidance ? `<th>Guidance</th>` : ''}
-                            </tr>
-                        </thead>
-                        <tbody>${rowsHtml}</tbody>
-                    </table>
-                </div>
-            </div>
-        `;
-    } else if (q.ms_image_url) {
-        return `
-            <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
-                <div class="ms-panel-header">
-                    <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
-                    <span style="font-size:0.78rem; font-weight:700; color:#166534;">[Total: ${q.marks || 1} Mark${(q.marks || 1) > 1 ? "s" : ""}]</span>
-                </div>
-                <div class="ms-theory-img-wrap">
-                    <img src="${q.ms_image_url}" alt="Mark Scheme Q${q.q_num}" class="ms-theory-img" loading="lazy">
-                </div>
-            </div>
-        `;
-    }
-    return "";
-}
-
 function renderQuestionsList(questions) {
     const listContainer = document.getElementById("questionsList");
     if (!questions || questions.length === 0) {
@@ -1425,8 +1319,35 @@ function renderQuestionsList(questions) {
 
         const paperInfo = `${q.year} ${q.month} • Paper ${q.component}`;
         const marksLabel = q.marks > 0 ? `[${q.marks} Mark${q.marks > 1 ? "s" : ""}]` : "";
-        const msContentHtml = renderQuestionMsHtml(q, paperInfo);
-        const questionContentHtml = renderQuestionContentHtml(q);
+
+        let msContentHtml = "";
+        if (q.is_mc) {
+            const ans = q.ms_answer || "A";
+            msContentHtml = `
+                <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
+                    <div class="ms-panel-header">
+                        <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
+                    </div>
+                    <div class="ms-mcq-badge">
+                        <span>Correct Answer:</span>
+                        <span class="ms-mcq-letter" style="${ans.length > 2 ? "width:auto; padding:0 0.6rem; font-size:0.85rem;" : ""}">${ans}</span>
+                        <span style="font-size:0.8rem; color:#64748b; font-weight:600;">[1 Mark]</span>
+                    </div>
+                </div>
+            `;
+        } else if (q.ms_image_url) {
+            msContentHtml = `
+                <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
+                    <div class="ms-panel-header">
+                        <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
+                        <span style="font-size:0.78rem; font-weight:700; color:#166534;">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
+                    </div>
+                    <div class="ms-theory-img-wrap">
+                        <img src="${q.ms_image_url}" alt="Mark Scheme Q${q.q_num}" class="ms-theory-img" loading="lazy">
+                    </div>
+                </div>
+            `;
+        }
 
         // Build all topic pills & subtopic labels for multi-topic questions
         const chNameMap = {};
@@ -1473,7 +1394,7 @@ function renderQuestionsList(questions) {
                 </button>
             </div>
             <div class="question-content">
-                ${questionContentHtml}
+                <img src="${q.image_url}" alt="Question ${q.q_num}" class="question-img" loading="lazy">
             </div>
             ${msContentHtml}
             <div class="question-footer">
@@ -1489,8 +1410,6 @@ function renderQuestionsList(questions) {
 
         listContainer.appendChild(card);
     });
-
-    typesetMathInElement(listContainer);
 }
 
 function toggleQuestionInTest(question) {
@@ -1921,95 +1840,6 @@ function renderSlicedExamItemHtml(imgUrl, slices, badgeText, marks, altText) {
     `;
 }
 
-function renderExamQuestionItemHtml(q, idx) {
-    const badgeText = `Question ${idx + 1}`;
-    const marksLabel = `[Total: ${q.marks || 1} Mark${(q.marks || 1) > 1 ? "s" : ""}]`;
-    if (q.blocks && q.blocks.length > 0) {
-        const blocksHtml = q.blocks.map(b => {
-            if (b.type === "diagram") {
-                return `
-                    <div class="question-diagram-wrap">
-                        <img src="${b.url}" alt="Diagram" class="question-diagram-img" style="max-width:${Math.min(100, Math.round(b.w * 0.95))}%;">
-                    </div>
-                `;
-            } else if (b.type === "text") {
-                const linesHtml = (b.lines || []).map(l => {
-                    const marksHtml = l.marks ? `<span class="q-line-marks">${l.marks}</span>` : "";
-                    return `<div class="q-line q-line-${l.kind || 'body'}">${l.html || ''}${marksHtml}</div>`;
-                }).join("");
-                return `<div class="question-text-block">${linesHtml}</div>`;
-            }
-            return "";
-        }).join("");
-
-        return `
-            <div class="exam-question-item text-rendered-q">
-                <div class="exam-q-header">
-                    <span class="exam-q-num-badge">${badgeText}</span>
-                    <span class="exam-q-marks">${marksLabel}</span>
-                </div>
-                <div class="exam-q-content" style="padding:0.4rem 0.2rem;">
-                    ${blocksHtml}
-                </div>
-            </div>
-        `;
-    }
-    return renderSlicedExamItemHtml(q.image_url, q.qp_slices, badgeText, q.marks || 1, badgeText);
-}
-
-function renderExamMsItemHtml(q, idx) {
-    const badgeText = `Question ${idx + 1} — Mark Scheme`;
-    const marksLabel = `[Total: ${q.marks || 1} Mark${(q.marks || 1) > 1 ? "s" : ""}]`;
-    if (q.is_mc) {
-        const ans = q.ms_answer || "A";
-        return `
-            <div class="exam-ms-mcq-row" style="margin-bottom:0.6rem;">
-                <div style="display:flex; align-items:center; gap:0.75rem;">
-                    <span class="exam-q-num-badge">${badgeText}</span>
-                    <span style="font-size:0.88rem; font-weight:700; color:#0f172a;">
-                        Answer: <strong style="color:#14532d; font-size:0.95rem; background:#ecfccb; padding:0.1rem 0.55rem; border-radius:4px; border:1px solid #84cc16;">${ans}</strong>
-                    </span>
-                </div>
-                <span class="exam-q-marks">[1 Mark]</span>
-            </div>
-        `;
-    } else if (q.ms_rows && q.ms_rows.length > 0) {
-        const hasGuidance = q.ms_rows.some(r => r.guidance && r.guidance.trim());
-        const rowsHtml = q.ms_rows.map(r => `
-            <tr>
-                <td class="ms-col-part">${r.part || ''}</td>
-                <td class="ms-col-ans">${r.answer || ''}</td>
-                <td class="ms-col-marks">${r.marks || ''}</td>
-                ${hasGuidance ? `<td class="ms-col-guidance">${r.guidance || ''}</td>` : ''}
-            </tr>
-        `).join("");
-        return `
-            <div class="exam-question-item text-rendered-ms" style="margin-bottom:1.2rem;">
-                <div class="exam-q-header">
-                    <span class="exam-q-num-badge">${badgeText}</span>
-                    <span class="exam-q-marks">${marksLabel}</span>
-                </div>
-                <div class="ms-table-wrap">
-                    <table class="ms-table">
-                        <thead>
-                            <tr>
-                                <th>Question</th>
-                                <th>Answer</th>
-                                <th>Marks</th>
-                                ${hasGuidance ? `<th>Guidance</th>` : ''}
-                            </tr>
-                        </thead>
-                        <tbody>${rowsHtml}</tbody>
-                    </table>
-                </div>
-            </div>
-        `;
-    } else if (q.ms_image_url) {
-        return renderSlicedExamItemHtml(q.ms_image_url, q.ms_slices, badgeText, q.marks || 1, badgeText);
-    }
-    return "";
-}
-
 // Generate the Exam Paper HTML matching the clean test builder cards, with Mark Scheme at the end
 function buildExamPaperHtml() {
     const cfg = SUBJECT_CONFIG[appState.subject] || SUBJECT_CONFIG.Physics;
@@ -2027,8 +1857,37 @@ function buildExamPaperHtml() {
     let markSchemesHtml = "";
 
     appState.testPaperQuestions.forEach((q, idx) => {
-        questionsHtml += renderExamQuestionItemHtml(q, idx);
-        markSchemesHtml += renderExamMsItemHtml(q, idx);
+        questionsHtml += renderSlicedExamItemHtml(
+            q.image_url,
+            q.qp_slices,
+            `Question ${idx + 1}`,
+            q.marks || 1,
+            `Question ${idx + 1}`
+        );
+
+        // Build Mark Scheme item for the end of the paper
+        if (q.is_mc) {
+            const ans = q.ms_answer || "A";
+            markSchemesHtml += `
+                <div class="exam-ms-mcq-row">
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                        <span class="exam-q-num-badge">Question ${idx + 1}</span>
+                        <span style="font-size:0.88rem; font-weight:700; color:#0f172a;">
+                            Answer: <strong style="color:#14532d; font-size:0.95rem; background:#ecfccb; padding:0.1rem 0.55rem; border-radius:4px; border:1px solid #84cc16;">${ans}</strong>
+                        </span>
+                    </div>
+                    <span class="exam-q-marks">[1 Mark]</span>
+                </div>
+            `;
+        } else if (q.ms_image_url) {
+            markSchemesHtml += renderSlicedExamItemHtml(
+                q.ms_image_url,
+                q.ms_slices,
+                `Question ${idx + 1} — Mark Scheme`,
+                q.marks || 1,
+                `Mark Scheme Question ${idx + 1}`
+            );
+        }
     });
 
     return `
@@ -2080,16 +1939,8 @@ function buildExamPaperHtml() {
 
 function renderExamPaperView() {
     const fullHtml = buildExamPaperHtml();
-    const area1 = document.getElementById("examPaperPrintArea");
-    const area2 = document.getElementById("printPaperRoot");
-    if (area1) {
-        area1.innerHTML = fullHtml;
-        typesetMathInElement(area1);
-    }
-    if (area2) {
-        area2.innerHTML = fullHtml;
-        typesetMathInElement(area2);
-    }
+    document.getElementById("examPaperPrintArea").innerHTML = fullHtml;
+    document.getElementById("printPaperRoot").innerHTML = fullHtml;
 }
 
 function handleDirectPrint() {
@@ -2116,10 +1967,7 @@ function openFullPagePrintTab() {
             <meta charset="UTF-8">
             <base href="${baseHref}">
             <title>${title} - Cioal Tutors</title>
-            <link rel="stylesheet" href="static/css/style.css?v=16">
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
-            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
-            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body, {delimiters: [{left:'$$', right:'$$', display:true}, {left:'$', right:'$', display:false}]})"></script>
+            <link rel="stylesheet" href="static/css/style.css?v=10">
             <style>
                 body {
                     background: #f8faf5;
@@ -2213,7 +2061,30 @@ function showMarkSchemePreview() {
                 <td style="padding:0.65rem; font-weight:700;">${q.is_mc ? `Answer: ${q.ms_answer || "A"} (1m)` : `${q.marks}m`}</td>
             </tr>
         `;
-        detailedMsHtml += renderExamMsItemHtml(q, idx);
+
+        if (q.is_mc) {
+            detailedMsHtml += `
+                <div class="exam-ms-mcq-row" style="margin-bottom:0.6rem;">
+                    <div style="display:flex; align-items:center; gap:0.75rem;">
+                        <span class="exam-q-num-badge">Question ${idx + 1}</span>
+                        <span style="font-size:0.9rem; font-weight:700;">Answer: <strong style="color:#14532d; background:#ecfccb; padding:0.1rem 0.55rem; border-radius:4px; border:1px solid #84cc16;">${q.ms_answer || "A"}</strong></span>
+                    </div>
+                    <span class="exam-q-marks">[1 Mark]</span>
+                </div>
+            `;
+        } else if (q.ms_image_url) {
+            detailedMsHtml += `
+                <div class="exam-question-item single-seg" style="margin-bottom:1rem;">
+                    <div class="exam-q-header">
+                        <span class="exam-q-num-badge">Question ${idx + 1} — Mark Scheme (${q.year} ${q.month} P${q.component} Q${q.q_num})</span>
+                        <span class="exam-q-marks">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
+                    </div>
+                    <div class="exam-q-seg-wrap">
+                        <img src="${q.ms_image_url}" alt="Mark Scheme Q${idx + 1}" class="exam-q-img" loading="lazy">
+                    </div>
+                </div>
+            `;
+        }
     });
 
     container.innerHTML = `
@@ -2245,8 +2116,6 @@ function showMarkSchemePreview() {
             </div>
         </div>
     `;
-
-    typesetMathInElement(container);
 }
 
 function showToast(message) {
