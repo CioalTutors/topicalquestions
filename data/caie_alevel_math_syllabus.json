@@ -1,0 +1,347 @@
+[
+  {
+    "id": 1,
+    "name": "Pure Mathematics 1 (Paper 1)",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "P1.1 Quadratics & Discriminant",
+        "keywords": [
+          "quadratic",
+          "completing the square",
+          "discriminant",
+          "real roots",
+          "quadratic inequality",
+          "simultaneous equations"
+        ]
+      },
+      {
+        "id": "1.2",
+        "name": "P1.2 Functions & Transformations",
+        "keywords": [
+          "function",
+          "domain",
+          "range",
+          "composite function",
+          "inverse function",
+          "one-one",
+          "transformation",
+          "translation",
+          "stretch",
+          "reflection"
+        ]
+      },
+      {
+        "id": "1.3",
+        "name": "P1.3 Coordinate Geometry",
+        "keywords": [
+          "equation of line",
+          "gradient",
+          "perpendicular",
+          "equation of circle",
+          "tangent to circle",
+          "intersection of line and curve"
+        ]
+      },
+      {
+        "id": "1.4",
+        "name": "P1.4 Circular Measure (Radians)",
+        "keywords": [
+          "radian",
+          "arc length",
+          "sector area",
+          "chord",
+          "perimeter of sector"
+        ]
+      },
+      {
+        "id": "1.5",
+        "name": "P1.5 Trigonometry",
+        "keywords": [
+          "sine",
+          "cosine",
+          "tangent",
+          "exact trig values",
+          "trigonometric equation",
+          "sin^2 + cos^2 = 1",
+          "tan = sin/cos"
+        ]
+      },
+      {
+        "id": "1.6",
+        "name": "P1.6 Series (Arithmetic & Geometric)",
+        "keywords": [
+          "arithmetic progression",
+          "ap",
+          "geometric progression",
+          "gp",
+          "common difference",
+          "common ratio",
+          "sum to infinity",
+          "binomial expansion"
+        ]
+      },
+      {
+        "id": "1.7",
+        "name": "P1.7 Differentiation & Applications",
+        "keywords": [
+          "differentiation",
+          "derivative",
+          "gradient of curve",
+          "tangent and normal",
+          "stationary point",
+          "maximum and minimum",
+          "rate of change"
+        ]
+      },
+      {
+        "id": "1.8",
+        "name": "P1.8 Integration & Areas",
+        "keywords": [
+          "integration",
+          "indefinite integral",
+          "definite integral",
+          "area under curve",
+          "area between curves",
+          "volume of revolution"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pure Mathematics 3 (Paper 3)",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "P3.1 Algebra & Partial Fractions",
+        "keywords": [
+          "polynomial",
+          "remainder theorem",
+          "factor theorem",
+          "partial fractions",
+          "modulus equation",
+          "modulus inequality"
+        ]
+      },
+      {
+        "id": "2.2",
+        "name": "P3.2 Logarithms & Exponential Functions",
+        "keywords": [
+          "logarithm",
+          "natural logarithm",
+          "ln",
+          "exponential",
+          "e^x",
+          "linear law",
+          "reduction to linear form"
+        ]
+      },
+      {
+        "id": "2.3",
+        "name": "P3.3 Advanced Trigonometry",
+        "keywords": [
+          "secant",
+          "cosecant",
+          "cotangent",
+          "compound angle",
+          "double angle",
+          "r cos(theta - alpha)",
+          "r sin(theta + alpha)"
+        ]
+      },
+      {
+        "id": "2.4",
+        "name": "P3.4 Advanced Differentiation",
+        "keywords": [
+          "product rule",
+          "quotient rule",
+          "chain rule",
+          "implicit differentiation",
+          "parametric differentiation",
+          "derivative of ln",
+          "derivative of e^x",
+          "derivative of trig"
+        ]
+      },
+      {
+        "id": "2.5",
+        "name": "P3.5 Advanced Integration",
+        "keywords": [
+          "integration by substitution",
+          "integration by parts",
+          "integration using partial fractions",
+          "differential equation",
+          "separation of variables"
+        ]
+      },
+      {
+        "id": "2.6",
+        "name": "P3.6 Numerical Solutions & Iteration",
+        "keywords": [
+          "sign change",
+          "root of equation",
+          "iteration formula",
+          "convergence",
+          "staircase diagram",
+          "cobweb diagram"
+        ]
+      },
+      {
+        "id": "2.7",
+        "name": "P3.7 Vectors in 3D",
+        "keywords": [
+          "3d vector",
+          "unit vector",
+          "scalar product",
+          "dot product",
+          "angle between vectors",
+          "vector equation of line",
+          "intersection of lines"
+        ]
+      },
+      {
+        "id": "2.8",
+        "name": "P3.8 Complex Numbers",
+        "keywords": [
+          "complex number",
+          "imaginary",
+          "argand diagram",
+          "modulus-argument form",
+          "de moivre",
+          "complex roots",
+          "locus in argand diagram"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Mechanics (Paper 4)",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "M1.1 Forces & Equilibrium",
+        "keywords": [
+          "resolving forces",
+          "coplanar forces",
+          "equilibrium of particle",
+          "friction",
+          "limiting friction",
+          "coefficient of friction",
+          "normal reaction",
+          "inclined plane"
+        ]
+      },
+      {
+        "id": "3.2",
+        "name": "M1.2 Kinematics of Motion in a Straight Line",
+        "keywords": [
+          "suvat equations",
+          "constant acceleration",
+          "variable acceleration",
+          "calculus in kinematics",
+          "displacement-time",
+          "velocity-time"
+        ]
+      },
+      {
+        "id": "3.3",
+        "name": "M1.3 Momentum & Newton's Laws of Motion",
+        "keywords": [
+          "newton's laws",
+          "resultant force",
+          "connected particles",
+          "pulley system",
+          "momentum",
+          "impulse",
+          "conservation of momentum"
+        ]
+      },
+      {
+        "id": "3.4",
+        "name": "M1.4 Energy, Work & Power",
+        "keywords": [
+          "work done",
+          "kinetic energy",
+          "gravitational potential energy",
+          "work-energy principle",
+          "power",
+          "driving force",
+          "tractive force"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Probability & Statistics 1 (Paper 5)",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "S1.1 Representation of Data",
+        "keywords": [
+          "stem-and-leaf",
+          "histogram",
+          "box-and-whisker",
+          "cumulative frequency",
+          "mean",
+          "median",
+          "mode",
+          "variance",
+          "standard deviation",
+          "interquartile range"
+        ]
+      },
+      {
+        "id": "4.2",
+        "name": "S1.2 Permutations & Combinations",
+        "keywords": [
+          "permutation",
+          "combination",
+          "npr",
+          "ncr",
+          "arrangements",
+          "selections"
+        ]
+      },
+      {
+        "id": "4.3",
+        "name": "S1.3 Probability & Conditional Probability",
+        "keywords": [
+          "probability",
+          "independent events",
+          "mutually exclusive",
+          "conditional probability",
+          "tree diagram",
+          "venn diagram"
+        ]
+      },
+      {
+        "id": "4.4",
+        "name": "S1.4 Discrete Random Variables & Binomial Distribution",
+        "keywords": [
+          "discrete random variable",
+          "probability distribution",
+          "expected value",
+          "e(x)",
+          "var(x)",
+          "binomial distribution",
+          "geometric distribution"
+        ]
+      },
+      {
+        "id": "4.5",
+        "name": "S1.5 The Normal Distribution",
+        "keywords": [
+          "normal distribution",
+          "standard normal",
+          "z-score",
+          "standardisation",
+          "continuity correction",
+          "approximation to binomial"
+        ]
+      }
+    ]
+  }
+]

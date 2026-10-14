@@ -1,0 +1,383 @@
+[
+  {
+    "id": 1,
+    "name": "Topic 1: Atoms, molecules and stoichiometry",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "1.1 Relative masses, mole & empirical formula",
+        "keywords": [
+          "relative atomic mass",
+          "relative molecular mass",
+          "mole",
+          "avogadro",
+          "empirical formula",
+          "molecular formula",
+          "stoichiometry",
+          "titration"
+        ]
+      },
+      {
+        "id": "1.2",
+        "name": "1.2 Atomic structure, electrons & ionisation energy",
+        "keywords": [
+          "proton number",
+          "nucleon number",
+          "isotope",
+          "orbitals",
+          "s orbital",
+          "p orbital",
+          "electronic configuration",
+          "first ionisation energy",
+          "successive ionisation energies"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Topic 2: Chemical bonding & states of matter",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "2.1 Ionic, covalent & metallic bonding",
+        "keywords": [
+          "ionic bonding",
+          "covalent bonding",
+          "coordinate bonding",
+          "dative",
+          "metallic bonding",
+          "electronegativity",
+          "bond polarity",
+          "dipole"
+        ]
+      },
+      {
+        "id": "2.2",
+        "name": "2.2 Shapes of molecules & intermolecular forces",
+        "keywords": [
+          "vsepr",
+          "bond angle",
+          "tetrahedral",
+          "linear",
+          "trigonal planar",
+          "octahedral",
+          "hydrogen bonding",
+          "van der waals",
+          "permanent dipole",
+          "ideal gas equation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Topic 3: Chemical energetics & thermodynamics",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "3.1 Enthalpy changes & Hess's law",
+        "keywords": [
+          "enthalpy change",
+          "standard enthalpy of formation",
+          "enthalpy of combustion",
+          "neutralisation",
+          "bond energy",
+          "hess's law",
+          "calorimetry"
+        ]
+      },
+      {
+        "id": "3.2",
+        "name": "3.2 Born-Haber cycles, entropy & Gibbs free energy",
+        "keywords": [
+          "lattice energy",
+          "born-haber",
+          "electron affinity",
+          "enthalpy of hydration",
+          "enthalpy of solution",
+          "entropy",
+          "gibbs free energy",
+          "delta g",
+          "feasibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Topic 4: Electrochemistry & equilibria",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "4.1 Chemical equilibria & Le Chatelier's principle",
+        "keywords": [
+          "dynamic equilibrium",
+          "le chatelier",
+          "kc",
+          "kp",
+          "partial pressure",
+          "equilibrium constant",
+          "haber process"
+        ]
+      },
+      {
+        "id": "4.2",
+        "name": "4.2 Acid-base equilibria, pH, Ka & buffers",
+        "keywords": [
+          "bronsted-lowry",
+          "ph",
+          "kw",
+          "ka",
+          "pka",
+          "weak acid",
+          "buffer solution",
+          "buffer capacity",
+          "solubility product",
+          "ksp",
+          "common ion effect"
+        ]
+      },
+      {
+        "id": "4.3",
+        "name": "4.3 Redox, electrode potentials & electrochemical cells",
+        "keywords": [
+          "redox",
+          "oxidation number",
+          "standard electrode potential",
+          "standard cell potential",
+          "electrochemical cell",
+          "nernst equation",
+          "e standard",
+          "half-cell"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Topic 5: Reaction kinetics",
+    "subtopics": [
+      {
+        "id": "5.1",
+        "name": "5.1 Rate equations, orders of reaction & rate constant",
+        "keywords": [
+          "rate of reaction",
+          "rate equation",
+          "order of reaction",
+          "rate constant",
+          "half-life",
+          "zero order",
+          "first order",
+          "second order",
+          "rate-determining step"
+        ]
+      },
+      {
+        "id": "5.2",
+        "name": "5.2 Catalysis & Arrhenius equation",
+        "keywords": [
+          "activation energy",
+          "homogeneous catalyst",
+          "heterogeneous catalyst",
+          "maxwell-boltzmann",
+          "arrhenius equation",
+          "rate mechanism"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Topic 6: Inorganic chemistry & Periodic Table",
+    "subtopics": [
+      {
+        "id": "6.1",
+        "name": "6.1 Periodicity & Period 3 elements",
+        "keywords": [
+          "period 3",
+          "periodicity",
+          "period 3 oxides",
+          "period 3 chlorides",
+          "structure and bonding",
+          "electronegativity trend"
+        ]
+      },
+      {
+        "id": "6.2",
+        "name": "6.2 Group 2 & Group 17 elements",
+        "keywords": [
+          "group 2",
+          "alkaline earth",
+          "thermal stability of carbonates",
+          "solubility of sulfates",
+          "solubility of hydroxides",
+          "group 17",
+          "halogens",
+          "halide ions",
+          "chlorine",
+          "bromine",
+          "iodine",
+          "disproportionation"
+        ]
+      },
+      {
+        "id": "6.3",
+        "name": "6.3 Transition elements & coordination chemistry",
+        "keywords": [
+          "transition metal",
+          "d-block",
+          "variable oxidation state",
+          "complex ion",
+          "ligand",
+          "coordination number",
+          "colour of complexes",
+          "d-d transition",
+          "ligand exchange",
+          "catalytic activity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Topic 7: Organic chemistry - Hydrocarbons & Halogenoalkanes",
+    "subtopics": [
+      {
+        "id": "7.1",
+        "name": "7.1 Nomenclature, isomerism & alkanes",
+        "keywords": [
+          "iupac",
+          "homologous series",
+          "structural isomerism",
+          "stereoisomerism",
+          "geometric isomerism",
+          "optical isomerism",
+          "chiral centre",
+          "alkane",
+          "free-radical substitution"
+        ]
+      },
+      {
+        "id": "7.2",
+        "name": "7.2 Alkenes & electrophilic addition",
+        "keywords": [
+          "alkene",
+          "electrophilic addition",
+          "markovnikov",
+          "carbocation stability",
+          "bromine water",
+          "hydrogenation",
+          "polymerisation"
+        ]
+      },
+      {
+        "id": "7.3",
+        "name": "7.3 Halogenoalkanes & nucleophilic substitution",
+        "keywords": [
+          "halogenoalkane",
+          "nucleophilic substitution",
+          "sn1",
+          "sn2",
+          "elimination",
+          "hydrolysis",
+          "cyanide",
+          "ammonia"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Topic 8: Carbonyl, carboxylic, aromatic & nitrogen compounds",
+    "subtopics": [
+      {
+        "id": "8.1",
+        "name": "8.1 Alcohols, aldehydes & ketones",
+        "keywords": [
+          "alcohol",
+          "primary alcohol",
+          "secondary alcohol",
+          "tertiary alcohol",
+          "oxidation",
+          "reflux",
+          "distillation",
+          "aldehyde",
+          "ketone",
+          "nucleophilic addition",
+          "2,4-dinitrophenylhydrazine",
+          "tollens' reagent",
+          "fehling's solution",
+          "tri-iodomethane test"
+        ]
+      },
+      {
+        "id": "8.2",
+        "name": "8.2 Carboxylic acids, esters & acyl chlorides",
+        "keywords": [
+          "carboxylic acid",
+          "ester",
+          "esterification",
+          "hydrolysis of esters",
+          "acyl chloride",
+          "nucleophilic addition-elimination",
+          "polyester"
+        ]
+      },
+      {
+        "id": "8.3",
+        "name": "8.3 Arenes & aromatic chemistry",
+        "keywords": [
+          "benzene",
+          "delocalised ring",
+          "electrophilic substitution",
+          "nitration",
+          "friedel-crafts",
+          "phenol",
+          "acidity of phenol",
+          "bromination of phenol"
+        ]
+      },
+      {
+        "id": "8.4",
+        "name": "8.4 Nitrogen compounds & polymerisation",
+        "keywords": [
+          "amine",
+          "basicity of amines",
+          "amide",
+          "amino acid",
+          "zwitterion",
+          "peptide bond",
+          "polyamide",
+          "nylon",
+          "condensation polymerisation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Topic 9: Analytical techniques",
+    "subtopics": [
+      {
+        "id": "9.1",
+        "name": "9.1 Infrared, NMR spectroscopy & chromatography",
+        "keywords": [
+          "infrared spectroscopy",
+          "ir spectrum",
+          "fingerprint region",
+          "mass spectrometry",
+          "molecular ion peak",
+          "fragmentation",
+          "1h nmr",
+          "13c nmr",
+          "chemical shift",
+          "spin-spin coupling",
+          "thin-layer chromatography",
+          "tlc",
+          "gas chromatography"
+        ]
+      }
+    ]
+  }
+]

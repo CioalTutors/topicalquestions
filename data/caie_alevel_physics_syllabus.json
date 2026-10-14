@@ -1,0 +1,545 @@
+[
+  {
+    "id": 1,
+    "name": "Topic 1: Physical quantities and units",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "1.1 Physical quantities & SI base units",
+        "keywords": [
+          "base units",
+          "derived units",
+          "homogeneity",
+          "si units",
+          "kelvin",
+          "ampere",
+          "candela",
+          "mole",
+          "kilogram",
+          "second",
+          "metre",
+          "prefix",
+          "nano",
+          "pico",
+          "giga",
+          "tera"
+        ]
+      },
+      {
+        "id": "1.2",
+        "name": "1.2 Errors, uncertainties & vectors",
+        "keywords": [
+          "systematic error",
+          "random error",
+          "uncertainty",
+          "percentage uncertainty",
+          "scalar",
+          "vector",
+          "resolving vectors",
+          "resultant vector",
+          "precision",
+          "accuracy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Topic 2: Kinematics",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "2.1 Equations of motion & graphs",
+        "keywords": [
+          "displacement",
+          "velocity",
+          "acceleration",
+          "displacement-time",
+          "velocity-time",
+          "suvat",
+          "equations of motion",
+          "free fall",
+          "acceleration of free fall"
+        ]
+      },
+      {
+        "id": "2.2",
+        "name": "2.2 Projectile motion",
+        "keywords": [
+          "projectile",
+          "horizontal motion",
+          "vertical motion",
+          "trajectory",
+          "parabolic",
+          "range",
+          "maximum height"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Topic 3: Dynamics",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "3.1 Momentum & Newton's laws of motion",
+        "keywords": [
+          "newton's first law",
+          "newton's second law",
+          "newton's third law",
+          "momentum",
+          "conservation of momentum",
+          "impulse",
+          "f = ma",
+          "resultant force"
+        ]
+      },
+      {
+        "id": "3.2",
+        "name": "3.2 Elastic & inelastic collisions",
+        "keywords": [
+          "elastic collision",
+          "inelastic collision",
+          "kinetic energy conserved",
+          "relative speed of approach",
+          "relative speed of separation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Topic 4: Forces, density and pressure",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "4.1 Turning effects, moments & equilibrium",
+        "keywords": [
+          "moment of a force",
+          "torque",
+          "couple",
+          "principle of moments",
+          "centre of gravity",
+          "translational equilibrium",
+          "rotational equilibrium"
+        ]
+      },
+      {
+        "id": "4.2",
+        "name": "4.2 Density, pressure & upthrust",
+        "keywords": [
+          "density",
+          "pressure",
+          "hydrostatic pressure",
+          "upthrust",
+          "archimedes",
+          "p = rho g h"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Topic 5: Work, energy and power",
+    "subtopics": [
+      {
+        "id": "5.1",
+        "name": "5.1 Work done & energy conservation",
+        "keywords": [
+          "work done",
+          "kinetic energy",
+          "gravitational potential energy",
+          "conservation of energy",
+          "internal energy",
+          "elastic potential"
+        ]
+      },
+      {
+        "id": "5.2",
+        "name": "5.2 Efficiency & power",
+        "keywords": [
+          "power",
+          "watt",
+          "efficiency",
+          "p = fv",
+          "useful energy output"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Topic 6: Deformation of solids",
+    "subtopics": [
+      {
+        "id": "6.1",
+        "name": "6.1 Stress, strain & Young modulus",
+        "keywords": [
+          "hooke's law",
+          "stress",
+          "strain",
+          "young modulus",
+          "tensile",
+          "compressive",
+          "yield point",
+          "limit of proportionality",
+          "elastic limit",
+          "elastic deformation",
+          "plastic deformation",
+          "strain energy"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Topic 7: Waves & superposition",
+    "subtopics": [
+      {
+        "id": "7.1",
+        "name": "7.1 Progressive waves & Doppler effect",
+        "keywords": [
+          "progressive wave",
+          "transverse",
+          "longitudinal",
+          "amplitude",
+          "wavelength",
+          "phase difference",
+          "intensity",
+          "doppler effect",
+          "electromagnetic spectrum"
+        ]
+      },
+      {
+        "id": "7.2",
+        "name": "7.2 Superposition, stationary waves & diffraction",
+        "keywords": [
+          "principle of superposition",
+          "interference",
+          "two-source interference",
+          "young's double slit",
+          "diffraction grating",
+          "stationary wave",
+          "node",
+          "antinode",
+          "path difference",
+          "coherence"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Topic 8: Electricity & D.C. circuits",
+    "subtopics": [
+      {
+        "id": "8.1",
+        "name": "8.1 Electric current, potential difference & resistance",
+        "keywords": [
+          "electric current",
+          "drift speed",
+          "i = nAvq",
+          "potential difference",
+          "resistance",
+          "resistivity",
+          "ohm's law",
+          "i-v characteristic",
+          "power"
+        ]
+      },
+      {
+        "id": "8.2",
+        "name": "8.2 Electromotive force, internal resistance & Kirchhoff's laws",
+        "keywords": [
+          "electromotive force",
+          "e.m.f.",
+          "internal resistance",
+          "terminal p.d.",
+          "kirchhoff's first law",
+          "kirchhoff's second law",
+          "potential divider",
+          "potentiometer"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Topic 9: Particle physics",
+    "subtopics": [
+      {
+        "id": "9.1",
+        "name": "9.1 Atomic structure, alpha scattering & quarks",
+        "keywords": [
+          "alpha-particle scattering",
+          "rutherford",
+          "nucleus",
+          "quarks",
+          "up quark",
+          "down quark",
+          "strange quark",
+          "baryon",
+          "meson",
+          "hadron",
+          "lepton",
+          "beta-minus decay",
+          "beta-plus decay",
+          "neutrino",
+          "antineutrino"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Topic 10: Circular motion & gravitational fields",
+    "subtopics": [
+      {
+        "id": "10.1",
+        "name": "10.1 Centripetal acceleration & circular motion",
+        "keywords": [
+          "angular velocity",
+          "centripetal acceleration",
+          "centripetal force",
+          "radian",
+          "omega"
+        ]
+      },
+      {
+        "id": "10.2",
+        "name": "10.2 Gravitational fields, potential & orbital motion",
+        "keywords": [
+          "newton's law of gravitation",
+          "gravitational field strength",
+          "gravitational potential",
+          "gravitational potential energy",
+          "kepler's third law",
+          "geostationary orbit",
+          "escape velocity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "name": "Topic 11: Temperature & ideal gases",
+    "subtopics": [
+      {
+        "id": "11.1",
+        "name": "11.1 Thermal equilibrium & temperature scales",
+        "keywords": [
+          "thermal equilibrium",
+          "zeroth law",
+          "absolute scale",
+          "kelvin",
+          "triple point of water",
+          "thermometer"
+        ]
+      },
+      {
+        "id": "11.2",
+        "name": "11.2 Specific heat capacity & latent heat",
+        "keywords": [
+          "specific heat capacity",
+          "specific latent heat",
+          "internal energy",
+          "first law of thermodynamics"
+        ]
+      },
+      {
+        "id": "11.3",
+        "name": "11.3 Ideal gases & kinetic theory",
+        "keywords": [
+          "ideal gas equation",
+          "pv = nrt",
+          "boltzmann constant",
+          "root-mean-square speed",
+          "kinetic theory of gases",
+          "c_rms"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "name": "Topic 12: Oscillations",
+    "subtopics": [
+      {
+        "id": "12.1",
+        "name": "12.1 Simple harmonic motion",
+        "keywords": [
+          "simple harmonic motion",
+          "shm",
+          "isochronous",
+          "acceleration proportional to displacement",
+          "a = -omega^2 x",
+          "pendulum",
+          "mass-spring"
+        ]
+      },
+      {
+        "id": "12.2",
+        "name": "12.2 Damped & forced oscillations, resonance",
+        "keywords": [
+          "damping",
+          "light damping",
+          "critical damping",
+          "heavy damping",
+          "forced oscillation",
+          "natural frequency",
+          "resonance",
+          "resonant frequency"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "name": "Topic 13: Electric fields & capacitance",
+    "subtopics": [
+      {
+        "id": "13.1",
+        "name": "13.1 Coulomb's law & electric potential",
+        "keywords": [
+          "coulomb's law",
+          "electric field strength",
+          "electric potential",
+          "potential gradient",
+          "radial field",
+          "uniform field",
+          "equipotential"
+        ]
+      },
+      {
+        "id": "13.2",
+        "name": "13.2 Capacitors, capacitance & energy",
+        "keywords": [
+          "capacitance",
+          "farad",
+          "parallel-plate capacitor",
+          "dielectric",
+          "capacitors in series",
+          "capacitors in parallel",
+          "energy stored in capacitor",
+          "exponential decay",
+          "time constant",
+          "rc circuit"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "name": "Topic 14: Magnetic fields & electromagnetic induction",
+    "subtopics": [
+      {
+        "id": "14.1",
+        "name": "14.1 Magnetic flux density & force on moving charges",
+        "keywords": [
+          "magnetic flux density",
+          "tesla",
+          "f = bil",
+          "f = bqv",
+          "hall effect",
+          "hall probe",
+          "hall voltage",
+          "deflection of charged particles"
+        ]
+      },
+      {
+        "id": "14.2",
+        "name": "14.2 Magnetic flux & Faraday's & Lenz's laws",
+        "keywords": [
+          "magnetic flux",
+          "weber",
+          "magnetic flux linkage",
+          "faraday's law",
+          "lenz's law",
+          "induced e.m.f.",
+          "alternating current",
+          "transformer",
+          "rectification"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "name": "Topic 15: Quantum, nuclear & medical physics",
+    "subtopics": [
+      {
+        "id": "15.1",
+        "name": "15.1 Photons & photoelectric effect",
+        "keywords": [
+          "photon",
+          "planck constant",
+          "e = hf",
+          "photoelectric effect",
+          "work function",
+          "threshold frequency",
+          "stopping potential",
+          "de broglie wavelength",
+          "wave-particle duality"
+        ]
+      },
+      {
+        "id": "15.2",
+        "name": "15.2 Energy levels & line spectra",
+        "keywords": [
+          "energy level",
+          "emission spectrum",
+          "absorption spectrum",
+          "ground state",
+          "excitation",
+          "ionisation"
+        ]
+      },
+      {
+        "id": "15.3",
+        "name": "15.3 Nuclear binding energy & radioactive decay",
+        "keywords": [
+          "mass defect",
+          "binding energy",
+          "fission",
+          "fusion",
+          "half-life",
+          "decay constant",
+          "activity",
+          "becquerel",
+          "exponential decay law",
+          "e = mc^2"
+        ]
+      },
+      {
+        "id": "15.4",
+        "name": "15.4 Medical imaging & ultrasound",
+        "keywords": [
+          "x-ray production",
+          "attenuation",
+          "acoustic impedance",
+          "ultrasound transducer",
+          "piezoelectric",
+          "pet scan",
+          "tracer",
+          "annihilation",
+          "radiopharmaceutical"
+        ]
+      },
+      {
+        "id": "15.5",
+        "name": "15.5 Astronomy & cosmology",
+        "keywords": [
+          "luminosity",
+          "standard candle",
+          "cepheid variable",
+          "stefan-boltzmann",
+          "wien's displacement law",
+          "redshift",
+          "hubble's law",
+          "cosmic microwave background"
+        ]
+      }
+    ]
+  }
+]

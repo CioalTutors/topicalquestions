@@ -1,0 +1,349 @@
+[
+  {
+    "id": 1,
+    "name": "Topic 1 & 2: Working as a Physicist & Mechanics",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "1.1 Standard units, vectors & uncertainties",
+        "keywords": [
+          "base units",
+          "derived units",
+          "vector addition",
+          "resolving vectors",
+          "random uncertainty",
+          "systematic uncertainty",
+          "percentage uncertainty"
+        ]
+      },
+      {
+        "id": "1.2",
+        "name": "1.2 Rectilinear motion & projectiles",
+        "keywords": [
+          "suvat equations",
+          "velocity-time graph",
+          "projectile",
+          "horizontal velocity",
+          "vertical acceleration",
+          "range",
+          "air resistance"
+        ]
+      },
+      {
+        "id": "1.3",
+        "name": "1.3 Newton's laws, momentum & impulse",
+        "keywords": [
+          "newton's laws",
+          "resultant force",
+          "conservation of momentum",
+          "impulse",
+          "force-time graph",
+          "elastic collision",
+          "inelastic collision"
+        ]
+      },
+      {
+        "id": "1.4",
+        "name": "1.4 Moments, equilibrium & energy",
+        "keywords": [
+          "moment of force",
+          "principle of moments",
+          "centre of gravity",
+          "work done",
+          "kinetic energy",
+          "gravitational potential energy",
+          "power",
+          "efficiency"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Topic 3: Electric circuits",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "2.1 Current, potential difference & resistance",
+        "keywords": [
+          "electric current",
+          "drift velocity",
+          "i = nqvA",
+          "potential difference",
+          "resistance",
+          "resistivity",
+          "superconductivity",
+          "ohm's law",
+          "i-v characteristics"
+        ]
+      },
+      {
+        "id": "2.2",
+        "name": "2.2 E.m.f., internal resistance & circuits",
+        "keywords": [
+          "electromotive force",
+          "emf",
+          "internal resistance",
+          "lost volts",
+          "terminal pd",
+          "kirchhoff's laws",
+          "potential divider",
+          "sensor circuit",
+          "ldr",
+          "thermistor"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Topic 4: Materials",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "3.1 Fluids, density, upthrust & viscosity",
+        "keywords": [
+          "density",
+          "upthrust",
+          "archimedes' principle",
+          "laminar flow",
+          "turbulent flow",
+          "viscosity",
+          "stokes' law",
+          "terminal velocity"
+        ]
+      },
+      {
+        "id": "3.2",
+        "name": "3.2 Solids under stress & Young modulus",
+        "keywords": [
+          "hooke's law",
+          "tensile stress",
+          "tensile strain",
+          "young modulus",
+          "elastic limit",
+          "yield point",
+          "brittle",
+          "ductile",
+          "elastic strain energy",
+          "hysteresis"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Topic 5: Waves and particle nature of light",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "4.1 Wave properties, polarisation & diffraction",
+        "keywords": [
+          "transverse wave",
+          "longitudinal wave",
+          "wave speed",
+          "phase difference",
+          "polarisation",
+          "diffraction",
+          "two-slit interference",
+          "diffraction grating",
+          "standing wave",
+          "node",
+          "antinode"
+        ]
+      },
+      {
+        "id": "4.2",
+        "name": "4.2 Refraction & total internal reflection",
+        "keywords": [
+          "refraction",
+          "refractive index",
+          "snell's law",
+          "critical angle",
+          "total internal reflection",
+          "optical fibre",
+          "pulse broadening"
+        ]
+      },
+      {
+        "id": "4.3",
+        "name": "4.3 Quantum physics & photoelectric effect",
+        "keywords": [
+          "photon",
+          "photoelectric effect",
+          "work function",
+          "threshold frequency",
+          "stopping potential",
+          "einstein photoelectric equation",
+          "wave-particle duality",
+          "de broglie"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Topic 6: Further mechanics",
+    "subtopics": [
+      {
+        "id": "5.1",
+        "name": "5.1 Circular motion & centripetal acceleration",
+        "keywords": [
+          "angular velocity",
+          "centripetal acceleration",
+          "centripetal force",
+          "conical pendulum",
+          "banked track"
+        ]
+      },
+      {
+        "id": "5.2",
+        "name": "5.2 Simple harmonic motion & oscillations",
+        "keywords": [
+          "simple harmonic motion",
+          "shm",
+          "isochronous",
+          "acceleration equation",
+          "velocity in shm",
+          "mass-spring oscillator",
+          "simple pendulum",
+          "resonance",
+          "damping"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Topic 7: Electric and magnetic fields",
+    "subtopics": [
+      {
+        "id": "6.1",
+        "name": "6.1 Electric fields, Coulomb's law & capacitance",
+        "keywords": [
+          "coulomb's law",
+          "electric field strength",
+          "electric potential",
+          "capacitance",
+          "parallel plate capacitor",
+          "capacitor discharge",
+          "time constant",
+          "exponential decay"
+        ]
+      },
+      {
+        "id": "6.2",
+        "name": "6.2 Magnetic fields, forces & electromagnetic induction",
+        "keywords": [
+          "magnetic flux density",
+          "f = bil",
+          "f = bqv",
+          "cyclotron",
+          "mass spectrometer",
+          "magnetic flux",
+          "faraday's law",
+          "lenz's law",
+          "alternating current",
+          "transformer"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Topic 8: Nuclear and particle physics",
+    "subtopics": [
+      {
+        "id": "7.1",
+        "name": "7.1 Rutherford scattering & atomic nucleus",
+        "keywords": [
+          "rutherford alpha scattering",
+          "nuclear radius",
+          "nuclear density",
+          "strong nuclear force"
+        ]
+      },
+      {
+        "id": "7.2",
+        "name": "7.2 Particle accelerators & the Standard Model",
+        "keywords": [
+          "linac",
+          "cyclotron",
+          "standard model",
+          "quarks",
+          "leptons",
+          "baryons",
+          "mesons",
+          "hadrons",
+          "antiparticles",
+          "annihilation",
+          "pair production",
+          "fundamental forces",
+          "feynman diagrams"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Topic 9 & 10: Thermodynamics, space, nuclear radiation & gravitation",
+    "subtopics": [
+      {
+        "id": "8.1",
+        "name": "8.1 Thermal energy, ideal gases & kinetic theory",
+        "keywords": [
+          "specific heat capacity",
+          "latent heat",
+          "internal energy",
+          "absolute zero",
+          "ideal gas equation",
+          "kinetic theory of gases",
+          "molecular kinetic energy"
+        ]
+      },
+      {
+        "id": "8.2",
+        "name": "8.2 Gravitational fields & orbital motion",
+        "keywords": [
+          "newton's law of gravitation",
+          "gravitational field strength",
+          "gravitational potential",
+          "orbital period",
+          "escape velocity",
+          "gravitational potential energy"
+        ]
+      },
+      {
+        "id": "8.3",
+        "name": "8.3 Astrophysics, cosmology & Doppler effect",
+        "keywords": [
+          "luminosity",
+          "stefan-boltzmann law",
+          "wien's displacement law",
+          "hertzsprung-russell diagram",
+          "standard candles",
+          "hubble's law",
+          "red shift",
+          "big bang",
+          "dark matter"
+        ]
+      },
+      {
+        "id": "8.4",
+        "name": "8.4 Radioactive decay & nuclear binding energy",
+        "keywords": [
+          "alpha",
+          "beta",
+          "gamma",
+          "decay constant",
+          "half-life",
+          "activity",
+          "mass deficit",
+          "binding energy per nucleon",
+          "nuclear fission",
+          "nuclear fusion"
+        ]
+      }
+    ]
+  }
+]

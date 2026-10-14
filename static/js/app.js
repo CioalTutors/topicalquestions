@@ -185,6 +185,191 @@ const SUBJECT_CONFIG = {
             { value: "3F", label: "Paper 3F (Foundation • Calculator)", tier: "Foundation" },
             { value: "3H", label: "Paper 3H (Higher • Calculator)", tier: "Higher" }
         ]
+    },
+    CAIE_Alevel_Physics: {
+        board: "Cambridge",
+        level: "A Level",
+        code: "9702",
+        badge: "CAIE A Level Physics 9702",
+        docTitle: "Cioal Tutor Topical Questions • A Level Physics (9702)",
+        subtitle: "Cambridge International AS & A Level Physics (9702) Question Bank & Test Builder",
+        examLabel: "Cambridge International AS & A Level Physics (9702)",
+        defaultTestTitle: "Weekly A Level Physics Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. kinematics, superposition, 9702)...",
+        storageKey: "cioal_test_paper_caie_alevel_physics",
+        syllabusUrl: "data/caie_alevel_physics_syllabus.json",
+        questionsUrl: "data/caie_alevel_physics_questions.json",
+        jsBundleUrl: "data/caie_alevel_physics_db.js",
+        catDir: "Categorized_Questions_CAIE_Alevel_Physics",
+        tiers: ["AS Level", "A Level"],
+        papers: [
+            { value: "1", label: "Paper 1 (Multiple Choice)", tier: "AS Level" },
+            { value: "2", label: "Paper 2 (AS Level Structured)", tier: "AS Level" },
+            { value: "3", label: "Paper 3 (Advanced Practical)", tier: "AS Level" },
+            { value: "4", label: "Paper 4 (A Level Structured)", tier: "A Level" },
+            { value: "5", label: "Paper 5 (Planning & Evaluation)", tier: "A Level" }
+        ]
+    },
+    CAIE_Alevel_Chemistry: {
+        board: "Cambridge",
+        level: "A Level",
+        code: "9701",
+        badge: "CAIE A Level Chemistry 9701",
+        docTitle: "Cioal Tutor Topical Questions • A Level Chemistry (9701)",
+        subtitle: "Cambridge International AS & A Level Chemistry (9701) Question Bank & Test Builder",
+        examLabel: "Cambridge International AS & A Level Chemistry (9701)",
+        defaultTestTitle: "Weekly A Level Chemistry Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. stoichiometry, equilibria, organic, 9701)...",
+        storageKey: "cioal_test_paper_caie_alevel_chemistry",
+        syllabusUrl: "data/caie_alevel_chemistry_syllabus.json",
+        questionsUrl: "data/caie_alevel_chemistry_questions.json",
+        jsBundleUrl: "data/caie_alevel_chemistry_db.js",
+        catDir: "Categorized_Questions_CAIE_Alevel_Chemistry",
+        tiers: ["AS Level", "A Level"],
+        papers: [
+            { value: "1", label: "Paper 1 (Multiple Choice)", tier: "AS Level" },
+            { value: "2", label: "Paper 2 (AS Level Structured)", tier: "AS Level" },
+            { value: "3", label: "Paper 3 (Advanced Practical)", tier: "AS Level" },
+            { value: "4", label: "Paper 4 (A Level Structured)", tier: "A Level" },
+            { value: "5", label: "Paper 5 (Planning & Evaluation)", tier: "A Level" }
+        ]
+    },
+    CAIE_Alevel_Biology: {
+        board: "Cambridge",
+        level: "A Level",
+        code: "9700",
+        badge: "CAIE A Level Biology 9700",
+        docTitle: "Cioal Tutor Topical Questions • A Level Biology (9700)",
+        subtitle: "Cambridge International AS & A Level Biology (9700) Question Bank & Test Builder",
+        examLabel: "Cambridge International AS & A Level Biology (9700)",
+        defaultTestTitle: "Weekly A Level Biology Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. cell structure, enzymes, immunity, 9700)...",
+        storageKey: "cioal_test_paper_caie_alevel_biology",
+        syllabusUrl: "data/caie_alevel_biology_syllabus.json",
+        questionsUrl: "data/caie_alevel_biology_questions.json",
+        jsBundleUrl: "data/caie_alevel_biology_db.js",
+        catDir: "Categorized_Questions_CAIE_Alevel_Biology",
+        tiers: ["AS Level", "A Level"],
+        papers: [
+            { value: "1", label: "Paper 1 (Multiple Choice)", tier: "AS Level" },
+            { value: "2", label: "Paper 2 (AS Level Structured)", tier: "AS Level" },
+            { value: "3", label: "Paper 3 (Advanced Practical)", tier: "AS Level" },
+            { value: "4", label: "Paper 4 (A Level Structured)", tier: "A Level" },
+            { value: "5", label: "Paper 5 (Planning & Evaluation)", tier: "A Level" }
+        ]
+    },
+    CAIE_Alevel_Math: {
+        board: "Cambridge",
+        level: "A Level",
+        code: "9709",
+        badge: "CAIE A Level Math 9709",
+        docTitle: "Cioal Tutor Topical Questions • A Level Mathematics (9709)",
+        subtitle: "Cambridge International AS & A Level Mathematics (9709) Question Bank & Test Builder",
+        examLabel: "Cambridge International AS & A Level Mathematics (9709)",
+        defaultTestTitle: "Weekly A Level Mathematics Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. quadratics, trigonometry, calculus, 9709)...",
+        storageKey: "cioal_test_paper_caie_alevel_math",
+        syllabusUrl: "data/caie_alevel_math_syllabus.json",
+        questionsUrl: "data/caie_alevel_math_questions.json",
+        jsBundleUrl: "data/caie_alevel_math_db.js",
+        catDir: "Categorized_Questions_CAIE_Alevel_Math",
+        tiers: ["AS Level", "A Level"],
+        papers: [
+            { value: "1", label: "Paper 1 (Pure Mathematics 1)", tier: "AS Level" },
+            { value: "2", label: "Paper 2 (Pure Mathematics 2)", tier: "AS Level" },
+            { value: "3", label: "Paper 3 (Pure Mathematics 3)", tier: "A Level" },
+            { value: "4", label: "Paper 4 (Mechanics)", tier: "AS Level" },
+            { value: "5", label: "Paper 5 (Probability & Statistics 1)", tier: "AS Level" },
+            { value: "6", label: "Paper 6 (Probability & Statistics 2)", tier: "A Level" }
+        ]
+    },
+    Edexcel_Alevel_Physics: {
+        board: "Edexcel",
+        level: "A Level",
+        code: "9PH0",
+        badge: "Edexcel A Level Physics 9PH0",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel A Level Physics (9PH0)",
+        subtitle: "Pearson Edexcel AS & A Level Physics Specification Question Bank & Test Builder",
+        examLabel: "Pearson Edexcel AS & A Level Physics (9PH0)",
+        defaultTestTitle: "Weekly Edexcel A Level Physics Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. mechanics, waves, nuclear, 9PH0)...",
+        storageKey: "cioal_test_paper_edexcel_alevel_physics",
+        syllabusUrl: "data/edexcel_alevel_physics_syllabus.json",
+        questionsUrl: "data/edexcel_alevel_physics_questions.json",
+        jsBundleUrl: "data/edexcel_alevel_physics_db.js",
+        catDir: "Categorized_Questions_Edexcel_Alevel_Physics",
+        tiers: ["AS Level", "A Level"],
+        papers: [
+            { value: "1", label: "Paper 1 (Advanced Physics I)", tier: "AS Level" },
+            { value: "2", label: "Paper 2 (Advanced Physics II)", tier: "AS Level" },
+            { value: "3", label: "Paper 3 (General & Practical)", tier: "AS Level" }
+        ]
+    },
+    Edexcel_Alevel_Chemistry: {
+        board: "Edexcel",
+        level: "A Level",
+        code: "9CH0",
+        badge: "Edexcel A Level Chemistry 9CH0",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel A Level Chemistry (9CH0)",
+        subtitle: "Pearson Edexcel AS & A Level Chemistry Specification Question Bank & Test Builder",
+        examLabel: "Pearson Edexcel AS & A Level Chemistry (9CH0)",
+        defaultTestTitle: "Weekly Edexcel A Level Chemistry Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. equilibria, organic, redox, 9CH0)...",
+        storageKey: "cioal_test_paper_edexcel_alevel_chemistry",
+        syllabusUrl: "data/edexcel_alevel_chemistry_syllabus.json",
+        questionsUrl: "data/edexcel_alevel_chemistry_questions.json",
+        jsBundleUrl: "data/edexcel_alevel_chemistry_db.js",
+        catDir: "Categorized_Questions_Edexcel_Alevel_Chemistry",
+        tiers: ["AS Level", "A Level"],
+        papers: [
+            { value: "1", label: "Paper 1 (Advanced Inorganic & Physical)", tier: "AS Level" },
+            { value: "2", label: "Paper 2 (Advanced Organic & Physical)", tier: "AS Level" },
+            { value: "3", label: "Paper 3 (General & Practical)", tier: "AS Level" }
+        ]
+    },
+    Edexcel_Alevel_Biology: {
+        board: "Edexcel",
+        level: "A Level",
+        code: "9BI0",
+        badge: "Edexcel A Level Biology 9BI0",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel A Level Biology (9BI0)",
+        subtitle: "Pearson Edexcel AS & A Level Biology (Salters-Nuffield) Question Bank & Test Builder",
+        examLabel: "Pearson Edexcel AS & A Level Biology (9BI0)",
+        defaultTestTitle: "Weekly Edexcel A Level Biology Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. circulation, genetics, voice, 9BI0)...",
+        storageKey: "cioal_test_paper_edexcel_alevel_biology",
+        syllabusUrl: "data/edexcel_alevel_biology_syllabus.json",
+        questionsUrl: "data/edexcel_alevel_biology_questions.json",
+        jsBundleUrl: "data/edexcel_alevel_biology_db.js",
+        catDir: "Categorized_Questions_Edexcel_Alevel_Biology",
+        tiers: ["AS Level", "A Level"],
+        papers: [
+            { value: "1", label: "Paper 1 (The Natural Environment & Species Survival)", tier: "AS Level" },
+            { value: "2", label: "Paper 2 (Energy, Exercise & Coordination)", tier: "AS Level" },
+            { value: "3", label: "Paper 3 (General & Practical Applications)", tier: "AS Level" }
+        ]
+    },
+    Edexcel_Alevel_Math: {
+        board: "Edexcel",
+        level: "A Level",
+        code: "9MA0",
+        badge: "Edexcel A Level Maths 9MA0",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel A Level Mathematics (9MA0)",
+        subtitle: "Pearson Edexcel AS & A Level Mathematics Specification Question Bank & Test Builder",
+        examLabel: "Pearson Edexcel AS & A Level Mathematics (9MA0)",
+        defaultTestTitle: "Weekly Edexcel A Level Mathematics Assessment",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. proof, calculus, statistics, mechanics, 9MA0)...",
+        storageKey: "cioal_test_paper_edexcel_alevel_math",
+        syllabusUrl: "data/edexcel_alevel_math_syllabus.json",
+        questionsUrl: "data/edexcel_alevel_math_questions.json",
+        jsBundleUrl: "data/edexcel_alevel_math_db.js",
+        catDir: "Categorized_Questions_Edexcel_Alevel_Math",
+        tiers: ["AS Level", "A Level"],
+        papers: [
+            { value: "1", label: "Paper 1 (Pure Mathematics 1)", tier: "AS Level" },
+            { value: "2", label: "Paper 2 (Pure Mathematics 2)", tier: "AS Level" },
+            { value: "3", label: "Paper 3 (Statistics & Mechanics)", tier: "AS Level" }
+        ]
     }
 };
 
@@ -302,10 +487,16 @@ async function ensureSubjectDatabaseLoaded(subject) {
         const relImg = (q.image_rel_path || q.image_path || "").replace(/\\/g, "/");
         if (relImg) {
             q.image_url = encodeURI(`${cfg.catDir}/${relImg}`) + imgCacheSuffix;
+        } else if (q.image_url && !isFileProto && !q.image_url.includes("?v=")) {
+            q.image_url += imgCacheSuffix;
         }
         if (!q.is_mc) {
             const relMs = (q.ms_image_rel_path || q.ms_image_path || "").replace(/\\/g, "/");
-            q.ms_image_url = relMs ? (encodeURI(`${cfg.catDir}/${relMs}`) + imgCacheSuffix) : null;
+            if (relMs) {
+                q.ms_image_url = encodeURI(`${cfg.catDir}/${relMs}`) + imgCacheSuffix;
+            } else if (q.ms_image_url && !isFileProto && !q.ms_image_url.includes("?v=")) {
+                q.ms_image_url += imgCacheSuffix;
+            }
         }
         questionsById[q.id] = q;
     });
@@ -441,25 +632,83 @@ function updateSplashSubjectTags() {
     const chemTag = document.getElementById("chemistryStatusTag");
     const bioTag = document.getElementById("biologyStatusTag");
     const mathTag = document.getElementById("mathStatusTag");
-    const isCaie = (splashState.board === "Cambridge" && splashState.level === "IGCSE / O Level");
-    const isEdexcel = (splashState.board === "Edexcel" && splashState.level === "IGCSE / O Level");
-    const isReady = isCaie || isEdexcel;
+
+    const isCaieIgcse = (splashState.board === "Cambridge" && splashState.level === "IGCSE / O Level");
+    const isEdexcelGcse = (splashState.board === "Edexcel" && splashState.level === "IGCSE / O Level");
+    const isCaieAlevel = (splashState.board === "Cambridge" && splashState.level === "A Level");
+    const isEdexcelAlevel = (splashState.board === "Edexcel" && splashState.level === "A Level");
 
     if (physTag) {
-        physTag.textContent = isCaie ? "0625 • Ready ▶" : (isEdexcel ? "1PH0 • Ready ▶" : "Coming Soon");
-        physTag.className = isReady ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+        if (isCaieIgcse) {
+            physTag.textContent = "0625 • Ready ▶";
+            physTag.className = "splash-subject-tag tag-ready";
+        } else if (isEdexcelGcse) {
+            physTag.textContent = "1PH0 • Ready ▶";
+            physTag.className = "splash-subject-tag tag-ready";
+        } else if (isCaieAlevel) {
+            physTag.textContent = "9702 • Ready ▶";
+            physTag.className = "splash-subject-tag tag-ready";
+        } else if (isEdexcelAlevel) {
+            physTag.textContent = "9PH0 • Ready ▶";
+            physTag.className = "splash-subject-tag tag-ready";
+        } else {
+            physTag.textContent = "Coming Soon";
+            physTag.className = "splash-subject-tag tag-soon";
+        }
     }
     if (chemTag) {
-        chemTag.textContent = isCaie ? "0620 • Ready ▶" : (isEdexcel ? "1CH0 • Ready ▶" : "Coming Soon");
-        chemTag.className = isReady ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+        if (isCaieIgcse) {
+            chemTag.textContent = "0620 • Ready ▶";
+            chemTag.className = "splash-subject-tag tag-ready";
+        } else if (isEdexcelGcse) {
+            chemTag.textContent = "1CH0 • Ready ▶";
+            chemTag.className = "splash-subject-tag tag-ready";
+        } else if (isCaieAlevel) {
+            chemTag.textContent = "9701 • Ready ▶";
+            chemTag.className = "splash-subject-tag tag-ready";
+        } else if (isEdexcelAlevel) {
+            chemTag.textContent = "9CH0 • Ready ▶";
+            chemTag.className = "splash-subject-tag tag-ready";
+        } else {
+            chemTag.textContent = "Coming Soon";
+            chemTag.className = "splash-subject-tag tag-soon";
+        }
     }
     if (bioTag) {
-        bioTag.textContent = isCaie ? "0610 • Ready ▶" : (isEdexcel ? "1BI0 • Ready ▶" : "Coming Soon");
-        bioTag.className = isReady ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+        if (isCaieIgcse) {
+            bioTag.textContent = "0610 • Ready ▶";
+            bioTag.className = "splash-subject-tag tag-ready";
+        } else if (isEdexcelGcse) {
+            bioTag.textContent = "1BI0 • Ready ▶";
+            bioTag.className = "splash-subject-tag tag-ready";
+        } else if (isCaieAlevel) {
+            bioTag.textContent = "9700 • Ready ▶";
+            bioTag.className = "splash-subject-tag tag-ready";
+        } else if (isEdexcelAlevel) {
+            bioTag.textContent = "9BI0 • Ready ▶";
+            bioTag.className = "splash-subject-tag tag-ready";
+        } else {
+            bioTag.textContent = "Coming Soon";
+            bioTag.className = "splash-subject-tag tag-soon";
+        }
     }
     if (mathTag) {
-        mathTag.textContent = isCaie ? "0580 • Ready ▶" : (isEdexcel ? "1MA1 • Ready ▶" : "Coming Soon");
-        mathTag.className = isReady ? "splash-subject-tag tag-ready" : "splash-subject-tag tag-soon";
+        if (isCaieIgcse) {
+            mathTag.textContent = "0580 • Ready ▶";
+            mathTag.className = "splash-subject-tag tag-ready";
+        } else if (isEdexcelGcse) {
+            mathTag.textContent = "1MA1 • Ready ▶";
+            mathTag.className = "splash-subject-tag tag-ready";
+        } else if (isCaieAlevel) {
+            mathTag.textContent = "9709 • Ready ▶";
+            mathTag.className = "splash-subject-tag tag-ready";
+        } else if (isEdexcelAlevel) {
+            mathTag.textContent = "9MA0 • Ready ▶";
+            mathTag.className = "splash-subject-tag tag-ready";
+        } else {
+            mathTag.textContent = "Coming Soon";
+            mathTag.className = "splash-subject-tag tag-soon";
+        }
     }
 }
 
@@ -620,8 +869,13 @@ function setupSplashScreenListeners() {
         card.addEventListener("click", async () => {
             const subject = card.dataset.subject;
             const validBase = ["Physics", "Chemistry", "Biology", "Math"].includes(subject);
-            if (splashState.level === "IGCSE / O Level" && validBase && (splashState.board === "Cambridge" || splashState.board === "Edexcel")) {
-                const targetSubject = (splashState.board === "Edexcel") ? `Edexcel_${subject}` : subject;
+            if (validBase && (splashState.board === "Cambridge" || splashState.board === "Edexcel")) {
+                let targetSubject;
+                if (splashState.level === "A Level") {
+                    targetSubject = (splashState.board === "Edexcel") ? `Edexcel_Alevel_${subject}` : `CAIE_Alevel_${subject}`;
+                } else {
+                    targetSubject = (splashState.board === "Edexcel") ? `Edexcel_${subject}` : subject;
+                }
                 splashScreen.classList.add("hidden");
                 comingSoonScreen.classList.add("hidden");
                 await switchSubject(targetSubject);
@@ -699,13 +953,26 @@ document.addEventListener("DOMContentLoaded", async () => {
     setupSplashScreenListeners();
     setupEventListeners();
     const initialSubject = localStorage.getItem("cioal_active_subject") || "Physics";
-    if (initialSubject.startsWith("Edexcel_")) {
+    if (initialSubject.startsWith("CAIE_Alevel_")) {
+        splashState.board = "Cambridge";
+        splashState.level = "A Level";
+    } else if (initialSubject.startsWith("Edexcel_Alevel_")) {
         splashState.board = "Edexcel";
-        document.querySelectorAll("#splashBoardGroup .splash-option-btn").forEach(b => {
-            b.classList.toggle("active", b.dataset.board === "Edexcel");
-        });
-        updateSplashSubjectTags();
+        splashState.level = "A Level";
+    } else if (initialSubject.startsWith("Edexcel_")) {
+        splashState.board = "Edexcel";
+        splashState.level = "IGCSE / O Level";
+    } else {
+        splashState.board = "Cambridge";
+        splashState.level = "IGCSE / O Level";
     }
+    document.querySelectorAll("#splashBoardGroup .splash-option-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.board === splashState.board);
+    });
+    document.querySelectorAll("#splashLevelGroup .splash-option-btn").forEach(b => {
+        b.classList.toggle("active", b.dataset.level === splashState.level);
+    });
+    updateSplashSubjectTags();
     await switchSubject(initialSubject);
 });
 
@@ -1226,6 +1493,124 @@ async function handleAddAllFiltered() {
     }
 }
 
+// Helper to render KaTeX math in any DOM container
+function triggerKaTeX(element) {
+    if (!element) return;
+    if (typeof renderMathInElement === "function") {
+        try {
+            renderMathInElement(element, {
+                delimiters: [
+                    { left: "$$", right: "$$", display: true },
+                    { left: "$", right: "$", display: false },
+                    { left: "\\[", right: "\\]", display: true },
+                    { left: "\\(", right: "\\)", display: false }
+                ],
+                throwOnError: false
+            });
+        } catch (e) {
+            console.warn("KaTeX rendering warning:", e);
+        }
+    }
+}
+
+// Render question content from native blocks (text + diagrams) or fallback image
+function renderQuestionContentHtml(q) {
+    if (q.blocks && Array.isArray(q.blocks) && q.blocks.length > 0) {
+        const flowHtml = q.blocks.map(b => {
+            if (b.type === "diagram") {
+                return `
+                    <div class="question-diagram-wrap">
+                        <img src="${b.url}" alt="Diagram" class="question-diagram-img" loading="lazy">
+                    </div>
+                `;
+            } else if (b.type === "text") {
+                const linesHtml = (b.lines || []).map(line => {
+                    const kindCls = line.kind || "body";
+                    const marksHtml = line.marks ? `<span class="native-line-marks">[${line.marks}]</span>` : "";
+                    return `
+                        <div class="native-q-line ${kindCls}">
+                            <span class="native-line-content">${line.html}</span>
+                            ${marksHtml}
+                        </div>
+                    `;
+                }).join("");
+                return `<div class="native-text-block">${linesHtml}</div>`;
+            }
+            return "";
+        }).join("");
+        return `<div class="native-question-flow">${flowHtml}</div>`;
+    }
+    if (q.image_url) {
+        return `<img src="${q.image_url}" alt="Question ${q.q_num}" class="question-img" loading="lazy">`;
+    }
+    return `<div style="padding:1rem; color:#64748b; font-style:italic;">No preview available for question ${q.q_num}.</div>`;
+}
+
+// Render structured Mark Scheme rows as a table
+function renderMsRowsTableHtml(rows) {
+    if (!rows || rows.length === 0) return "";
+    const trsHtml = rows.map(r => `
+        <tr>
+            <td class="ms-cell-part">${r.part || "—"}</td>
+            <td class="ms-cell-answer">${r.answer || "—"}</td>
+            <td class="ms-cell-marks">${r.marks || "—"}</td>
+            <td class="ms-cell-guidance">${r.guidance || "—"}</td>
+        </tr>
+    `).join("");
+
+    return `
+        <div class="ms-table-responsive">
+            <table class="ms-table">
+                <thead>
+                    <tr>
+                        <th style="width:14%;">Part</th>
+                        <th style="width:48%;">Scheme / Acceptable Answer</th>
+                        <th style="width:10%; text-align:center;">Marks</th>
+                        <th style="width:28%;">Guidance / Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    ${trsHtml}
+                </tbody>
+            </table>
+        </div>
+    `;
+}
+
+// Render native exam item for exam paper view & print
+function renderNativeExamItemHtml(q, badgeText, marks) {
+    const marksLabel = `[Total: ${marks} Mark${marks > 1 ? "s" : ""}]`;
+    const contentHtml = renderQuestionContentHtml(q);
+    return `
+        <div class="exam-question-item single-seg native-item">
+            <div class="exam-q-header">
+                <span class="exam-q-num-badge">${badgeText}</span>
+                <span class="exam-q-marks">${marksLabel}</span>
+            </div>
+            <div class="exam-q-native-body">
+                ${contentHtml}
+            </div>
+        </div>
+    `;
+}
+
+// Render native Mark Scheme item for exam paper view & print
+function renderNativeMsExamItemHtml(q, badgeText, marks) {
+    const marksLabel = `[Total: ${marks} Mark${marks > 1 ? "s" : ""}]`;
+    const tableHtml = renderMsRowsTableHtml(q.ms_rows);
+    return `
+        <div class="exam-question-item single-seg native-ms-item">
+            <div class="exam-q-header">
+                <span class="exam-q-num-badge">${badgeText}</span>
+                <span class="exam-q-marks">${marksLabel}</span>
+            </div>
+            <div class="exam-q-native-ms-body" style="padding:0.35rem 0.6rem;">
+                ${tableHtml}
+            </div>
+        </div>
+    `;
+}
+
 function renderQuestionsList(questions) {
     const listContainer = document.getElementById("questionsList");
     if (!questions || questions.length === 0) {
@@ -1295,6 +1680,16 @@ function renderQuestionsList(questions) {
                     </div>
                 </div>
             `;
+        } else if (q.ms_rows && q.ms_rows.length > 0) {
+            msContentHtml = `
+                <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
+                    <div class="ms-panel-header">
+                        <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
+                        <span style="font-size:0.78rem; font-weight:700; color:#166534;">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
+                    </div>
+                    ${renderMsRowsTableHtml(q.ms_rows)}
+                </div>
+            `;
         } else if (q.ms_image_url) {
             msContentHtml = `
                 <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
@@ -1309,6 +1704,8 @@ function renderQuestionsList(questions) {
             `;
         }
 
+        const questionContentHtml = renderQuestionContentHtml(q);
+
         card.innerHTML = `
             <div class="question-header">
                 <div class="question-meta">
@@ -1322,7 +1719,7 @@ function renderQuestionsList(questions) {
                 </button>
             </div>
             <div class="question-content">
-                <img src="${q.image_url}" alt="Question ${q.q_num}" class="question-img" loading="lazy">
+                ${questionContentHtml}
             </div>
             ${msContentHtml}
             <div class="question-footer">
@@ -1338,6 +1735,8 @@ function renderQuestionsList(questions) {
 
         listContainer.appendChild(card);
     });
+
+    triggerKaTeX(listContainer);
 }
 
 function toggleQuestionInTest(question) {
@@ -1785,13 +2184,21 @@ function buildExamPaperHtml() {
     let markSchemesHtml = "";
 
     appState.testPaperQuestions.forEach((q, idx) => {
-        questionsHtml += renderSlicedExamItemHtml(
-            q.image_url,
-            q.qp_slices,
-            `Question ${idx + 1}`,
-            q.marks || 1,
-            `Question ${idx + 1}`
-        );
+        if (q.blocks && q.blocks.length > 0) {
+            questionsHtml += renderNativeExamItemHtml(
+                q,
+                `Question ${idx + 1}`,
+                q.marks || 1
+            );
+        } else {
+            questionsHtml += renderSlicedExamItemHtml(
+                q.image_url,
+                q.qp_slices,
+                `Question ${idx + 1}`,
+                q.marks || 1,
+                `Question ${idx + 1}`
+            );
+        }
 
         // Build Mark Scheme item for the end of the paper
         if (q.is_mc) {
@@ -1807,6 +2214,12 @@ function buildExamPaperHtml() {
                     <span class="exam-q-marks">[1 Mark]</span>
                 </div>
             `;
+        } else if (q.ms_rows && q.ms_rows.length > 0) {
+            markSchemesHtml += renderNativeMsExamItemHtml(
+                q,
+                `Question ${idx + 1} — Mark Scheme`,
+                q.marks || 1
+            );
         } else if (q.ms_image_url) {
             markSchemesHtml += renderSlicedExamItemHtml(
                 q.ms_image_url,
@@ -1867,8 +2280,16 @@ function buildExamPaperHtml() {
 
 function renderExamPaperView() {
     const fullHtml = buildExamPaperHtml();
-    document.getElementById("examPaperPrintArea").innerHTML = fullHtml;
-    document.getElementById("printPaperRoot").innerHTML = fullHtml;
+    const printArea = document.getElementById("examPaperPrintArea");
+    const printRoot = document.getElementById("printPaperRoot");
+    if (printArea) {
+        printArea.innerHTML = fullHtml;
+        triggerKaTeX(printArea);
+    }
+    if (printRoot) {
+        printRoot.innerHTML = fullHtml;
+        triggerKaTeX(printRoot);
+    }
 }
 
 function handleDirectPrint() {
@@ -1895,7 +2316,11 @@ function openFullPagePrintTab() {
             <meta charset="UTF-8">
             <base href="${baseHref}">
             <title>${title} - Cioal Tutors</title>
-            <link rel="stylesheet" href="static/css/style.css?v=10">
+            <link rel="stylesheet" href="static/css/style.css?v=17">
+            <!-- KaTeX for rendering mathematical & scientific expressions -->
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+            <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" onload="if(window.renderMathInElement)renderMathInElement(document.body,{delimiters:[{left:'$$',right:'$$',display:true},{left:'$',right:'$',display:false},{left:'\\\\[',right:'\\\\]',display:true},{left:'\\\\(',right:'\\\\)',display:false}],throwOnError:false})"></script>
             <style>
                 body {
                     background: #f8faf5;
@@ -2000,6 +2425,18 @@ function showMarkSchemePreview() {
                     <span class="exam-q-marks">[1 Mark]</span>
                 </div>
             `;
+        } else if (q.ms_rows && q.ms_rows.length > 0) {
+            detailedMsHtml += `
+                <div class="exam-question-item single-seg native-ms-item" style="margin-bottom:1rem;">
+                    <div class="exam-q-header">
+                        <span class="exam-q-num-badge">Question ${idx + 1} — Mark Scheme (${q.year} ${q.month} P${q.component} Q${q.q_num})</span>
+                        <span class="exam-q-marks">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
+                    </div>
+                    <div style="padding:0.35rem 0.6rem;">
+                        ${renderMsRowsTableHtml(q.ms_rows)}
+                    </div>
+                </div>
+            `;
         } else if (q.ms_image_url) {
             detailedMsHtml += `
                 <div class="exam-question-item single-seg" style="margin-bottom:1rem;">
@@ -2044,6 +2481,8 @@ function showMarkSchemePreview() {
             </div>
         </div>
     `;
+
+    triggerKaTeX(container);
 }
 
 function showToast(message) {

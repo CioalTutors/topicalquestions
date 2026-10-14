@@ -1,0 +1,300 @@
+[
+  {
+    "id": 1,
+    "name": "Topic 1 & 2: Atomic structure, Bonding and Redox",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "1.1 Electronic configuration & ionisation energies",
+        "keywords": [
+          "atomic orbitals",
+          "s p d orbitals",
+          "first ionisation energy",
+          "successive ionisation energies",
+          "shielding",
+          "nuclear charge"
+        ]
+      },
+      {
+        "id": "1.2",
+        "name": "1.2 Bonding, shapes of molecules & intermolecular forces",
+        "keywords": [
+          "ionic lattice",
+          "covalent bonding",
+          "dative covalent",
+          "metallic bonding",
+          "vsepr",
+          "electronegativity",
+          "london forces",
+          "permanent dipole",
+          "hydrogen bonding"
+        ]
+      },
+      {
+        "id": "1.3",
+        "name": "1.3 Redox chemistry & oxidation states",
+        "keywords": [
+          "oxidation number",
+          "half equation",
+          "disproportionation",
+          "redox titration"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Topic 3 & 4: Formulae, amounts & Inorganic chemistry",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "2.1 Moles, stoichiometry & titration calculations",
+        "keywords": [
+          "mole",
+          "avogadro constant",
+          "ideal gas equation",
+          "molar volume",
+          "percentage yield",
+          "atom economy",
+          "titration"
+        ]
+      },
+      {
+        "id": "2.2",
+        "name": "2.2 Group 2 & Group 7 chemistry",
+        "keywords": [
+          "alkaline earth metals",
+          "thermal stability of nitrates and carbonates",
+          "solubility of sulfates and hydroxides",
+          "halogens",
+          "halide displacement",
+          "reactions of chlorine with water",
+          "bleach"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Topic 5 & 6: Energetics, Kinetics and Equilibria I",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "3.1 Enthalpy changes & Hess's law",
+        "keywords": [
+          "enthalpy of formation",
+          "enthalpy of combustion",
+          "neutralisation",
+          "bond enthalpy",
+          "hess's law",
+          "calorimetry"
+        ]
+      },
+      {
+        "id": "3.2",
+        "name": "3.2 Reaction kinetics & Maxwell-Boltzmann",
+        "keywords": [
+          "collision theory",
+          "activation energy",
+          "maxwell-boltzmann distribution",
+          "catalyst",
+          "effect of temperature on rate"
+        ]
+      },
+      {
+        "id": "3.3",
+        "name": "3.3 Dynamic equilibrium & Kc",
+        "keywords": [
+          "reversible reaction",
+          "le chatelier's principle",
+          "equilibrium constant",
+          "kc expression",
+          "equilibrium yield"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Topic 7: Organic chemistry I & Analytical techniques",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "4.1 Alkanes, alkenes, halogenoalkanes & alcohols",
+        "keywords": [
+          "homologous series",
+          "free radical substitution",
+          "electrophilic addition",
+          "markovnikov",
+          "nucleophilic substitution",
+          "elimination",
+          "oxidation of alcohols",
+          "reflux",
+          "distillation"
+        ]
+      },
+      {
+        "id": "4.2",
+        "name": "4.2 Mass spectrometry & Infrared spectroscopy",
+        "keywords": [
+          "mass spectrometry",
+          "molecular ion peak",
+          "high resolution mass spec",
+          "infrared spectroscopy",
+          "wavenumber",
+          "fingerprint region"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Topic 8: Energetics II, Entropy & Gibbs energy",
+    "subtopics": [
+      {
+        "id": "5.1",
+        "name": "5.1 Lattice energy & Born-Haber cycles",
+        "keywords": [
+          "lattice energy",
+          "born-haber cycle",
+          "enthalpy of atomisation",
+          "electron affinity",
+          "enthalpy of hydration",
+          "enthalpy of solution",
+          "polarisation of ions"
+        ]
+      },
+      {
+        "id": "5.2",
+        "name": "5.2 Entropy & Gibbs free energy",
+        "keywords": [
+          "entropy",
+          "delta s",
+          "gibbs free energy",
+          "delta g",
+          "feasibility",
+          "temperature of feasibility"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Topic 9 & 10: Kinetics II, Equilibria II & Acid-Base",
+    "subtopics": [
+      {
+        "id": "6.1",
+        "name": "6.1 Rate equations, orders & Arrhenius equation",
+        "keywords": [
+          "rate equation",
+          "order of reaction",
+          "rate constant",
+          "initial rates method",
+          "half-life method",
+          "rate determining step",
+          "arrhenius equation"
+        ]
+      },
+      {
+        "id": "6.2",
+        "name": "6.2 Kp, pH, Ka, Kw & buffer solutions",
+        "keywords": [
+          "partial pressure",
+          "kp",
+          "ph calculations",
+          "ionic product of water",
+          "kw",
+          "acid dissociation constant",
+          "ka",
+          "pka",
+          "buffer solution",
+          "ph titration curves",
+          "indicators"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Topic 11 & 12: Transition metals & Electrochemistry",
+    "subtopics": [
+      {
+        "id": "7.1",
+        "name": "7.1 Electrode potentials & electrochemical cells",
+        "keywords": [
+          "standard electrode potential",
+          "electrochemical cell",
+          "e cell",
+          "salt bridge",
+          "predicting reaction feasibility"
+        ]
+      },
+      {
+        "id": "7.2",
+        "name": "7.2 Transition metals, complexes & catalysis",
+        "keywords": [
+          "transition metal properties",
+          "complex ion",
+          "ligand",
+          "dative covalent bond",
+          "coordination number",
+          "ligand exchange",
+          "colour origin in d-block",
+          "catalytic mechanisms"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Topic 13 & 14: Organic chemistry II, Arenes, Carbonyls & Synthesis",
+    "subtopics": [
+      {
+        "id": "8.1",
+        "name": "8.1 Arenes, benzene & electrophilic substitution",
+        "keywords": [
+          "benzene structure",
+          "delocalised electrons",
+          "electrophilic aromatic substitution",
+          "nitration of benzene",
+          "friedel-crafts",
+          "phenol",
+          "reactions of phenol"
+        ]
+      },
+      {
+        "id": "8.2",
+        "name": "8.2 Carbonyls, carboxylic acids, esters & amines",
+        "keywords": [
+          "aldehydes and ketones",
+          "nucleophilic addition",
+          "2,4-dnp",
+          "tollens' reagent",
+          "iodoform test",
+          "carboxylic acids",
+          "acyl chlorides",
+          "esters",
+          "aliphatic amines",
+          "aromatic amines",
+          "amides",
+          "amino acids",
+          "condensation polymers"
+        ]
+      },
+      {
+        "id": "8.3",
+        "name": "8.3 NMR spectroscopy & modern organic synthesis",
+        "keywords": [
+          "1h nmr",
+          "13c nmr",
+          "chemical shift",
+          "splitting patterns",
+          "multiplicity",
+          "solvent peak",
+          "organic synthetic routes",
+          "purity determination"
+        ]
+      }
+    ]
+  }
+]

@@ -1961,3 +1961,184 @@ body {
   }
 }
 
+/* =========================================================
+   Native Question Content & LaTeX Math Flow
+   ========================================================= */
+.native-question-flow {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  background: #ffffff;
+  color: #1e293b;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.native-text-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.native-q-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 0.75rem;
+  word-break: break-word;
+}
+
+.native-line-content {
+  flex: 1;
+}
+
+.native-q-line.q_start {
+  font-weight: 600;
+  color: #0f172a;
+}
+
+.native-q-line.mcq_option {
+  padding-left: 0.75rem;
+  display: flex;
+  align-items: baseline;
+  gap: 0.6rem;
+}
+
+.mcq-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  min-width: 22px;
+  background: #f1f5f9;
+  border: 1.5px solid #cbd5e1;
+  border-radius: 50%;
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: #334155;
+  margin-right: 0.45rem;
+  user-select: none;
+}
+
+.native-line-marks {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: #475569;
+  flex-shrink: 0;
+  margin-left: auto;
+}
+
+.question-diagram-wrap {
+  text-align: center;
+  margin: 0.5rem auto;
+  max-width: 100%;
+}
+
+.question-diagram-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  display: inline-block;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+
+/* =========================================================
+   Mark Scheme Table (Clean, Responsive & Printable)
+   ========================================================= */
+.ms-table-responsive {
+  width: 100%;
+  overflow-x: auto;
+  margin-top: 0.65rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px;
+  background: #ffffff;
+}
+
+.ms-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+  line-height: 1.5;
+  color: #1e293b;
+}
+
+.ms-table th {
+  background: #f8faf5;
+  color: #14532d;
+  font-weight: 700;
+  font-size: 0.82rem;
+  padding: 0.55rem 0.75rem;
+  text-align: left;
+  border-bottom: 2px solid #84cc16;
+}
+
+.ms-table td {
+  padding: 0.55rem 0.75rem;
+  border-bottom: 1px solid #f1f5f9;
+  vertical-align: top;
+}
+
+.ms-table tr:last-child td {
+  border-bottom: none;
+}
+
+.ms-table tr:hover {
+  background: #f8fafc;
+}
+
+.ms-cell-part {
+  font-weight: 700;
+  color: #0f172a;
+  white-space: nowrap;
+}
+
+.ms-cell-answer {
+  color: #0f172a;
+}
+
+.ms-cell-marks {
+  font-weight: 700;
+  color: #166534;
+  text-align: center;
+  white-space: nowrap;
+}
+
+.ms-cell-guidance {
+  color: #475569;
+  font-size: 0.82rem;
+}
+
+/* Print Overrides for Native Questions */
+@media print {
+  .native-question-flow {
+    padding: 0.35rem 0.5rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.5 !important;
+  }
+  .exam-question-item.native-item {
+    break-inside: auto !important;
+    page-break-inside: auto !important;
+  }
+  .exam-q-native-body {
+    padding: 0.35rem 0.5rem !important;
+  }
+  .question-diagram-img {
+    box-shadow: none !important;
+  }
+  .ms-table-responsive {
+    border: 1px solid #cbd5e1 !important;
+  }
+  .ms-table th {
+    background: #f1f5f9 !important;
+    border-bottom: 2px solid #84cc16 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .ms-table td {
+    border-bottom: 1px solid #cbd5e1 !important;
+  }
+}
+
+

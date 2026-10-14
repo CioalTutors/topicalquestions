@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "name": "Pure Mathematics: Algebra, Functions & Graphs",
+    "subtopics": [
+      {
+        "id": "1.1",
+        "name": "P.1 Proof (Deduction, Exhaustion, Contradiction)",
+        "keywords": [
+          "proof by deduction",
+          "proof by exhaustion",
+          "disproof by counter-example",
+          "proof by contradiction",
+          "irrationality of root 2"
+        ]
+      },
+      {
+        "id": "1.2",
+        "name": "P.2 Algebra, Functions & Partial Fractions",
+        "keywords": [
+          "algebraic division",
+          "factor theorem",
+          "partial fractions",
+          "modulus function",
+          "composite functions",
+          "inverse functions",
+          "transformations of graphs"
+        ]
+      },
+      {
+        "id": "1.3",
+        "name": "P.3 Coordinate Geometry in the (x, y) plane",
+        "keywords": [
+          "straight line equations",
+          "circles",
+          "tangent to circle",
+          "parametric equations",
+          "converting parametric to cartesian"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Pure Mathematics: Sequences, Series & Binomial",
+    "subtopics": [
+      {
+        "id": "2.1",
+        "name": "P.4 Sequences, Series & Progressions",
+        "keywords": [
+          "arithmetic sequence",
+          "ap",
+          "geometric sequence",
+          "gp",
+          "sum of ap",
+          "sum of gp",
+          "sum to infinity",
+          "sigma notation",
+          "recurrence relation"
+        ]
+      },
+      {
+        "id": "2.2",
+        "name": "P.5 The Binomial Expansion",
+        "keywords": [
+          "binomial theorem",
+          "pascal's triangle",
+          "general binomial expansion",
+          "fractional and negative powers",
+          "validity of binomial expansion"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Pure Mathematics: Trigonometry",
+    "subtopics": [
+      {
+        "id": "3.1",
+        "name": "P.6 Trigonometric functions, radians & identities",
+        "keywords": [
+          "radian measure",
+          "arc length",
+          "sector area",
+          "secant",
+          "cosecant",
+          "cotangent",
+          "compound angle formulae",
+          "double angle formulae",
+          "r cos(x - alpha)",
+          "r sin(x + alpha)",
+          "small angle approximations",
+          "inverse trig functions"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Pure Mathematics: Exponentials, Logarithms & Calculus",
+    "subtopics": [
+      {
+        "id": "4.1",
+        "name": "P.7 Exponentials and Logarithms",
+        "keywords": [
+          "exponential function",
+          "e^x",
+          "natural logarithms",
+          "laws of logarithms",
+          "exponential growth and decay",
+          "non-linear data to linear form"
+        ]
+      },
+      {
+        "id": "4.2",
+        "name": "P.8 Differentiation & Applications",
+        "keywords": [
+          "differentiation from first principles",
+          "derivative of e^x and ln",
+          "product rule",
+          "quotient rule",
+          "chain rule",
+          "implicit differentiation",
+          "parametric differentiation",
+          "rates of change",
+          "stationary points and inflection"
+        ]
+      },
+      {
+        "id": "4.3",
+        "name": "P.9 Integration & Applications",
+        "keywords": [
+          "standard integrals",
+          "integration by substitution",
+          "integration by parts",
+          "integration using partial fractions",
+          "area under curve",
+          "differential equations",
+          "separation of variables",
+          "trapezium rule"
+        ]
+      },
+      {
+        "id": "4.4",
+        "name": "P.10 Numerical Methods & Vectors in 3D",
+        "keywords": [
+          "change of sign method",
+          "newton-raphson method",
+          "fixed point iteration",
+          "cobweb diagram",
+          "3d vectors",
+          "position vector",
+          "magnitude and direction in 3d"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Statistics (Paper 3 Section A)",
+    "subtopics": [
+      {
+        "id": "5.1",
+        "name": "S.1 Statistical Sampling & Data Presentation",
+        "keywords": [
+          "random sampling",
+          "systematic sampling",
+          "stratified sampling",
+          "quota sampling",
+          "opportunity sampling",
+          "large data set",
+          "outliers",
+          "cleaning data",
+          "box plots",
+          "histograms",
+          "measures of spread"
+        ]
+      },
+      {
+        "id": "5.2",
+        "name": "S.2 Probability, Venn & Tree Diagrams",
+        "keywords": [
+          "probability",
+          "independent events",
+          "mutually exclusive events",
+          "conditional probability",
+          "venn diagrams",
+          "tree diagrams"
+        ]
+      },
+      {
+        "id": "5.3",
+        "name": "S.3 Statistical Distributions (Binomial & Normal)",
+        "keywords": [
+          "binomial distribution",
+          "discrete random variable",
+          "normal distribution",
+          "standard normal distribution",
+          "z values",
+          "hypothesis testing for binomial",
+          "hypothesis testing for normal",
+          "critical region",
+          "significance level"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Mechanics (Paper 3 Section B)",
+    "subtopics": [
+      {
+        "id": "6.1",
+        "name": "M.1 Kinematics in 1D and 2D",
+        "keywords": [
+          "suvat equations",
+          "velocity-time graphs",
+          "calculus in kinematics",
+          "variable acceleration",
+          "vectors in kinematics",
+          "projectiles in 2d"
+        ]
+      },
+      {
+        "id": "6.2",
+        "name": "M.2 Forces, Newton's Laws & Friction",
+        "keywords": [
+          "newton's laws of motion",
+          "f = ma",
+          "equilibrium of particle",
+          "connected particles",
+          "pulleys",
+          "friction",
+          "limiting equilibrium",
+          "coefficient of friction",
+          "inclined planes"
+        ]
+      },
+      {
+        "id": "6.3",
+        "name": "M.3 Moments & Rigid Bodies",
+        "keywords": [
+          "moment of a force",
+          "equilibrium of rigid body",
+          "centres of mass",
+          "tilting",
+          "ladder problems",
+          "non-uniform rods"
+        ]
+      }
+    ]
+  }
+]
