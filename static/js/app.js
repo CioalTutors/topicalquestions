@@ -425,6 +425,14 @@ function setAppMode(mode) {
         if (sidebarTopical) sidebarTopical.style.display = "block";
         if (testTray) testTray.style.display = "none";
         if (addAllBtn) addAllBtn.style.display = "none";
+
+        const mobileToggleText = document.querySelector("#mobileTopicsToggleBtn .mobile-topics-toggle-text");
+        if (mobileToggleText) mobileToggleText.textContent = "Topics";
+        const openMobileBtn = document.getElementById("openMobileSidebarBtn");
+        if (openMobileBtn) {
+            openMobileBtn.innerHTML = `☰ Select Chapter & Topic <span class="mobile-filter-badge" id="mobileChapterCountBadge" style="display:none;"></span>`;
+        }
+
         initTopicalSidebar();
         appState.currentPage = 1;
         fetchQuestions();
@@ -432,6 +440,15 @@ function setAppMode(mode) {
         if (sidebarBuilder) sidebarBuilder.style.display = "block";
         if (sidebarTopical) sidebarTopical.style.display = "none";
         if (addAllBtn) addAllBtn.style.display = "";
+
+        const mobileToggleText = document.querySelector("#mobileTopicsToggleBtn .mobile-topics-toggle-text");
+        if (mobileToggleText) mobileToggleText.textContent = "Filters";
+        const openMobileBtn = document.getElementById("openMobileSidebarBtn");
+        if (openMobileBtn) {
+            const chCount = appState.selectedChapters ? appState.selectedChapters.length : 0;
+            openMobileBtn.innerHTML = `🎛️ Chapters & Filters <span class="mobile-filter-badge" id="mobileChapterCountBadge">${chCount} Ch</span>`;
+        }
+
         updateTestTray();
         appState.currentPage = 1;
         fetchQuestions();
@@ -1517,10 +1534,14 @@ function setupEventListeners() {
     // Mobile filter drawer controls
     const openSidebarBtn = document.getElementById("openMobileSidebarBtn");
     if (openSidebarBtn) openSidebarBtn.addEventListener("click", openMobileSidebar);
+    const mobileTopicsToggleBtn = document.getElementById("mobileTopicsToggleBtn");
+    if (mobileTopicsToggleBtn) mobileTopicsToggleBtn.addEventListener("click", openMobileSidebar);
     const closeSidebarBtn = document.getElementById("closeMobileSidebarBtn");
     if (closeSidebarBtn) closeSidebarBtn.addEventListener("click", closeMobileSidebar);
     const applyMobileBtn = document.getElementById("applyMobileFiltersBtn");
     if (applyMobileBtn) applyMobileBtn.addEventListener("click", closeMobileSidebar);
+    const applyMobileTopicalBtn = document.getElementById("applyMobileTopicalBtn");
+    if (applyMobileTopicalBtn) applyMobileTopicalBtn.addEventListener("click", closeMobileSidebar);
     const backdrop = document.getElementById("sidebarBackdrop");
     if (backdrop) backdrop.addEventListener("click", closeMobileSidebar);
 

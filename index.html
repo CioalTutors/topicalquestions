@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cioal Tutor Topical Questions • IGCSE Physics (0625)</title>
-    <link rel="stylesheet" href="static/css/style.css?v=20">
+    <link rel="stylesheet" href="static/css/style.css?v=23">
     <link rel="icon" type="image/jpeg" href="static/cioaltutors.jpg">
     <!-- KaTeX for rendering mathematical & scientific expressions -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -185,6 +185,16 @@
 
     <!-- Header -->
     <header class="app-header">
+        <!-- Mobile Sidebar Toggle (☰ three-line icon on top left) -->
+        <button type="button" class="mobile-topics-toggle-btn" id="mobileTopicsToggleBtn" aria-label="Open Topics Menu" title="Click to choose chapters and topics">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+            <span class="mobile-topics-toggle-text">Topics</span>
+        </button>
+
         <div class="header-brand" style="cursor:pointer;" id="headerBrandHome" title="Return to Subject & Board Selection">
             <img src="static/cioaltutors.jpg" alt="Cioal Tutors Logo" class="header-logo">
             <div class="header-title-box">
@@ -205,9 +215,6 @@
             <button class="btn btn-sm btn-outline" id="openSplashBtn" title="Switch Exam Board, Level, or Subject">
                 🎓 Switch Subject / Board
             </button>
-            <span style="font-size:0.82rem; color:#64748b; background:#f1f5e9; padding:0.35rem 0.75rem; border-radius:20px; font-weight:600;">
-                📚 <span id="totalQuestionsIndexed">4,258</span> Questions Indexed
-            </span>
             <button class="btn btn-accent" id="openTestTrayBtn">
                 📝 My Test Paper (<span id="testTrayCountTop">0</span>)
             </button>
@@ -398,6 +405,13 @@
                         ↺ Reset Topic Selection
                     </button>
                 </div>
+
+                <!-- Mobile-only Apply Button for Topical Mode -->
+                <div class="mobile-sidebar-footer" style="margin-top:1.25rem;">
+                    <button type="button" class="btn btn-accent" id="applyMobileTopicalBtn" style="width:100%; font-weight:800; padding:0.75rem 1rem;">
+                        ✓ View Topical Questions
+                    </button>
+                </div>
             </div>
 
         </aside>
@@ -555,7 +569,7 @@
     <!-- Standalone Print Container (outside all modals for perfect multi-page browser printing) -->
     <div id="printPaperRoot" style="display:none;"></div>
 
-    <script src="static/js/mcq_explanations.js?v=22"></script>
-    <script src="static/js/app.js?v=22"></script>
+    <script src="static/js/mcq_explanations.js?v=23"></script>
+    <script src="static/js/app.js?v=23"></script>
 </body>
 </html>

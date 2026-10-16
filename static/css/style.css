@@ -1449,7 +1449,8 @@ body {
 .mobile-sidebar-header,
 .mobile-sidebar-footer,
 .sidebar-backdrop,
-.mobile-only-btn {
+.mobile-only-btn,
+.mobile-topics-toggle-btn {
   display: none;
 }
 
@@ -1461,6 +1462,38 @@ body {
     padding: 0.65rem 0.9rem;
     flex-wrap: wrap;
     gap: 0.6rem;
+    align-items: center;
+  }
+
+  .mobile-topics-toggle-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.35rem;
+    padding: 0.45rem 0.7rem;
+    background: #f0fdf4;
+    border: 1.5px solid #16a34a;
+    color: #15803d;
+    border-radius: 8px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    cursor: pointer;
+    flex-shrink: 0;
+    box-shadow: 0 1px 3px rgba(22, 163, 74, 0.15);
+    transition: all 0.15s ease;
+  }
+
+  .mobile-topics-toggle-btn:hover,
+  .mobile-topics-toggle-btn:active {
+    background: #dcfce7;
+    border-color: #15803d;
+    color: #14532d;
+    transform: scale(0.97);
+  }
+
+  .mobile-topics-toggle-btn svg {
+    stroke: currentColor;
+    flex-shrink: 0;
   }
 
   .header-brand {
