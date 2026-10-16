@@ -1,298 +1,678 @@
 [
   {
     "id": 1,
-    "name": "Topic 1 & 2: Atomic structure, Bonding and Redox",
+    "tier": "AS Level",
+    "name": "[AS] Topic 1: Atomic Structure & Periodic Table",
     "subtopics": [
       {
         "id": "1.1",
-        "name": "1.1 Electronic configuration & ionisation energies",
+        "name": "1.1 Isotopes, mass spectrometry & electronic structure",
         "keywords": [
-          "atomic orbitals",
-          "s p d orbitals",
-          "first ionisation energy",
-          "successive ionisation energies",
-          "shielding",
-          "nuclear charge"
+          "isotopes",
+          "mass spectrometer",
+          "mass spectrum",
+          "relative atomic mass",
+          "s orbital",
+          "p orbital",
+          "d orbital",
+          "electronic configuration",
+          "quantum shells"
         ]
       },
       {
         "id": "1.2",
-        "name": "1.2 Bonding, shapes of molecules & intermolecular forces",
+        "name": "1.2 Ionization energies & periodicity",
         "keywords": [
-          "ionic lattice",
-          "covalent bonding",
-          "dative covalent",
-          "metallic bonding",
-          "vsepr",
-          "electronegativity",
-          "london forces",
-          "permanent dipole",
-          "hydrogen bonding"
-        ]
-      },
-      {
-        "id": "1.3",
-        "name": "1.3 Redox chemistry & oxidation states",
-        "keywords": [
-          "oxidation number",
-          "half equation",
-          "disproportionation",
-          "redox titration"
+          "first ionization energy",
+          "successive ionization energies",
+          "nuclear charge",
+          "shielding",
+          "periodicity",
+          "trends in ionization energy",
+          "group 2 trends",
+          "period 3 trends"
         ]
       }
     ]
   },
   {
     "id": 2,
-    "name": "Topic 3 & 4: Formulae, amounts & Inorganic chemistry",
+    "tier": "AS Level",
+    "name": "[AS] Topic 2: Bonding & Structure",
     "subtopics": [
       {
         "id": "2.1",
-        "name": "2.1 Moles, stoichiometry & titration calculations",
+        "name": "2.1 Ionic, covalent & metallic bonding",
         "keywords": [
-          "mole",
-          "avogadro constant",
-          "ideal gas equation",
-          "molar volume",
-          "percentage yield",
-          "atom economy",
-          "titration"
+          "ionic bonding",
+          "giant ionic lattice",
+          "covalent bond",
+          "dative covalent",
+          "coordinate bond",
+          "metallic bonding",
+          "giant metallic lattice",
+          "giant covalent",
+          "macromolecular",
+          "diamond",
+          "graphite",
+          "graphene"
         ]
       },
       {
         "id": "2.2",
-        "name": "2.2 Group 2 & Group 7 chemistry",
+        "name": "2.2 Electronegativity, intermolecular forces & molecular shapes",
         "keywords": [
-          "alkaline earth metals",
-          "thermal stability of nitrates and carbonates",
-          "solubility of sulfates and hydroxides",
-          "halogens",
-          "halide displacement",
-          "reactions of chlorine with water",
-          "bleach"
+          "electronegativity",
+          "dipole",
+          "polar bond",
+          "london dispersion forces",
+          "permanent dipole",
+          "hydrogen bonding",
+          "vsepr",
+          "shapes of molecules",
+          "linear",
+          "trigonal planar",
+          "tetrahedral",
+          "trigonal pyramidal",
+          "non-linear",
+          "octahedral",
+          "bond angle"
         ]
       }
     ]
   },
   {
     "id": 3,
-    "name": "Topic 5 & 6: Energetics, Kinetics and Equilibria I",
+    "tier": "AS Level",
+    "name": "[AS] Topic 3: Redox I",
     "subtopics": [
       {
         "id": "3.1",
-        "name": "3.1 Enthalpy changes & Hess's law",
+        "name": "3.1 Oxidation numbers & redox reactions",
         "keywords": [
-          "enthalpy of formation",
-          "enthalpy of combustion",
-          "neutralisation",
-          "bond enthalpy",
-          "hess's law",
-          "calorimetry"
-        ]
-      },
-      {
-        "id": "3.2",
-        "name": "3.2 Reaction kinetics & Maxwell-Boltzmann",
-        "keywords": [
-          "collision theory",
-          "activation energy",
-          "maxwell-boltzmann distribution",
-          "catalyst",
-          "effect of temperature on rate"
-        ]
-      },
-      {
-        "id": "3.3",
-        "name": "3.3 Dynamic equilibrium & Kc",
-        "keywords": [
-          "reversible reaction",
-          "le chatelier's principle",
-          "equilibrium constant",
-          "kc expression",
-          "equilibrium yield"
+          "oxidation number",
+          "oxidation state",
+          "oxidation is loss",
+          "reduction is gain",
+          "oxidising agent",
+          "reducing agent",
+          "disproportionation",
+          "half-equations",
+          "ionic redox equations"
         ]
       }
     ]
   },
   {
     "id": 4,
-    "name": "Topic 7: Organic chemistry I & Analytical techniques",
+    "tier": "AS Level",
+    "name": "[AS] Topic 4: Inorganic Chemistry & Groups 2 and 7",
     "subtopics": [
       {
         "id": "4.1",
-        "name": "4.1 Alkanes, alkenes, halogenoalkanes & alcohols",
+        "name": "4.1 Group 2 (Alkaline earth metals)",
         "keywords": [
-          "homologous series",
-          "free radical substitution",
-          "electrophilic addition",
-          "markovnikov",
-          "nucleophilic substitution",
-          "elimination",
-          "oxidation of alcohols",
-          "reflux",
-          "distillation"
+          "group 2",
+          "magnesium",
+          "calcium",
+          "strontium",
+          "barium",
+          "reactivity with water",
+          "solubility of hydroxides",
+          "solubility of sulfates",
+          "thermal decomposition of carbonates",
+          "thermal decomposition of nitrates",
+          "flame tests"
         ]
       },
       {
         "id": "4.2",
-        "name": "4.2 Mass spectrometry & Infrared spectroscopy",
+        "name": "4.2 Group 7 (Halogens & halides)",
         "keywords": [
-          "mass spectrometry",
-          "molecular ion peak",
-          "high resolution mass spec",
-          "infrared spectroscopy",
-          "wavenumber",
-          "fingerprint region"
+          "group 7",
+          "chlorine",
+          "bromine",
+          "iodine",
+          "halogens",
+          "halide ions",
+          "trend in oxidising ability",
+          "displacement reactions",
+          "silver nitrate test",
+          "solubility in ammonia",
+          "disproportionation of chlorine",
+          "chlorate",
+          "reaction with concentrated sulfuric acid"
         ]
       }
     ]
   },
   {
     "id": 5,
-    "name": "Topic 8: Energetics II, Entropy & Gibbs energy",
+    "tier": "AS Level",
+    "name": "[AS] Topic 5: Formulae, Equations & Amount of Substance",
     "subtopics": [
       {
         "id": "5.1",
-        "name": "5.1 Lattice energy & Born-Haber cycles",
+        "name": "5.1 The mole, empirical & molecular formulae",
         "keywords": [
-          "lattice energy",
-          "born-haber cycle",
-          "enthalpy of atomisation",
-          "electron affinity",
-          "enthalpy of hydration",
-          "enthalpy of solution",
-          "polarisation of ions"
+          "avogadro constant",
+          "mole concept",
+          "molar mass",
+          "empirical formula",
+          "molecular formula",
+          "hydrated salt",
+          "water of crystallisation"
         ]
       },
       {
         "id": "5.2",
-        "name": "5.2 Entropy & Gibbs free energy",
+        "name": "5.2 Molar gas volumes & solution calculations",
         "keywords": [
-          "entropy",
-          "delta s",
-          "gibbs free energy",
-          "delta g",
-          "feasibility",
-          "temperature of feasibility"
+          "molar volume of gas",
+          "ideal gas equation",
+          "pv = nrt",
+          "concentration",
+          "titration",
+          "volumetric analysis",
+          "percentage yield",
+          "atom economy",
+          "stoichiometry",
+          "limiting reagent"
         ]
       }
     ]
   },
   {
     "id": 6,
-    "name": "Topic 9 & 10: Kinetics II, Equilibria II & Acid-Base",
+    "tier": "AS Level",
+    "name": "[AS] Topic 6: Organic Chemistry I",
     "subtopics": [
       {
         "id": "6.1",
-        "name": "6.1 Rate equations, orders & Arrhenius equation",
+        "name": "6.1 Nomenclature, isomerism & alkanes",
         "keywords": [
-          "rate equation",
-          "order of reaction",
-          "rate constant",
-          "initial rates method",
-          "half-life method",
-          "rate determining step",
-          "arrhenius equation"
+          "homologous series",
+          "functional group",
+          "iupac name",
+          "structural isomerism",
+          "fractional distillation",
+          "cracking",
+          "combustion of alkanes",
+          "free radical substitution",
+          "initiation",
+          "propagation",
+          "termination"
         ]
       },
       {
         "id": "6.2",
-        "name": "6.2 Kp, pH, Ka, Kw & buffer solutions",
+        "name": "6.2 Alkenes, mechanisms & polymerisation",
         "keywords": [
-          "partial pressure",
-          "kp",
-          "ph calculations",
-          "ionic product of water",
-          "kw",
-          "acid dissociation constant",
-          "ka",
-          "pka",
-          "buffer solution",
-          "ph titration curves",
-          "indicators"
+          "alkenes",
+          "carbon-carbon double bond",
+          "e/z isomerism",
+          "cis-trans",
+          "electrophilic addition",
+          "markownikoff's rule",
+          "carbocation intermediate",
+          "addition polymerisation"
+        ]
+      },
+      {
+        "id": "6.3",
+        "name": "6.3 Halogenoalkanes & nucleophilic substitution",
+        "keywords": [
+          "halogenoalkanes",
+          "nucleophilic substitution",
+          "hydrolysis of halogenoalkane",
+          "sn1",
+          "sn2",
+          "nucleophile",
+          "cyanide",
+          "ammonia",
+          "elimination reaction"
+        ]
+      },
+      {
+        "id": "6.4",
+        "name": "6.4 Alcohols, classification & reactions",
+        "keywords": [
+          "primary alcohol",
+          "secondary alcohol",
+          "tertiary alcohol",
+          "oxidation of alcohols",
+          "potassium dichromate",
+          "aldehyde",
+          "ketone",
+          "carboxylic acid",
+          "dehydration of alcohols",
+          "esterification"
         ]
       }
     ]
   },
   {
     "id": 7,
-    "name": "Topic 11 & 12: Transition metals & Electrochemistry",
+    "tier": "AS Level",
+    "name": "[AS] Topic 7: Modern Analytical Techniques I",
     "subtopics": [
       {
         "id": "7.1",
-        "name": "7.1 Electrode potentials & electrochemical cells",
+        "name": "7.1 Infrared spectroscopy & mass spectrometry",
         "keywords": [
-          "standard electrode potential",
-          "electrochemical cell",
-          "e cell",
-          "salt bridge",
-          "predicting reaction feasibility"
-        ]
-      },
-      {
-        "id": "7.2",
-        "name": "7.2 Transition metals, complexes & catalysis",
-        "keywords": [
-          "transition metal properties",
-          "complex ion",
-          "ligand",
-          "dative covalent bond",
-          "coordination number",
-          "ligand exchange",
-          "colour origin in d-block",
-          "catalytic mechanisms"
+          "infrared spectroscopy",
+          "ir spectrum",
+          "molecular vibrations",
+          "characteristic wavenumber",
+          "o-h stretch",
+          "c=o stretch",
+          "fingerprint region",
+          "molecular ion peak",
+          "fragmentation"
         ]
       }
     ]
   },
   {
     "id": 8,
-    "name": "Topic 13 & 14: Organic chemistry II, Arenes, Carbonyls & Synthesis",
+    "tier": "AS Level",
+    "name": "[AS] Topic 8: Energetics I",
     "subtopics": [
       {
         "id": "8.1",
-        "name": "8.1 Arenes, benzene & electrophilic substitution",
+        "name": "8.1 Enthalpy changes, calorimetry & Hess's Law",
         "keywords": [
-          "benzene structure",
-          "delocalised electrons",
+          "exothermic",
+          "endothermic",
+          "standard enthalpy of reaction",
+          "enthalpy of formation",
+          "enthalpy of combustion",
+          "enthalpy of neutralisation",
+          "calorimetry",
+          "q = mcat",
+          "hess's law",
+          "mean bond enthalpy",
+          "bond energies"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "tier": "AS Level",
+    "name": "[AS] Topic 9: Kinetics I",
+    "subtopics": [
+      {
+        "id": "9.1",
+        "name": "9.1 Collision theory, Maxwell-Boltzmann & catalysts",
+        "keywords": [
+          "collision theory",
+          "activation energy",
+          "maxwell-boltzmann distribution",
+          "effect of temperature",
+          "effect of concentration",
+          "effect of pressure",
+          "catalyst",
+          "heterogeneous catalyst",
+          "homogeneous catalyst"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "tier": "AS Level",
+    "name": "[AS] Topic 10: Equilibrium I",
+    "subtopics": [
+      {
+        "id": "10.1",
+        "name": "10.1 Dynamic equilibrium & equilibrium constant Kc",
+        "keywords": [
+          "dynamic equilibrium",
+          "reversible reaction",
+          "closed system",
+          "le chatelier's principle",
+          "equilibrium constant kc",
+          "kc expression",
+          "equilibrium concentrations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "tier": "A Level",
+    "name": "[A2] Topic 11: Equilibrium II",
+    "subtopics": [
+      {
+        "id": "11.1",
+        "name": "11.1 Gas equilibria, mole fractions & Kp",
+        "keywords": [
+          "gas equilibria",
+          "mole fraction",
+          "partial pressure",
+          "dalton's law",
+          "equilibrium constant kp",
+          "kp expression",
+          "effect of temperature on kp"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "tier": "A Level",
+    "name": "[A2] Topic 12: Acid-base Equilibria",
+    "subtopics": [
+      {
+        "id": "12.1",
+        "name": "12.1 pH, Kw & strong/weak acids and bases",
+        "keywords": [
+          "bronsted-lowry",
+          "conjugate acid-base pair",
+          "ionic product of water kw",
+          "ph definition",
+          "ph calculation",
+          "acid dissociation constant ka",
+          "pka",
+          "weak acid ph"
+        ]
+      },
+      {
+        "id": "12.2",
+        "name": "12.2 Titration curves, indicators & buffer solutions",
+        "keywords": [
+          "titration curve",
+          "equivalence point",
+          "buffer solution",
+          "action of buffer",
+          "acidic buffer",
+          "basic buffer",
+          "henderson-hasselbalch",
+          "indicator",
+          "methyl orange",
+          "phenolphthalein"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "tier": "A Level",
+    "name": "[A2] Topic 13: Energetics II",
+    "subtopics": [
+      {
+        "id": "13.1",
+        "name": "13.1 Lattice energy & Born-Haber cycles",
+        "keywords": [
+          "lattice energy",
+          "lattice enthalpy",
+          "born-haber cycle",
+          "enthalpy of atomisation",
+          "electron affinity",
+          "polarisation of ions",
+          "covalent character",
+          "enthalpy of hydration",
+          "enthalpy of solution"
+        ]
+      },
+      {
+        "id": "13.2",
+        "name": "13.2 Entropy & Gibbs free energy",
+        "keywords": [
+          "entropy",
+          "standard entropy",
+          "entropy of system",
+          "entropy of surroundings",
+          "total entropy",
+          "gibbs free energy",
+          "delta g = delta h - t delta s",
+          "feasibility",
+          "spontaneity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "tier": "A Level",
+    "name": "[A2] Topic 14: Redox II",
+    "subtopics": [
+      {
+        "id": "14.1",
+        "name": "14.1 Electrode potentials & electrochemical cells",
+        "keywords": [
+          "standard hydrogen electrode",
+          "standard electrode potential",
+          "electrochemical cell",
+          "cell diagram",
+          "cell emf",
+          "e_cell",
+          "predicting feasibility",
+          "commercial cells",
+          "fuel cells"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "tier": "A Level",
+    "name": "[A2] Topic 15: Transition Metals",
+    "subtopics": [
+      {
+        "id": "15.1",
+        "name": "15.1 Properties, d-orbitals & complex ions",
+        "keywords": [
+          "transition metal",
+          "d block",
+          "variable oxidation states",
+          "complex ion",
+          "ligand",
+          "monodentate",
+          "bidentate",
+          "edta",
+          "coordination number",
+          "d-orbital splitting",
+          "colour of complexes"
+        ]
+      },
+      {
+        "id": "15.2",
+        "name": "15.2 Ligand exchange & transition metal reactions",
+        "keywords": [
+          "ligand exchange",
+          "ligand substitution",
+          "stability constant",
+          "chelate effect",
+          "reactions of fe2+",
+          "reactions of fe3+",
+          "reactions of cu2+",
+          "reactions of cr3+",
+          "reactions of co2+",
+          "precipitation with oh-",
+          "precipitation with nh3"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "tier": "A Level",
+    "name": "[A2] Topic 16: Kinetics II",
+    "subtopics": [
+      {
+        "id": "16.1",
+        "name": "16.1 Rate equations, orders of reaction & mechanisms",
+        "keywords": [
+          "rate equation",
+          "rate constant k",
+          "order of reaction",
+          "zero order",
+          "first order",
+          "second order",
+          "initial rate method",
+          "rate-determining step",
+          "reaction mechanism",
+          "half-life of first order"
+        ]
+      },
+      {
+        "id": "16.2",
+        "name": "16.2 Arrhenius equation & activation energy",
+        "keywords": [
+          "arrhenius equation",
+          "ln k vs 1/t",
+          "pre-exponential factor",
+          "calculating activation energy ea"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "tier": "A Level",
+    "name": "[A2] Topic 17: Organic Chemistry II (Carbonyls & Carboxylics)",
+    "subtopics": [
+      {
+        "id": "17.1",
+        "name": "17.1 Chirality & optical isomerism",
+        "keywords": [
+          "chiral centre",
+          "asymmetric carbon",
+          "enantiomers",
+          "optical activity",
+          "polarimeter",
+          "plane-polarised light",
+          "racemic mixture"
+        ]
+      },
+      {
+        "id": "17.2",
+        "name": "17.2 Carbonyl compounds (Aldehydes & Ketones)",
+        "keywords": [
+          "carbonyl",
+          "aldehyde",
+          "ketone",
+          "nucleophilic addition",
+          "hcn",
+          "hydroxynitrile",
+          "2,4-dnp",
+          "brady's reagent",
+          "tollens' reagent",
+          "fehling's solution",
+          "triiodomethane",
+          "iodoform test"
+        ]
+      },
+      {
+        "id": "17.3",
+        "name": "17.3 Carboxylic acids, esters & acyl chlorides",
+        "keywords": [
+          "carboxylic acid",
+          "ester",
+          "esterification",
+          "acid hydrolysis",
+          "alkaline hydrolysis",
+          "saponification",
+          "acyl chloride",
+          "addition-elimination",
+          "polyester"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "tier": "A Level",
+    "name": "[A2] Topic 18: Organic Chemistry III (Arenes & Nitrogen)",
+    "subtopics": [
+      {
+        "id": "18.1",
+        "name": "18.1 Arenes & electrophilic aromatic substitution",
+        "keywords": [
+          "benzene",
+          "arene",
+          "delocalised pi electrons",
+          "kekule structure",
           "electrophilic aromatic substitution",
           "nitration of benzene",
+          "halogenation of benzene",
           "friedel-crafts",
-          "phenol",
-          "reactions of phenol"
+          "alkylation",
+          "acylation",
+          "phenol"
         ]
       },
       {
-        "id": "8.2",
-        "name": "8.2 Carbonyls, carboxylic acids, esters & amines",
+        "id": "18.2",
+        "name": "18.2 Nitrogen compounds (Amines, Amides & Amino acids)",
         "keywords": [
-          "aldehydes and ketones",
-          "nucleophilic addition",
-          "2,4-dnp",
-          "tollens' reagent",
-          "iodoform test",
-          "carboxylic acids",
-          "acyl chlorides",
-          "esters",
-          "aliphatic amines",
-          "aromatic amines",
+          "amines",
+          "primary amine",
+          "basicity of amines",
           "amides",
           "amino acids",
-          "condensation polymers"
+          "zwitterion",
+          "isoelectric point",
+          "peptide bond",
+          "condensation polymerisation",
+          "polyamides",
+          "nylon",
+          "kevlar"
         ]
       },
       {
-        "id": "8.3",
-        "name": "8.3 NMR spectroscopy & modern organic synthesis",
+        "id": "18.3",
+        "name": "18.3 Multistep organic synthesis",
         "keywords": [
-          "1h nmr",
-          "13c nmr",
+          "organic synthesis",
+          "synthetic route",
+          "reflux",
+          "distillation",
+          "recrystallisation",
+          "melting point determination",
+          "purity"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "tier": "A Level",
+    "name": "[A2] Topic 19: Modern Analytical Techniques II",
+    "subtopics": [
+      {
+        "id": "19.1",
+        "name": "19.1 13C and 1H NMR spectroscopy",
+        "keywords": [
+          "nmr spectroscopy",
+          "carbon-13 nmr",
+          "proton nmr",
           "chemical shift",
-          "splitting patterns",
-          "multiplicity",
-          "solvent peak",
-          "organic synthetic routes",
-          "purity determination"
+          "tms standard",
+          "environments",
+          "splitting pattern",
+          "n+1 rule",
+          "singlet",
+          "doublet",
+          "triplet",
+          "quartet",
+          "integration trace",
+          "d2o exchange"
+        ]
+      },
+      {
+        "id": "19.2",
+        "name": "19.2 Chromatography (TLC, GC, HPLC)",
+        "keywords": [
+          "chromatography",
+          "thin layer chromatography",
+          "tlc",
+          "rf value",
+          "gas chromatography",
+          "retention time",
+          "gc-ms"
         ]
       }
     ]

@@ -312,6 +312,70 @@ body {
   border-top: 1px solid var(--border);
 }
 
+/* Syllabus Tier Group Headers & Pill Badges */
+.syllabus-tier-group-header {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  padding: 0.45rem 0.65rem;
+  margin: 0.85rem 0 0.45rem 0;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid transparent;
+}
+
+.syllabus-tier-group-header:first-child {
+  margin-top: 0;
+}
+
+.tier-group-as {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+  border-left: 4px solid #2563eb;
+}
+
+.tier-group-a2 {
+  background: #fdf2f8;
+  color: #be185d;
+  border-color: #fbcfe8;
+  border-left: 4px solid #db2777;
+}
+
+.tier-group-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 0.1rem 0.4rem;
+  border-radius: 4px;
+  background: rgba(255, 255, 255, 0.75);
+}
+
+.pill-tier {
+  display: inline-block;
+  padding: 0.12rem 0.4rem;
+  font-size: 0.68rem;
+  font-weight: 800;
+  border-radius: 4px;
+  margin-right: 0.4rem;
+  letter-spacing: 0.02em;
+  vertical-align: middle;
+}
+
+.pill-as {
+  background: #dbeafe;
+  color: #1e40af;
+  border: 1px solid #93c5fd;
+}
+
+.pill-a2 {
+  background: #fce7f3;
+  color: #9d174d;
+  border: 1px solid #f9a8d4;
+}
+
 /* Main Content Area */
 .app-main {
   padding: 1.5rem;

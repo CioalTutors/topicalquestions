@@ -1,252 +1,784 @@
 [
   {
     "id": 1,
-    "name": "Pure Mathematics: Algebra, Functions & Graphs",
+    "tier": "AS Level",
+    "name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
     "subtopics": [
       {
         "id": "1.1",
-        "name": "P.1 Proof (Deduction, Exhaustion, Contradiction)",
+        "name": "1.1 Proof by deduction & exhaustion",
         "keywords": [
           "proof by deduction",
           "proof by exhaustion",
           "disproof by counter-example",
-          "proof by contradiction",
-          "irrationality of root 2"
+          "deductive reasoning",
+          "algebraic proof"
         ]
       },
       {
         "id": "1.2",
-        "name": "P.2 Algebra, Functions & Partial Fractions",
+        "name": "1.2 Indices, surds, quadratics & inequalities",
         "keywords": [
-          "algebraic division",
+          "indices",
+          "surds",
+          "rationalising denominator",
+          "quadratic formula",
+          "completing the square",
+          "discriminant",
+          "roots",
+          "simultaneous equations",
+          "quadratic inequality",
+          "polynomials",
           "factor theorem",
-          "partial fractions",
-          "modulus function",
-          "composite functions",
-          "inverse functions",
-          "transformations of graphs"
-        ]
-      },
-      {
-        "id": "1.3",
-        "name": "P.3 Coordinate Geometry in the (x, y) plane",
-        "keywords": [
-          "straight line equations",
-          "circles",
-          "tangent to circle",
-          "parametric equations",
-          "converting parametric to cartesian"
+          "graph transformations",
+          "f(x+a)",
+          "af(x)"
         ]
       }
     ]
   },
   {
     "id": 2,
-    "name": "Pure Mathematics: Sequences, Series & Binomial",
+    "tier": "AS Level",
+    "name": "[AS] Topic 2: Pure - Coordinate Geometry & Circles",
     "subtopics": [
       {
         "id": "2.1",
-        "name": "P.4 Sequences, Series & Progressions",
+        "name": "2.1 Straight lines & parallel/perpendicular gradients",
         "keywords": [
-          "arithmetic sequence",
-          "ap",
-          "geometric sequence",
-          "gp",
-          "sum of ap",
-          "sum of gp",
-          "sum to infinity",
-          "sigma notation",
-          "recurrence relation"
+          "equation of straight line",
+          "y = mx + c",
+          "y - y1 = m(x - x1)",
+          "perpendicular gradient",
+          "midpoint",
+          "distance formula",
+          "length of line segment"
         ]
       },
       {
         "id": "2.2",
-        "name": "P.5 The Binomial Expansion",
+        "name": "2.2 Circles, tangents & chords",
         "keywords": [
-          "binomial theorem",
-          "pascal's triangle",
-          "general binomial expansion",
-          "fractional and negative powers",
-          "validity of binomial expansion"
+          "equation of a circle",
+          "(x-a)^2 + (y-b)^2 = r^2",
+          "centre of circle",
+          "radius of circle",
+          "tangent to a circle",
+          "normal to a circle",
+          "chord",
+          "diameter",
+          "intersection of line and circle"
         ]
       }
     ]
   },
   {
     "id": 3,
-    "name": "Pure Mathematics: Trigonometry",
+    "tier": "AS Level",
+    "name": "[AS] Topic 3: Pure - Binomial Expansion (n in N)",
     "subtopics": [
       {
         "id": "3.1",
-        "name": "P.6 Trigonometric functions, radians & identities",
+        "name": "3.1 Pascal's triangle, nCr & binomial expansion",
         "keywords": [
-          "radian measure",
-          "arc length",
-          "sector area",
-          "secant",
-          "cosecant",
-          "cotangent",
-          "compound angle formulae",
-          "double angle formulae",
-          "r cos(x - alpha)",
-          "r sin(x + alpha)",
-          "small angle approximations",
-          "inverse trig functions"
+          "binomial expansion",
+          "pascal's triangle",
+          "ncr",
+          "(a+b)^n",
+          "coefficient of x",
+          "binomial theorem",
+          "expansion for positive integer power"
         ]
       }
     ]
   },
   {
     "id": 4,
-    "name": "Pure Mathematics: Exponentials, Logarithms & Calculus",
+    "tier": "AS Level",
+    "name": "[AS] Topic 4: Pure - Trigonometric Ratios & Equations",
     "subtopics": [
       {
         "id": "4.1",
-        "name": "P.7 Exponentials and Logarithms",
+        "name": "4.1 Sine, cosine rules & area of triangle",
         "keywords": [
-          "exponential function",
-          "e^x",
-          "natural logarithms",
-          "laws of logarithms",
-          "exponential growth and decay",
-          "non-linear data to linear form"
+          "sine rule",
+          "cosine rule",
+          "area of triangle",
+          "1/2 ab sin c",
+          "ambiguous case of sine rule"
         ]
       },
       {
         "id": "4.2",
-        "name": "P.8 Differentiation & Applications",
+        "name": "4.2 Trig graphs, identities & basic equations",
         "keywords": [
-          "differentiation from first principles",
-          "derivative of e^x and ln",
-          "product rule",
-          "quotient rule",
-          "chain rule",
-          "implicit differentiation",
-          "parametric differentiation",
-          "rates of change",
-          "stationary points and inflection"
-        ]
-      },
-      {
-        "id": "4.3",
-        "name": "P.9 Integration & Applications",
-        "keywords": [
-          "standard integrals",
-          "integration by substitution",
-          "integration by parts",
-          "integration using partial fractions",
-          "area under curve",
-          "differential equations",
-          "separation of variables",
-          "trapezium rule"
-        ]
-      },
-      {
-        "id": "4.4",
-        "name": "P.10 Numerical Methods & Vectors in 3D",
-        "keywords": [
-          "change of sign method",
-          "newton-raphson method",
-          "fixed point iteration",
-          "cobweb diagram",
-          "3d vectors",
-          "position vector",
-          "magnitude and direction in 3d"
+          "sin theta",
+          "cos theta",
+          "tan theta",
+          "sin^2 theta + cos^2 theta = 1",
+          "tan theta = sin theta / cos theta",
+          "exact values of trig",
+          "solving trig equations",
+          "cast diagram"
         ]
       }
     ]
   },
   {
     "id": 5,
-    "name": "Statistics (Paper 3 Section A)",
+    "tier": "AS Level",
+    "name": "[AS] Topic 5: Pure - Exponentials & Logarithms",
     "subtopics": [
       {
         "id": "5.1",
-        "name": "S.1 Statistical Sampling & Data Presentation",
+        "name": "5.1 Exponential function e^x & natural logarithm ln(x)",
         "keywords": [
-          "random sampling",
-          "systematic sampling",
-          "stratified sampling",
-          "quota sampling",
-          "opportunity sampling",
-          "large data set",
-          "outliers",
-          "cleaning data",
-          "box plots",
-          "histograms",
-          "measures of spread"
+          "exponential function",
+          "e^x",
+          "natural logarithm",
+          "ln x",
+          "laws of logarithms",
+          "log_a",
+          "change of base",
+          "exponential equations"
         ]
       },
       {
         "id": "5.2",
-        "name": "S.2 Probability, Venn & Tree Diagrams",
+        "name": "5.2 Non-linear data reduction to linear form",
         "keywords": [
-          "probability",
-          "independent events",
-          "mutually exclusive events",
-          "conditional probability",
-          "venn diagrams",
-          "tree diagrams"
-        ]
-      },
-      {
-        "id": "5.3",
-        "name": "S.3 Statistical Distributions (Binomial & Normal)",
-        "keywords": [
-          "binomial distribution",
-          "discrete random variable",
-          "normal distribution",
-          "standard normal distribution",
-          "z values",
-          "hypothesis testing for binomial",
-          "hypothesis testing for normal",
-          "critical region",
-          "significance level"
+          "y = ax^n",
+          "y = ab^x",
+          "log graph",
+          "linear law",
+          "reducing non-linear data",
+          "gradient and intercept of log graph"
         ]
       }
     ]
   },
   {
     "id": 6,
-    "name": "Mechanics (Paper 3 Section B)",
+    "tier": "AS Level",
+    "name": "[AS] Topic 6: Pure - Basic Differentiation & Integration",
     "subtopics": [
       {
         "id": "6.1",
-        "name": "M.1 Kinematics in 1D and 2D",
+        "name": "6.1 Differentiation from first principles & tangents",
         "keywords": [
-          "suvat equations",
-          "velocity-time graphs",
-          "calculus in kinematics",
-          "variable acceleration",
-          "vectors in kinematics",
-          "projectiles in 2d"
+          "differentiation from first principles",
+          "derivative of x^n",
+          "dy/dx",
+          "gradient of curve",
+          "tangent and normal",
+          "stationary points",
+          "increasing and decreasing functions",
+          "second derivative",
+          "maximum and minimum"
         ]
       },
       {
         "id": "6.2",
-        "name": "M.2 Forces, Newton's Laws & Friction",
+        "name": "6.2 Indefinite & definite integrals of polynomial functions",
         "keywords": [
-          "newton's laws of motion",
-          "f = ma",
-          "equilibrium of particle",
-          "connected particles",
-          "pulleys",
-          "friction",
-          "limiting equilibrium",
-          "coefficient of friction",
-          "inclined planes"
+          "indefinite integral",
+          "definite integral",
+          "integrate x^n",
+          "constant of integration",
+          "area under curve",
+          "area between curves"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "tier": "AS Level",
+    "name": "[AS] Topic 7: Pure - Vectors (2D)",
+    "subtopics": [
+      {
+        "id": "7.1",
+        "name": "7.1 2D vectors, magnitude, direction & collinearity",
+        "keywords": [
+          "vector in 2d",
+          "column vector",
+          "unit vector",
+          "i and j components",
+          "magnitude of vector",
+          "direction of vector",
+          "scalar multiplication",
+          "collinear vectors",
+          "position vector"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "tier": "AS Level",
+    "name": "[AS] Topic 8: Statistics - Data Presentation & Sampling",
+    "subtopics": [
+      {
+        "id": "8.1",
+        "name": "8.1 Sampling methods & large data set",
+        "keywords": [
+          "simple random sample",
+          "systematic sampling",
+          "stratified sampling",
+          "quota sampling",
+          "opportunity sampling",
+          "convenience sampling",
+          "large data set",
+          "lds",
+          "outliers",
+          "cleaning data"
         ]
       },
       {
-        "id": "6.3",
-        "name": "M.3 Moments & Rigid Bodies",
+        "id": "8.2",
+        "name": "8.2 Measures of location, spread & representations",
+        "keywords": [
+          "mean",
+          "median",
+          "mode",
+          "standard deviation",
+          "variance",
+          "interquartile range",
+          "iqr",
+          "box plot",
+          "histogram",
+          "cumulative frequency",
+          "scatter graph",
+          "linear regression line",
+          "correlation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "tier": "AS Level",
+    "name": "[AS] Topic 9: Statistics - Probability & Binomial Distribution",
+    "subtopics": [
+      {
+        "id": "9.1",
+        "name": "9.1 Venn diagrams, mutually exclusive & independent events",
+        "keywords": [
+          "probability",
+          "venn diagram",
+          "tree diagram",
+          "mutually exclusive",
+          "p(a or b)",
+          "independent events",
+          "p(a and b)"
+        ]
+      },
+      {
+        "id": "9.2",
+        "name": "9.2 Binomial distribution & hypothesis testing",
+        "keywords": [
+          "binomial distribution",
+          "b(n, p)",
+          "discrete random variable",
+          "hypothesis test for binomial",
+          "null hypothesis h0",
+          "alternative hypothesis h1",
+          "significance level",
+          "critical region",
+          "p-value",
+          "one-tailed",
+          "two-tailed"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "tier": "AS Level",
+    "name": "[AS] Topic 10: Mechanics - Kinematics (1D)",
+    "subtopics": [
+      {
+        "id": "10.1",
+        "name": "10.1 Constant acceleration in 1D (SUVAT)",
+        "keywords": [
+          "constant acceleration",
+          "suvat",
+          "displacement-time graph",
+          "velocity-time graph",
+          "motion under gravity",
+          "vertical projection",
+          "v = u + at",
+          "s = ut + 1/2 at^2",
+          "v^2 = u^2 + 2as"
+        ]
+      },
+      {
+        "id": "10.2",
+        "name": "10.2 Variable acceleration in 1D via calculus",
+        "keywords": [
+          "variable acceleration",
+          "differentiation in kinematics",
+          "integration in kinematics",
+          "v = ds/dt",
+          "a = dv/dt",
+          "s = int v dt"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "tier": "AS Level",
+    "name": "[AS] Topic 11: Mechanics - Forces & Newton's Laws",
+    "subtopics": [
+      {
+        "id": "11.1",
+        "name": "11.1 Newton's laws & connected particles",
+        "keywords": [
+          "newton's first law",
+          "newton's second law",
+          "newton's third law",
+          "f = ma",
+          "weight",
+          "normal reaction",
+          "tension",
+          "thrust",
+          "connected particles",
+          "pulleys",
+          "smooth peg",
+          "lift problem"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "tier": "A Level",
+    "name": "[A2] Topic 12: Pure - Proof by Contradiction & Partial Fractions",
+    "subtopics": [
+      {
+        "id": "12.1",
+        "name": "12.1 Proof by contradiction",
+        "keywords": [
+          "proof by contradiction",
+          "irrationality of root 2",
+          "infinitude of primes",
+          "assumption that leads to contradiction"
+        ]
+      },
+      {
+        "id": "12.2",
+        "name": "12.2 Algebraic division & partial fractions",
+        "keywords": [
+          "partial fractions",
+          "linear factors in denominator",
+          "repeated factor",
+          "improper algebraic fraction",
+          "algebraic long division"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "tier": "A Level",
+    "name": "[A2] Topic 13: Pure - Functions & Transformations",
+    "subtopics": [
+      {
+        "id": "13.1",
+        "name": "13.1 Modulus, composite & inverse functions",
+        "keywords": [
+          "modulus function",
+          "|f(x)|",
+          "f(|x|)",
+          "composite function",
+          "fg(x)",
+          "inverse function",
+          "f^-1(x)",
+          "domain",
+          "range",
+          "one-to-one function",
+          "many-to-one",
+          "self-inverse"
+        ]
+      },
+      {
+        "id": "13.2",
+        "name": "13.2 Combinations of graph transformations",
+        "keywords": [
+          "graph transformation",
+          "translation",
+          "stretch",
+          "reflection",
+          "order of transformations",
+          "y = af(bx + c) + d"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "tier": "A Level",
+    "name": "[A2] Topic 14: Pure - Sequences, Series & Binomial",
+    "subtopics": [
+      {
+        "id": "14.1",
+        "name": "14.1 Arithmetic & geometric progressions",
+        "keywords": [
+          "arithmetic progression",
+          "ap",
+          "common difference d",
+          "nth term of ap",
+          "sum of ap",
+          "geometric progression",
+          "gp",
+          "common ratio r",
+          "nth term of gp",
+          "sum of gp",
+          "sum to infinity",
+          "convergent series",
+          "sigma notation",
+          "recurrence relation",
+          "periodic sequence"
+        ]
+      },
+      {
+        "id": "14.2",
+        "name": "14.2 Binomial expansion for rational powers",
+        "keywords": [
+          "general binomial expansion",
+          "(1+x)^n",
+          "rational power",
+          "negative power",
+          "range of validity",
+          "|x| < 1",
+          "approximating roots using binomial"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "tier": "A Level",
+    "name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
+    "subtopics": [
+      {
+        "id": "15.1",
+        "name": "15.1 Radians, arcs, sectors & small angles",
+        "keywords": [
+          "radian measure",
+          "arc length s = r theta",
+          "sector area 1/2 r^2 theta",
+          "small angle approximations",
+          "sin theta approx theta",
+          "cos theta approx 1 - 1/2 theta^2"
+        ]
+      },
+      {
+        "id": "15.2",
+        "name": "15.2 Reciprocal & inverse trig functions",
+        "keywords": [
+          "secant",
+          "sec x",
+          "cosecant",
+          "cosec x",
+          "cotangent",
+          "cot x",
+          "1 + tan^2 x = sec^2 x",
+          "1 + cot^2 x = cosec^2 x",
+          "arcsin",
+          "arccos",
+          "arctan"
+        ]
+      },
+      {
+        "id": "15.3",
+        "name": "15.3 Compound, double angle & R-addition formulae",
+        "keywords": [
+          "compound angle formulae",
+          "double angle formulae",
+          "sin(a+b)",
+          "cos(a+b)",
+          "tan(a+b)",
+          "sin 2a",
+          "cos 2a",
+          "r cos(x - alpha)",
+          "r sin(x + alpha)",
+          "harmonic form"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "tier": "A Level",
+    "name": "[A2] Topic 16: Pure - Advanced Differentiation",
+    "subtopics": [
+      {
+        "id": "16.1",
+        "name": "16.1 Chain rule, product rule & quotient rule",
+        "keywords": [
+          "chain rule",
+          "product rule",
+          "quotient rule",
+          "derivative of e^kx",
+          "derivative of ln x",
+          "derivative of sin x",
+          "derivative of cos x",
+          "derivative of tan x",
+          "derivative of sec x"
+        ]
+      },
+      {
+        "id": "16.2",
+        "name": "16.2 Parametric & implicit differentiation, rates of change",
+        "keywords": [
+          "parametric differentiation",
+          "dx/dt",
+          "dy/dt",
+          "parametric curves",
+          "implicit differentiation",
+          "connected rates of change",
+          "points of inflection",
+          "convex and concave"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "tier": "A Level",
+    "name": "[A2] Topic 17: Pure - Advanced Integration & Differential Equations",
+    "subtopics": [
+      {
+        "id": "17.1",
+        "name": "17.1 Standard forms, substitution & parts",
+        "keywords": [
+          "standard integrals",
+          "integrate e^kx",
+          "integrate 1/x",
+          "integrate trig functions",
+          "integration by substitution",
+          "integration by parts",
+          "integrate using partial fractions",
+          "integration using trig identities"
+        ]
+      },
+      {
+        "id": "17.2",
+        "name": "17.2 Differential equations & separation of variables",
+        "keywords": [
+          "first order differential equation",
+          "separation of variables",
+          "general solution",
+          "particular solution",
+          "initial conditions",
+          "modelling with differential equations"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "tier": "A Level",
+    "name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
+    "subtopics": [
+      {
+        "id": "18.1",
+        "name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+        "keywords": [
+          "change of sign",
+          "location of roots",
+          "fixed point iteration",
+          "x_n+1 = g(x_n)",
+          "staircase diagram",
+          "cobweb diagram",
+          "newton-raphson method",
+          "trapezium rule",
+          "overestimate",
+          "underestimate"
+        ]
+      },
+      {
+        "id": "18.2",
+        "name": "18.2 3D vectors & geometric applications",
+        "keywords": [
+          "3d vector",
+          "i j k components",
+          "magnitude in 3d",
+          "distance between points in 3d",
+          "position vector in 3d",
+          "collinear points in 3d",
+          "geometric proof with vectors"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "tier": "A Level",
+    "name": "[A2] Topic 19: Statistics - Conditional Probability & Normal Distribution",
+    "subtopics": [
+      {
+        "id": "19.1",
+        "name": "19.1 Conditional probability & modelling",
+        "keywords": [
+          "conditional probability",
+          "p(a|b)",
+          "p(a and b) / p(b)",
+          "venn diagrams conditional",
+          "tree diagrams conditional",
+          "two-way tables"
+        ]
+      },
+      {
+        "id": "19.2",
+        "name": "19.2 The normal distribution",
+        "keywords": [
+          "normal distribution",
+          "continuous random variable",
+          "bell curve",
+          "mean and variance of normal",
+          "standard normal variable z",
+          "standardising",
+          "z = (x - mu) / sigma",
+          "normal approximation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "tier": "A Level",
+    "name": "[A2] Topic 20: Statistics - Hypothesis Testing & Correlation",
+    "subtopics": [
+      {
+        "id": "20.1",
+        "name": "20.1 Hypothesis test for the mean of a normal distribution",
+        "keywords": [
+          "hypothesis test for normal mean",
+          "sample mean distribution",
+          "x-bar ~ n(mu, sigma^2/n)",
+          "standard error",
+          "critical values",
+          "critical region normal",
+          "significance level"
+        ]
+      },
+      {
+        "id": "20.2",
+        "name": "20.2 Correlation coefficients & hypothesis testing",
+        "keywords": [
+          "product moment correlation coefficient",
+          "pmcc",
+          "r",
+          "hypothesis test for correlation",
+          "null hypothesis rho = 0",
+          "critical values of pmcc",
+          "causation and correlation"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "tier": "A Level",
+    "name": "[A2] Topic 21: Mechanics - 2D Projectiles & Vector Kinematics",
+    "subtopics": [
+      {
+        "id": "21.1",
+        "name": "21.1 Projectile motion in 2D",
+        "keywords": [
+          "projectile",
+          "horizontal velocity",
+          "vertical acceleration",
+          "range of projectile",
+          "time of flight",
+          "maximum height",
+          "trajectory",
+          "angle of elevation",
+          "speed of projection"
+        ]
+      },
+      {
+        "id": "21.2",
+        "name": "21.2 2D kinematics with calculus & vectors",
+        "keywords": [
+          "vectors in kinematics",
+          "r(t)",
+          "v(t)",
+          "a(t)",
+          "differentiating vectors",
+          "integrating vectors",
+          "speed from velocity vector",
+          "bearing"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "tier": "A Level",
+    "name": "[A2] Topic 22: Mechanics - Friction, Slopes & Static Equilibrium",
+    "subtopics": [
+      {
+        "id": "22.1",
+        "name": "22.1 Friction & limiting equilibrium on inclined planes",
+        "keywords": [
+          "coefficient of friction mu",
+          "limiting friction",
+          "f <= mu r",
+          "f_max = mu r",
+          "rough surface",
+          "inclined plane",
+          "angle of friction",
+          "component of weight down plane",
+          "equilibrium on slope"
+        ]
+      },
+      {
+        "id": "22.2",
+        "name": "22.2 Statics of a particle & connected systems",
+        "keywords": [
+          "equilibrium of a particle",
+          "resolving forces in two directions",
+          "coplanar forces in equilibrium",
+          "lami's theorem",
+          "connected particles on slope"
+        ]
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "tier": "A Level",
+    "name": "[A2] Topic 23: Mechanics - Moments & Rigid Bodies",
+    "subtopics": [
+      {
+        "id": "23.1",
+        "name": "23.1 Moment of a force & parallel forces",
         "keywords": [
           "moment of a force",
+          "force x perpendicular distance",
+          "principle of moments",
+          "clockwise and anticlockwise moments",
+          "uniform rod",
+          "non-uniform rod",
+          "centre of mass"
+        ]
+      },
+      {
+        "id": "23.2",
+        "name": "23.2 Equilibrium of rigid bodies & ladder problems",
+        "keywords": [
           "equilibrium of rigid body",
-          "centres of mass",
           "tilting",
-          "ladder problems",
-          "non-uniform rods"
+          "point of tilting",
+          "reaction at supports",
+          "ladder resting against wall",
+          "smooth wall",
+          "rough ground",
+          "friction at base of ladder"
         ]
       }
     ]

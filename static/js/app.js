@@ -300,9 +300,9 @@ const SUBJECT_CONFIG = {
         catDir: "Categorized_Questions_Edexcel_Alevel_Physics",
         tiers: ["AS Level", "A Level"],
         papers: [
-            { value: "1", label: "Paper 1 (Advanced Physics I)", tier: "AS Level" },
-            { value: "2", label: "Paper 2 (Advanced Physics II)", tier: "AS Level" },
-            { value: "3", label: "Paper 3 (General & Practical)", tier: "AS Level" }
+            { value: "1", label: "Paper 1 (Advanced Physics I)", tier: "Both" },
+            { value: "2", label: "Paper 2 (Advanced Physics II)", tier: "Both" },
+            { value: "3", label: "Paper 3 (General & Practical)", tier: "Both" }
         ]
     },
     Edexcel_Alevel_Chemistry: {
@@ -322,21 +322,21 @@ const SUBJECT_CONFIG = {
         catDir: "Categorized_Questions_Edexcel_Alevel_Chemistry",
         tiers: ["AS Level", "A Level"],
         papers: [
-            { value: "1", label: "Paper 1 (Advanced Inorganic & Physical)", tier: "AS Level" },
-            { value: "2", label: "Paper 2 (Advanced Organic & Physical)", tier: "AS Level" },
-            { value: "3", label: "Paper 3 (General & Practical)", tier: "AS Level" }
+            { value: "1", label: "Paper 1 (Advanced Inorganic & Physical)", tier: "Both" },
+            { value: "2", label: "Paper 2 (Advanced Organic & Physical)", tier: "Both" },
+            { value: "3", label: "Paper 3 (General & Practical)", tier: "Both" }
         ]
     },
     Edexcel_Alevel_Biology: {
         board: "Edexcel",
         level: "A Level",
-        code: "9BI0",
-        badge: "Edexcel A Level Biology 9BI0",
-        docTitle: "Cioal Tutor Topical Questions • Edexcel A Level Biology (9BI0)",
+        code: "9BN0",
+        badge: "Edexcel A Level Biology 9BN0",
+        docTitle: "Cioal Tutor Topical Questions • Edexcel A Level Biology (9BN0)",
         subtitle: "Pearson Edexcel AS & A Level Biology (Salters-Nuffield) Question Bank & Test Builder",
-        examLabel: "Pearson Edexcel AS & A Level Biology (9BI0)",
+        examLabel: "Pearson Edexcel AS & A Level Biology (Salters-Nuffield) (9BN0/8BN0)",
         defaultTestTitle: "Weekly Edexcel A Level Biology Assessment",
-        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. circulation, genetics, voice, 9BI0)...",
+        searchPlaceholder: "Search questions by topic, keyword, or paper ID (e.g. circulation, genetics, voice, 9BN0)...",
         storageKey: "cioal_test_paper_edexcel_alevel_biology",
         syllabusUrl: "data/edexcel_alevel_biology_syllabus.json",
         questionsUrl: "data/edexcel_alevel_biology_questions.json",
@@ -344,9 +344,9 @@ const SUBJECT_CONFIG = {
         catDir: "Categorized_Questions_Edexcel_Alevel_Biology",
         tiers: ["AS Level", "A Level"],
         papers: [
-            { value: "1", label: "Paper 1 (The Natural Environment & Species Survival)", tier: "AS Level" },
-            { value: "2", label: "Paper 2 (Energy, Exercise & Coordination)", tier: "AS Level" },
-            { value: "3", label: "Paper 3 (General & Practical Applications)", tier: "AS Level" }
+            { value: "1", label: "Paper 1 (Natural Environment & Survival)", tier: "Both" },
+            { value: "2", label: "Paper 2 (Energy, Exercise & Coordination)", tier: "Both" },
+            { value: "3", label: "Paper 3 (General & Practical Applications)", tier: "Both" }
         ]
     },
     Edexcel_Alevel_Math: {
@@ -366,9 +366,9 @@ const SUBJECT_CONFIG = {
         catDir: "Categorized_Questions_Edexcel_Alevel_Math",
         tiers: ["AS Level", "A Level"],
         papers: [
-            { value: "1", label: "Paper 1 (Pure Mathematics 1)", tier: "AS Level" },
-            { value: "2", label: "Paper 2 (Pure Mathematics 2)", tier: "AS Level" },
-            { value: "3", label: "Paper 3 (Statistics & Mechanics)", tier: "AS Level" }
+            { value: "1", label: "Paper 1 (Pure Mathematics 1)", tier: "Both" },
+            { value: "2", label: "Paper 2 (Pure Mathematics 2)", tier: "Both" },
+            { value: "3", label: "Paper 3 (Statistics & Mechanics)", tier: "Both" }
         ]
     }
 };
@@ -441,7 +441,7 @@ async function ensureSubjectDatabaseLoaded(subject) {
             questionsData = window.CIOAL_STATIC_DB[subjKey].questions;
         }
     } else {
-        const cacheBuster = "?v=16";
+        const cacheBuster = "?v=18";
         try {
             [syllabusData, questionsData] = await Promise.all([
                 fetch(`${cfg.syllabusUrl}${cacheBuster}`).then(r => {
@@ -738,6 +738,24 @@ function renderTierCheckboxes(subject) {
                         : checkedTiers.has(paperObj.tier);
                 }
             });
+
+            // Synchronize syllabus chapter checkboxes when chapters have a tier attribute
+            document.querySelectorAll(".chapter-accordion-item").forEach(item => {
+                const chTier = item.dataset.tier;
+                if (chTier) {
+                    const shouldBeChecked = checkedTiers.has(chTier);
+                    const chBox = item.querySelector(".chapter-checkbox");
+                    if (chBox) {
+                        chBox.checked = shouldBeChecked;
+                        chBox.indeterminate = false;
+                    }
+                    item.querySelectorAll(".subtopic-checkbox").forEach(sb => {
+                        sb.checked = shouldBeChecked;
+                    });
+                    item.style.opacity = shouldBeChecked ? "1" : "0.45";
+                }
+            });
+
             handleFilterChange();
         });
     });
@@ -994,16 +1012,54 @@ function renderSyllabusCheckboxes(syllabus) {
     const container = document.getElementById("syllabusChaptersList");
     container.innerHTML = "";
 
+    const checkedTiers = new Set(
+        Array.from(document.querySelectorAll(".tier-checkbox:checked")).map(el => el.value)
+    );
+
+    let currentTierGroup = null;
+
     syllabus.forEach(ch => {
+        // Render section divider headers when chapters declare a tier (AS Level vs A Level)
+        if (ch.tier && ch.tier !== currentTierGroup) {
+            currentTierGroup = ch.tier;
+            const groupHeader = document.createElement("div");
+            const isAS = ch.tier === "AS Level";
+            groupHeader.className = `syllabus-tier-group-header ${isAS ? 'tier-group-as' : 'tier-group-a2'}`;
+            groupHeader.innerHTML = `
+                <span>${isAS ? '📘 AS Level (Year 1)' : '🔬 A Level (Year 2)'}</span>
+                <span class="tier-group-tag">${isAS ? 'Foundational' : 'Advanced'}</span>
+            `;
+            container.appendChild(groupHeader);
+        }
+
         const item = document.createElement("div");
         item.className = "chapter-accordion-item";
+        if (ch.tier) {
+            item.dataset.tier = ch.tier;
+        }
+
+        // Clean name with badge pill
+        let displayName = ch.name;
+        let pillBadge = "";
+        if (ch.name.startsWith("[AS]")) {
+            pillBadge = `<span class="pill-tier pill-as">AS</span>`;
+            displayName = ch.name.replace(/^\[AS\]\s*/, '');
+        } else if (ch.name.startsWith("[A2]")) {
+            pillBadge = `<span class="pill-tier pill-a2">A2</span>`;
+            displayName = ch.name.replace(/^\[A2\]\s*/, '');
+        }
+
+        const isChecked = ch.tier ? (checkedTiers.size === 0 || checkedTiers.has(ch.tier)) : true;
+        if (ch.tier && !isChecked) {
+            item.style.opacity = "0.45";
+        }
 
         const header = document.createElement("div");
         header.className = "chapter-accordion-header";
         header.innerHTML = `
             <div class="chapter-header-left">
-                <input type="checkbox" class="chapter-checkbox" data-chapter="${ch.id}" id="ch_${ch.id}">
-                <label for="ch_${ch.id}" style="cursor:pointer;">${ch.name}</label>
+                <input type="checkbox" class="chapter-checkbox" data-chapter="${ch.id}" id="ch_${ch.id}" ${isChecked ? "checked" : ""}>
+                <label for="ch_${ch.id}" style="cursor:pointer;">${pillBadge}${displayName}</label>
             </div>
             <span class="chapter-toggle-icon" style="font-size:0.75rem; color:#64748b;">▼</span>
         `;
@@ -1016,7 +1072,7 @@ function renderSyllabusCheckboxes(syllabus) {
             const subLabel = document.createElement("label");
             subLabel.className = "custom-checkbox";
             subLabel.innerHTML = `
-                <input type="checkbox" class="subtopic-checkbox" data-chapter="${ch.id}" data-subtopic="${sub.id}" id="sub_${sub.id}">
+                <input type="checkbox" class="subtopic-checkbox" data-chapter="${ch.id}" data-subtopic="${sub.id}" id="sub_${sub.id}" ${isChecked ? "checked" : ""}>
                 <span>${sub.name}</span>
             `;
             body.appendChild(subLabel);
