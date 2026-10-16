@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cioal Tutor Topical Questions • IGCSE Physics (0625)</title>
-    <link rel="stylesheet" href="static/css/style.css?v=19">
+    <link rel="stylesheet" href="static/css/style.css?v=20">
     <link rel="icon" type="image/jpeg" href="static/cioaltutors.jpg">
     <!-- KaTeX for rendering mathematical & scientific expressions -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
@@ -85,6 +85,63 @@
         </div>
     </div>
 
+    <!-- Mode Selection Screen (Step 4: Choose between Test Builder and Topical Exam Questions) -->
+    <div class="splash-overlay hidden" id="splashModeScreen">
+        <div class="splash-container" style="max-width:760px;">
+            <div class="splash-brand">
+                <div class="splash-logo-wrap">
+                    <img src="static/cioaltutors.jpg" alt="Cioal Tutors Icon" class="splash-logo">
+                </div>
+                <h1 class="splash-title">Choose Workspace Mode</h1>
+                <div style="margin-top:0.75rem; display:inline-block; background:#c6ff60; color:#14532d; font-weight:800; font-size:0.85rem; padding:0.3rem 0.9rem; border-radius:20px; border:1px solid #84cc16;" id="splashModeSubjectBadge">
+                    Physics (0625)
+                </div>
+            </div>
+
+            <div class="splash-mode-grid">
+                <!-- Option 1: Topical Exam Questions -->
+                <div class="splash-mode-card" id="splashChooseTopical" data-mode="topical">
+                    <div class="splash-mode-card-header">
+                        <span class="splash-mode-icon">📖</span>
+                        <div>
+                            <h3 class="splash-mode-name">Topical Exam Questions</h3>
+                            <span class="splash-mode-tag tag-topical">Topical Revision</span>
+                        </div>
+                    </div>
+                    <p class="splash-mode-description">
+                        Practice questions topic-by-topic with clean Chapter, Subtopic, and Paper dropdowns. Includes instant answer toggles and clear 2-line explanations for every MCQ.
+                    </p>
+                    <button type="button" class="btn btn-accent splash-mode-btn">
+                        Open Topical Questions ▶
+                    </button>
+                </div>
+
+                <!-- Option 2: Test Builder -->
+                <div class="splash-mode-card" id="splashChooseBuilder" data-mode="builder">
+                    <div class="splash-mode-card-header">
+                        <span class="splash-mode-icon">🛠️</span>
+                        <div>
+                            <h3 class="splash-mode-name">Test Builder</h3>
+                            <span class="splash-mode-tag tag-builder">Assessment Maker</span>
+                        </div>
+                    </div>
+                    <p class="splash-mode-description">
+                        Filter by multi-chapter checkboxes, years, and sessions. Automatically calculate total marks, exam duration, and generate printable PDF test papers and mark schemes.
+                    </p>
+                    <button type="button" class="btn btn-outline splash-mode-btn">
+                        Open Test Builder ▶
+                    </button>
+                </div>
+            </div>
+
+            <div style="text-align:center; margin-top:1.25rem;">
+                <button type="button" class="btn btn-outline" id="backToSubjectSelectBtn" style="font-weight:700;">
+                    ◀ Back to Subject Selection
+                </button>
+            </div>
+        </div>
+    </div>
+
     <!-- Coming Soon Screen (when other Board/Level is clicked) -->
     <div class="splash-overlay hidden" id="comingSoonScreen">
         <div class="splash-container" style="max-width:600px;">
@@ -135,6 +192,15 @@
                 <p class="header-subtitle" id="headerSubtitle">Cambridge 2026–2028 Syllabus Question Bank & Test Builder</p>
             </div>
         </div>
+        <!-- Mode Switcher in Header -->
+        <div class="header-mode-toggle" id="headerModeToggle">
+            <button type="button" class="header-mode-btn" data-mode="topical" id="btnModeTopical" title="Switch to Topical Exam Questions Mode">
+                📖 Topical Questions
+            </button>
+            <button type="button" class="header-mode-btn active" data-mode="builder" id="btnModeBuilder" title="Switch to Test Builder Mode">
+                🛠️ Test Builder
+            </button>
+        </div>
         <div class="header-actions">
             <button class="btn btn-sm btn-outline" id="openSplashBtn" title="Switch Exam Board, Level, or Subject">
                 🎓 Switch Subject / Board
@@ -163,127 +229,175 @@
                 <button type="button" class="mobile-sidebar-close" id="closeMobileSidebarBtn" aria-label="Close Filters">&times;</button>
             </div>
 
-            <!-- Show Mark Scheme Toggle (Above Curriculum Tier) -->
-            <div class="ms-toggle-section">
-                <label class="custom-checkbox ms-toggle-label" style="padding:0;">
-                    <input type="checkbox" id="showMarkSchemeCheckbox">
-                    <span>📋 Show Mark Scheme</span>
-                </label>
-            </div>
+            <!-- Test Builder Mode Sidebar -->
+            <div id="sidebarTestBuilder">
+                <!-- Show Mark Scheme Toggle (Above Curriculum Tier) -->
+                <div class="ms-toggle-section">
+                    <label class="custom-checkbox ms-toggle-label" style="padding:0;">
+                        <input type="checkbox" id="showMarkSchemeCheckbox">
+                        <span>📋 Show Mark Scheme</span>
+                    </label>
+                </div>
 
-            <!-- Tier Filter -->
-            <div class="filter-section">
-                <div class="filter-header">
-                    <span class="filter-title">Curriculum Tier</span>
-                </div>
-                <div class="checkbox-grid" id="curriculumTiersGroup">
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="tier-checkbox" value="Core" checked>
-                        <span>Core</span>
-                    </label>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="tier-checkbox" value="Extended" checked>
-                        <span>Extended</span>
-                    </label>
-                </div>
-            </div>
-
-            <!-- Paper Type Filter -->
-            <div class="filter-section">
-                <div class="filter-header">
-                    <span class="filter-title">Paper Component</span>
-                </div>
-                <div class="checkbox-group" id="paperComponentsGroup">
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="paper-type-checkbox" value="1" checked>
-                        <span>Paper 1 (MCQ Core)</span>
-                    </label>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="paper-type-checkbox" value="2" checked>
-                        <span>Paper 2 (MCQ Extended)</span>
-                    </label>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="paper-type-checkbox" value="3" checked>
-                        <span>Paper 3 (Theory Core)</span>
-                    </label>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="paper-type-checkbox" value="4" checked>
-                        <span>Paper 4 (Theory Extended)</span>
-                    </label>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="paper-type-checkbox" value="5" checked>
-                        <span>Paper 5 (Practical Test)</span>
-                    </label>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="paper-type-checkbox" value="6" checked>
-                        <span>Paper 6 (Alt to Practical)</span>
-                    </label>
-                </div>
-            </div>
-
-            <!-- Years Filter -->
-            <div class="filter-section">
-                <div class="filter-header">
-                    <span class="filter-title">Exam Year</span>
-                    <div>
-                        <span class="filter-link" id="selectAllYears">All</span> | 
-                        <span class="filter-link" id="clearYears">Clear</span>
+                <!-- Tier Filter -->
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <span class="filter-title">Curriculum Tier</span>
+                    </div>
+                    <div class="checkbox-grid" id="curriculumTiersGroup">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="tier-checkbox" value="Core" checked>
+                            <span>Core</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="tier-checkbox" value="Extended" checked>
+                            <span>Extended</span>
+                        </label>
                     </div>
                 </div>
-                <div class="checkbox-grid-3">
-                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2026" checked> <span>2026</span></label>
-                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2025" checked> <span>2025</span></label>
-                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2024" checked> <span>2024</span></label>
-                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2023" checked> <span>2023</span></label>
-                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2022" checked> <span>2022</span></label>
-                    <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2021" checked> <span>2021</span></label>
-                </div>
-            </div>
 
-            <!-- Month / Series Filter -->
-            <div class="filter-section">
-                <div class="filter-header">
-                    <span class="filter-title">Exam Session</span>
-                    <div>
-                        <span class="filter-link" id="selectAllMonths">All</span> | 
-                        <span class="filter-link" id="clearMonths">Clear</span>
+                <!-- Paper Type Filter -->
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <span class="filter-title">Paper Component</span>
+                    </div>
+                    <div class="checkbox-group" id="paperComponentsGroup">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="paper-type-checkbox" value="1" checked>
+                            <span>Paper 1 (MCQ Core)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="paper-type-checkbox" value="2" checked>
+                            <span>Paper 2 (MCQ Extended)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="paper-type-checkbox" value="3" checked>
+                            <span>Paper 3 (Theory Core)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="paper-type-checkbox" value="4" checked>
+                            <span>Paper 4 (Theory Extended)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="paper-type-checkbox" value="5" checked>
+                            <span>Paper 5 (Practical Test)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="paper-type-checkbox" value="6" checked>
+                            <span>Paper 6 (Alt to Practical)</span>
+                        </label>
                     </div>
                 </div>
-                <div class="checkbox-group">
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="month-checkbox" value="Feb/March" checked>
-                        <span>Feb / March (m)</span>
-                    </label>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="month-checkbox" value="May/June" checked>
-                        <span>May / June (s)</span>
-                    </label>
-                    <label class="custom-checkbox">
-                        <input type="checkbox" class="month-checkbox" value="Oct/Nov" checked>
-                        <span>Oct / Nov (w)</span>
-                    </label>
-                </div>
-            </div>
 
-            <!-- Chapters Filter -->
-            <div class="filter-section">
-                <div class="filter-header">
-                    <span class="filter-title">Syllabus Chapters</span>
-                    <div>
-                        <span class="filter-link" id="selectAllChapters">All</span> | 
-                        <span class="filter-link" id="clearChapters">Clear</span>
+                <!-- Years Filter -->
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <span class="filter-title">Exam Year</span>
+                        <div>
+                            <span class="filter-link" id="selectAllYears">All</span> | 
+                            <span class="filter-link" id="clearYears">Clear</span>
+                        </div>
+                    </div>
+                    <div class="checkbox-grid-3">
+                        <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2026" checked> <span>2026</span></label>
+                        <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2025" checked> <span>2025</span></label>
+                        <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2024" checked> <span>2024</span></label>
+                        <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2023" checked> <span>2023</span></label>
+                        <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2022" checked> <span>2022</span></label>
+                        <label class="custom-checkbox"><input type="checkbox" class="year-checkbox" value="2021" checked> <span>2021</span></label>
                     </div>
                 </div>
-                <div id="syllabusChaptersList">
-                    <!-- Populated dynamically by JS -->
+
+                <!-- Month / Series Filter -->
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <span class="filter-title">Exam Session</span>
+                        <div>
+                            <span class="filter-link" id="selectAllMonths">All</span> | 
+                            <span class="filter-link" id="clearMonths">Clear</span>
+                        </div>
+                    </div>
+                    <div class="checkbox-group">
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="month-checkbox" value="Feb/March" checked>
+                            <span>Feb / March (m)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="month-checkbox" value="May/June" checked>
+                            <span>May / June (s)</span>
+                        </label>
+                        <label class="custom-checkbox">
+                            <input type="checkbox" class="month-checkbox" value="Oct/Nov" checked>
+                            <span>Oct / Nov (w)</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Chapters Filter -->
+                <div class="filter-section">
+                    <div class="filter-header">
+                        <span class="filter-title">Syllabus Chapters</span>
+                        <div>
+                            <span class="filter-link" id="selectAllChapters">All</span> | 
+                            <span class="filter-link" id="clearChapters">Clear</span>
+                        </div>
+                    </div>
+                    <div id="syllabusChaptersList">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+                </div>
+
+                <!-- Mobile-only Sticky Apply Button -->
+                <div class="mobile-sidebar-footer">
+                    <button type="button" class="btn btn-accent" id="applyMobileFiltersBtn" style="width:100%; font-weight:800;">
+                        ✓ Apply & View Questions
+                    </button>
                 </div>
             </div>
 
-            <!-- Mobile-only Sticky Apply Button -->
-            <div class="mobile-sidebar-footer">
-                <button type="button" class="btn btn-accent" id="applyMobileFiltersBtn" style="width:100%; font-weight:800;">
-                    ✓ Apply & View Questions
-                </button>
+            <!-- Topical Mode Sidebar -->
+            <div id="sidebarTopical" style="display:none;">
+                <div class="topical-sidebar-heading">
+                    <span class="topical-heading-badge">📖 Topical Exam Questions</span>
+                    <p class="topical-heading-sub">Drill down chapter by chapter, select subtopics, and pick specific paper components.</p>
+                </div>
+
+                <!-- 1. Chapter Dropdown -->
+                <div class="topical-nav-group">
+                    <label class="topical-nav-label" for="topicalChapterSelect">
+                        <span class="topical-step-num">1</span> Syllabus Chapter
+                    </label>
+                    <select id="topicalChapterSelect" class="form-select topical-select">
+                        <option value="">-- Choose a Syllabus Chapter --</option>
+                    </select>
+                </div>
+
+                <!-- 2. Subtopic Dropdown -->
+                <div class="topical-nav-group">
+                    <label class="topical-nav-label" for="topicalSubtopicSelect">
+                        <span class="topical-step-num">2</span> Subtopic
+                    </label>
+                    <select id="topicalSubtopicSelect" class="form-select topical-select" disabled>
+                        <option value="all">📂 All Subtopics in this Chapter</option>
+                    </select>
+                </div>
+
+                <!-- 3. Paper Component Filter -->
+                <div class="topical-nav-group">
+                    <label class="topical-nav-label">
+                        <span class="topical-step-num">3</span> Paper Component
+                    </label>
+                    <div class="topical-paper-tabs" id="topicalPaperTabs">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+                </div>
+
+                <!-- Reset Selection Button -->
+                <div style="margin-top:1.5rem;">
+                    <button type="button" class="btn btn-sm btn-outline" id="resetTopicalNavBtn" style="width:100%; font-weight:700;">
+                        ↺ Reset Topic Selection
+                    </button>
+                </div>
             </div>
 
         </aside>
@@ -441,6 +555,7 @@
     <!-- Standalone Print Container (outside all modals for perfect multi-page browser printing) -->
     <div id="printPaperRoot" style="display:none;"></div>
 
-    <script src="static/js/app.js?v=19"></script>
+    <script src="static/js/mcq_explanations.js?v=20"></script>
+    <script src="static/js/app.js?v=20"></script>
 </body>
 </html>

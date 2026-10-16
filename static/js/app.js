@@ -381,6 +381,10 @@ const SUBJECT_DB_CACHE = {};
 let appState = {
     subject: "Physics",
     syllabus: [],
+    mode: localStorage.getItem("cioal_active_mode") || "topical",
+    topicalChapter: null,
+    topicalSubtopic: "all",
+    topicalPaper: "all",
     selectedYears: [],
     selectedMonths: [],
     selectedTiers: [],
@@ -398,8 +402,217 @@ let appState = {
 
 let splashState = {
     board: "Cambridge",
-    level: "IGCSE / O Level"
+    level: "IGCSE / O Level",
+    targetSubject: "Physics"
 };
+
+function setAppMode(mode) {
+    appState.mode = mode;
+    localStorage.setItem("cioal_active_mode", mode);
+
+    const btnTopical = document.getElementById("btnModeTopical");
+    const btnBuilder = document.getElementById("btnModeBuilder");
+    if (btnTopical) btnTopical.classList.toggle("active", mode === "topical");
+    if (btnBuilder) btnBuilder.classList.toggle("active", mode === "builder");
+
+    const sidebarBuilder = document.getElementById("sidebarTestBuilder");
+    const sidebarTopical = document.getElementById("sidebarTopical");
+    const testTray = document.getElementById("testTray");
+    const addAllBtn = document.getElementById("addAllFilteredBtn");
+
+    if (mode === "topical") {
+        if (sidebarBuilder) sidebarBuilder.style.display = "none";
+        if (sidebarTopical) sidebarTopical.style.display = "block";
+        if (testTray) testTray.style.display = "none";
+        if (addAllBtn) addAllBtn.style.display = "none";
+        initTopicalSidebar();
+        appState.currentPage = 1;
+        fetchQuestions();
+    } else {
+        if (sidebarBuilder) sidebarBuilder.style.display = "block";
+        if (sidebarTopical) sidebarTopical.style.display = "none";
+        if (addAllBtn) addAllBtn.style.display = "";
+        updateTestTray();
+        appState.currentPage = 1;
+        fetchQuestions();
+    }
+}
+
+function renderTopicalIntroCard(syllabus) {
+    const listContainer = document.getElementById("questionsList");
+    if (!listContainer) return;
+
+    const cardsHtml = (syllabus || []).map(ch => {
+        let cleanName = ch.name.replace(/^\[(AS|A2)\]\s*/, '').replace(/^(M1|S1):\s*/, '');
+        return `
+            <button type="button" class="topical-chapter-quick-btn" data-chid="${ch.id}">
+                <span><strong>Ch ${ch.id}.</strong> ${cleanName}</span>
+                <span style="color:#16a34a; font-weight:800;">▶</span>
+            </button>
+        `;
+    }).join("");
+
+    listContainer.innerHTML = `
+        <div class="empty-state-card topical-intro-card">
+            <div class="empty-state-icon">📖</div>
+            <p class="empty-state-title">Select a Syllabus Chapter to Begin</p>
+            <p class="empty-state-subtitle">Choose a chapter from the dropdown menu on the left, or click any chapter below to start practicing topical past paper questions and mark schemes.</p>
+            <div class="topical-chapter-quick-grid">
+                ${cardsHtml}
+            </div>
+        </div>
+    `;
+
+    listContainer.querySelectorAll(".topical-chapter-quick-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+            const chId = btn.dataset.chid;
+            const selectEl = document.getElementById("topicalChapterSelect");
+            if (selectEl) {
+                selectEl.value = chId;
+                selectEl.dispatchEvent(new Event("change"));
+            }
+        });
+    });
+}
+
+function initTopicalSidebar() {
+    const chSelect = document.getElementById("topicalChapterSelect");
+    const subSelect = document.getElementById("topicalSubtopicSelect");
+    const tabsContainer = document.getElementById("topicalPaperTabs");
+    if (!chSelect || !tabsContainer) return;
+
+    // Populate chapters
+    const currentChVal = appState.topicalChapter ? String(appState.topicalChapter) : "";
+    chSelect.innerHTML = `<option value="">-- Choose a Syllabus Chapter --</option>` +
+        (appState.syllabus || []).map(ch => {
+            return `<option value="${ch.id}" ${String(ch.id) === currentChVal ? "selected" : ""}>${ch.name}</option>`;
+        }).join("");
+
+    // Populate subtopics
+    if (appState.topicalChapter) {
+        const chObj = (appState.syllabus || []).find(c => c.id === appState.topicalChapter);
+        if (chObj && chObj.subtopics && chObj.subtopics.length > 0) {
+            subSelect.disabled = false;
+            subSelect.innerHTML = `<option value="all">📂 All Subtopics in this Chapter</option>` +
+                chObj.subtopics.map(s => {
+                    const isSel = String(s.id) === String(appState.topicalSubtopic);
+                    return `<option value="${s.id}" ${isSel ? "selected" : ""}>${s.name}</option>`;
+                }).join("");
+        } else {
+            subSelect.disabled = true;
+            subSelect.innerHTML = `<option value="all">📂 All Subtopics in this Chapter</option>`;
+        }
+    } else {
+        subSelect.disabled = true;
+        subSelect.innerHTML = `<option value="all">📂 All Subtopics in this Chapter</option>`;
+    }
+
+    // Populate paper tabs based on subject
+    const subject = appState.subject;
+    const cfg = SUBJECT_CONFIG[subject] || SUBJECT_CONFIG.Physics;
+    let tabs = [];
+
+    if (subject === "Edexcel_Alevel_Math") {
+        tabs = [
+            { id: "all", label: "All Modules (P1, P2, P3, M1, S1)" },
+            { id: "P1", label: "P1 (Pure Mathematics 1)" },
+            { id: "P2", label: "P2 (Pure Mathematics 2)" },
+            { id: "P3", label: "P3 (Pure Mathematics 3)" },
+            { id: "M1", label: "M1 (Mechanics 1)" },
+            { id: "S1", label: "S1 (Statistics 1)" }
+        ];
+    } else {
+        const isCambridgeScience = cfg.board === "Cambridge" && (
+            subject === "Physics" || subject === "Chemistry" || subject === "Biology" ||
+            subject === "CAIE_Alevel_Physics" || subject === "CAIE_Alevel_Chemistry" || subject === "CAIE_Alevel_Biology"
+        );
+        if (isCambridgeScience) {
+            tabs = [
+                { id: "all", label: "All Paper Types" },
+                { id: "mcq", label: "📝 Multiple Choice (MCQ)" },
+                { id: "theory", label: "📄 Structured Theory" },
+                { id: "atp", label: "🔬 Practical / Alt to Practical" }
+            ];
+        } else {
+            tabs = [{ id: "all", label: "All Papers" }];
+            (cfg.papers || []).forEach(p => {
+                tabs.push({ id: String(p.value), label: p.label });
+            });
+        }
+    }
+
+    const curPaper = appState.topicalPaper || "all";
+    tabsContainer.innerHTML = tabs.map(t => {
+        const isActive = t.id === curPaper;
+        return `
+            <button type="button" class="topical-paper-tab ${isActive ? "active" : ""}" data-paper="${t.id}">
+                <span>${t.label}</span>
+                ${isActive ? '<span style="font-size:0.75rem;">✓</span>' : ''}
+            </button>
+        `;
+    }).join("");
+
+    // Wire up tab clicks
+    tabsContainer.querySelectorAll(".topical-paper-tab").forEach(tab => {
+        tab.addEventListener("click", () => {
+            tabsContainer.querySelectorAll(".topical-paper-tab").forEach(t => t.classList.remove("active"));
+            tab.classList.add("active");
+            appState.topicalPaper = tab.dataset.paper;
+            appState.currentPage = 1;
+            fetchQuestions();
+        });
+    });
+}
+
+function renderTopicalAnswerContent(q) {
+    if (q.is_mc) {
+        const ans = q.ms_answer || "A";
+        const explanation = (typeof window.getMcqExplanation === "function")
+            ? window.getMcqExplanation(q, appState.subject)
+            : (q.explanation || `Option ${ans} is the correct response verified by the official mark scheme.`);
+
+        const msImgHtml = q.ms_image_url
+            ? `<div class="ms-theory-img-wrap" style="margin-top:0.75rem;"><img src="${q.ms_image_url}" alt="Mark Scheme Q${q.q_num}" class="ms-theory-img" loading="lazy"></div>`
+            : "";
+
+        return `
+            <div class="topical-ans-correct-badge">
+                <span>Correct Answer:</span>
+                <strong>Option ${ans}</strong>
+                <span style="font-size:0.8rem; color:#64748b; font-weight:600;">[1 Mark]</span>
+            </div>
+            <div class="topical-explanation-box">
+                <div class="topical-explanation-label">💡 Why is this the answer?</div>
+                <p class="topical-explanation-text">${explanation}</p>
+            </div>
+            ${msImgHtml}
+        `;
+    }
+
+    if (q.ms_rows && q.ms_rows.length > 0) {
+        return `
+            <div style="margin-bottom:0.6rem; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-weight:700; color:#14532d; font-size:0.88rem;">✅ Official Mark Scheme</span>
+                <span style="font-size:0.8rem; font-weight:700; color:#15803d;">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
+            </div>
+            ${renderMsRowsTableHtml(q.ms_rows)}
+        `;
+    }
+
+    if (q.ms_image_url) {
+        return `
+            <div style="margin-bottom:0.6rem; display:flex; align-items:center; justify-content:space-between;">
+                <span style="font-weight:700; color:#14532d; font-size:0.88rem;">✅ Official Mark Scheme</span>
+                <span style="font-size:0.8rem; font-weight:700; color:#15803d;">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
+            </div>
+            <div class="ms-theory-img-wrap">
+                <img src="${q.ms_image_url}" alt="Mark Scheme Q${q.q_num}" class="ms-theory-img" loading="lazy">
+            </div>
+        `;
+    }
+
+    return `<div style="color:#64748b; font-style:italic;">No official mark scheme preview available.</div>`;
+}
 
 let currentQuestionsData = [];
 let isTimeManuallyEdited = false;
@@ -492,13 +705,11 @@ async function ensureSubjectDatabaseLoaded(subject) {
         } else if (q.image_url && !isFileProto && !q.image_url.includes("?v=")) {
             q.image_url += imgCacheSuffix;
         }
-        if (!q.is_mc) {
-            const relMs = (q.ms_image_rel_path || q.ms_image_path || "").replace(/\\/g, "/");
-            if (relMs) {
-                q.ms_image_url = encodeURI(`${cfg.catDir}/${relMs}`) + imgCacheSuffix;
-            } else if (q.ms_image_url && !isFileProto && !q.ms_image_url.includes("?v=")) {
-                q.ms_image_url += imgCacheSuffix;
-            }
+        const relMs = (q.ms_image_rel_path || q.ms_image_path || "").replace(/\\/g, "/");
+        if (relMs) {
+            q.ms_image_url = encodeURI(`${cfg.catDir}/${relMs}`) + imgCacheSuffix;
+        } else if (q.ms_image_url && !isFileProto && !q.ms_image_url.includes("?v=")) {
+            q.ms_image_url += imgCacheSuffix;
         }
         questionsById[q.id] = q;
     });
@@ -855,6 +1066,14 @@ async function switchSubject(subject) {
     appState.currentPage = 1;
 
     updateMobileFilterBadge();
+
+    if (appState.mode === "topical") {
+        appState.topicalChapter = null;
+        appState.topicalSubtopic = "all";
+        appState.topicalPaper = "all";
+        initTopicalSidebar();
+    }
+
     await fetchQuestions();
 }
 
@@ -896,9 +1115,16 @@ function setupSplashScreenListeners() {
                 } else {
                     targetSubject = (splashState.board === "Edexcel") ? `Edexcel_${subject}` : subject;
                 }
+                splashState.targetSubject = targetSubject;
+                const cfg = SUBJECT_CONFIG[targetSubject] || SUBJECT_CONFIG.Physics;
+                const modeBadge = document.getElementById("splashModeSubjectBadge");
+                if (modeBadge) {
+                    modeBadge.textContent = `${cfg.board} • ${cfg.level || (targetSubject.includes("Alevel") ? "A Level" : "IGCSE")} • ${cfg.badge}`;
+                }
                 splashScreen.classList.add("hidden");
                 comingSoonScreen.classList.add("hidden");
-                await switchSubject(targetSubject);
+                const modeScreen = document.getElementById("splashModeScreen");
+                if (modeScreen) modeScreen.classList.remove("hidden");
             } else {
                 comingSoonBadge.textContent = `${splashState.board} • ${splashState.level} • ${subject}`;
                 comingSoonMessage.textContent = `Topical past paper questions and mark schemes for ${splashState.board} ${splashState.level} ${subject} are currently being prepared and will be available soon!`;
@@ -907,6 +1133,36 @@ function setupSplashScreenListeners() {
             }
         });
     });
+
+    // Mode Selection screen buttons (Step 4)
+    const chooseTopical = document.getElementById("splashChooseTopical");
+    if (chooseTopical) {
+        chooseTopical.addEventListener("click", async () => {
+            const modeScreen = document.getElementById("splashModeScreen");
+            if (modeScreen) modeScreen.classList.add("hidden");
+            await switchSubject(splashState.targetSubject);
+            setAppMode("topical");
+        });
+    }
+
+    const chooseBuilder = document.getElementById("splashChooseBuilder");
+    if (chooseBuilder) {
+        chooseBuilder.addEventListener("click", async () => {
+            const modeScreen = document.getElementById("splashModeScreen");
+            if (modeScreen) modeScreen.classList.add("hidden");
+            await switchSubject(splashState.targetSubject);
+            setAppMode("builder");
+        });
+    }
+
+    const backToSubjBtn = document.getElementById("backToSubjectSelectBtn");
+    if (backToSubjBtn) {
+        backToSubjBtn.addEventListener("click", () => {
+            const modeScreen = document.getElementById("splashModeScreen");
+            if (modeScreen) modeScreen.classList.add("hidden");
+            splashScreen.classList.remove("hidden");
+        });
+    }
 
     // Coming soon screen buttons
     const backBtn = document.getElementById("backToSplashBtn");
@@ -928,8 +1184,14 @@ function setupSplashScreenListeners() {
         });
         updateSplashSubjectTags();
         comingSoonScreen.classList.add("hidden");
-        splashScreen.classList.add("hidden");
-        await switchSubject(subj);
+
+        // Open mode selection for this subject
+        splashState.targetSubject = subj;
+        const cfg = SUBJECT_CONFIG[subj] || SUBJECT_CONFIG.Physics;
+        const modeBadge = document.getElementById("splashModeSubjectBadge");
+        if (modeBadge) modeBadge.textContent = `${cfg.board} • IGCSE • ${cfg.badge}`;
+        const modeScreen = document.getElementById("splashModeScreen");
+        if (modeScreen) modeScreen.classList.remove("hidden");
     };
 
     const launchPhysicsBtn = document.getElementById("launchPhysicsNowBtn");
@@ -957,6 +1219,8 @@ function setupSplashScreenListeners() {
     if (openSplashBtn) {
         openSplashBtn.addEventListener("click", () => {
             comingSoonScreen.classList.add("hidden");
+            const modeScreen = document.getElementById("splashModeScreen");
+            if (modeScreen) modeScreen.classList.add("hidden");
             splashScreen.classList.remove("hidden");
         });
     }
@@ -964,6 +1228,8 @@ function setupSplashScreenListeners() {
     if (headerBrandHome) {
         headerBrandHome.addEventListener("click", () => {
             comingSoonScreen.classList.add("hidden");
+            const modeScreen = document.getElementById("splashModeScreen");
+            if (modeScreen) modeScreen.classList.add("hidden");
             splashScreen.classList.remove("hidden");
         });
     }
@@ -994,6 +1260,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     });
     updateSplashSubjectTags();
     await switchSubject(initialSubject);
+    setAppMode(appState.mode);
 });
 
 async function loadSyllabusAndFilters() {
@@ -1166,6 +1433,69 @@ function updateMobileFilterBadge() {
 }
 
 function setupEventListeners() {
+    // Mode switcher in header
+    const btnTopical = document.getElementById("btnModeTopical");
+    if (btnTopical) btnTopical.addEventListener("click", () => setAppMode("topical"));
+    const btnBuilder = document.getElementById("btnModeBuilder");
+    if (btnBuilder) btnBuilder.addEventListener("click", () => setAppMode("builder"));
+
+    // Topical Mode Sidebar controls
+    const chSelect = document.getElementById("topicalChapterSelect");
+    if (chSelect) {
+        chSelect.addEventListener("change", () => {
+            const val = chSelect.value;
+            const subSelect = document.getElementById("topicalSubtopicSelect");
+            if (!val) {
+                appState.topicalChapter = null;
+                appState.topicalSubtopic = "all";
+                if (subSelect) {
+                    subSelect.disabled = true;
+                    subSelect.innerHTML = `<option value="all">📂 All Subtopics in this Chapter</option>`;
+                }
+            } else {
+                appState.topicalChapter = parseInt(val);
+                appState.topicalSubtopic = "all";
+                const chObj = (appState.syllabus || []).find(c => c.id === appState.topicalChapter);
+                if (subSelect && chObj && chObj.subtopics) {
+                    subSelect.disabled = false;
+                    subSelect.innerHTML = `<option value="all">📂 All Subtopics in this Chapter</option>` +
+                        chObj.subtopics.map(s => `<option value="${s.id}">${s.name}</option>`).join("");
+                }
+            }
+            appState.currentPage = 1;
+            fetchQuestions();
+        });
+    }
+
+    const subSelect = document.getElementById("topicalSubtopicSelect");
+    if (subSelect) {
+        subSelect.addEventListener("change", () => {
+            appState.topicalSubtopic = subSelect.value;
+            appState.currentPage = 1;
+            fetchQuestions();
+        });
+    }
+
+    const resetTopicalBtn = document.getElementById("resetTopicalNavBtn");
+    if (resetTopicalBtn) {
+        resetTopicalBtn.addEventListener("click", () => {
+            appState.topicalChapter = null;
+            appState.topicalSubtopic = "all";
+            appState.topicalPaper = "all";
+            const chSelectEl = document.getElementById("topicalChapterSelect");
+            if (chSelectEl) chSelectEl.value = "";
+            const subSelectEl = document.getElementById("topicalSubtopicSelect");
+            if (subSelectEl) {
+                subSelectEl.disabled = true;
+                subSelectEl.innerHTML = `<option value="all">📂 All Subtopics in this Chapter</option>`;
+            }
+            const tabs = document.querySelectorAll("#topicalPaperTabs .topical-paper-tab");
+            tabs.forEach(t => t.classList.toggle("active", t.dataset.paper === "all"));
+            appState.currentPage = 1;
+            fetchQuestions();
+        });
+    }
+
     // Sync Show Mark Scheme checkboxes (sidebar & mobile bar)
     const showMsCb = document.getElementById("showMarkSchemeCheckbox");
     const mobileShowMsCb = document.getElementById("mobileShowMarkSchemeCheckbox");
@@ -1461,6 +1791,100 @@ async function fetchQuestions() {
 
     try {
         const db = await ensureSubjectDatabaseLoaded(appState.subject);
+
+        // If in Topical Exam Questions mode
+        if (appState.mode === "topical") {
+            if (!appState.topicalChapter) {
+                document.getElementById("matchingCount").textContent = "Select a Chapter";
+                const pagTop = document.getElementById("paginationControls");
+                const pagBot = document.getElementById("paginationControlsBottom");
+                if (pagTop) pagTop.style.display = "none";
+                if (pagBot) pagBot.style.display = "none";
+                renderTopicalIntroCard(db.syllabus);
+                return;
+            }
+
+            const chId = appState.topicalChapter;
+            const subId = appState.topicalSubtopic || "all";
+            const paperVal = appState.topicalPaper || "all";
+            const searchQuery = (appState.searchQuery || "").trim().toLowerCase();
+
+            let matched = db.questions.filter(q => {
+                // Chapter match
+                const qChs = (q.all_chapter_ids && q.all_chapter_ids.length > 0)
+                    ? q.all_chapter_ids.map(Number)
+                    : [Number(q.chapter_id)];
+                if (!qChs.includes(chId)) return false;
+
+                // Subtopic match
+                if (subId !== "all") {
+                    const qSubs = (q.all_subtopic_ids && q.all_subtopic_ids.length > 0)
+                        ? q.all_subtopic_ids.map(String)
+                        : [String(q.subtopic_id)];
+                    if (!qSubs.includes(subId)) return false;
+                }
+
+                // Paper match
+                if (paperVal !== "all") {
+                    if (paperVal === "mcq") {
+                        if (!q.is_mc) return false;
+                    } else if (paperVal === "theory") {
+                        if (q.is_mc) return false;
+                        const c = String(q.component || q.paper_type || "");
+                        const f = c.charAt(0);
+                        const isALevel = appState.subject.startsWith("CAIE_Alevel");
+                        if (isALevel) {
+                            if (f !== "2" && f !== "4") return false;
+                        } else {
+                            if (f !== "3" && f !== "4") return false;
+                        }
+                    } else if (paperVal === "atp") {
+                        if (q.is_mc) return false;
+                        const c = String(q.component || q.paper_type || "");
+                        const f = c.charAt(0);
+                        const isALevel = appState.subject.startsWith("CAIE_Alevel");
+                        if (isALevel) {
+                            if (f !== "3" && f !== "5") return false;
+                        } else {
+                            if (f !== "5" && f !== "6") return false;
+                        }
+                    } else {
+                        const pNum = String(q.paper_type ?? q.paper_num ?? "");
+                        const pComp = String(q.component ?? "");
+                        if (pNum !== paperVal && pComp !== paperVal && !pComp.startsWith(paperVal)) return false;
+                    }
+                }
+
+                // Search query match
+                if (searchQuery) {
+                    const hay = `${q.summary || q.text_preview || ""} ${q.subtopic_name || ""} ${q.chapter_name || ""} ${q.id || ""} ${q.paper_file || q.paper_id || ""}`.toLowerCase();
+                    if (!hay.includes(searchQuery)) return false;
+                }
+
+                return true;
+            });
+
+            appState.totalMatching = matched.length;
+            appState.totalPages = Math.max(1, Math.ceil(matched.length / appState.perPage));
+            const start = (appState.currentPage - 1) * appState.perPage;
+            const end = start + appState.perPage;
+            currentQuestionsData = matched.slice(start, end);
+
+            const chObj = (db.syllabus || []).find(c => c.id === chId);
+            const chDisplayName = chObj ? chObj.name.split(":")[0] : `Chapter ${chId}`;
+            document.getElementById("matchingCount").textContent = `${matched.length.toLocaleString()} Questions • ${chDisplayName}`;
+            
+            const pagTop = document.getElementById("paginationControls");
+            const pagBot = document.getElementById("paginationControlsBottom");
+            if (pagTop) pagTop.style.display = appState.totalPages > 1 ? "" : "none";
+            if (pagBot) pagBot.style.display = appState.totalPages > 1 ? "" : "none";
+
+            renderQuestionsList(currentQuestionsData);
+            renderPagination();
+            return;
+        }
+
+        // Test Builder mode (standard searchQuestionsStatic)
         const payload = {
             subject: appState.subject,
             years: appState.selectedYears,
@@ -1689,6 +2113,21 @@ function renderNativeMsExamItemHtml(q, badgeText, marks) {
 function renderQuestionsList(questions) {
     const listContainer = document.getElementById("questionsList");
     if (!questions || questions.length === 0) {
+        if (appState.mode === "topical") {
+            if (!appState.topicalChapter) {
+                renderTopicalIntroCard(appState.syllabus);
+                return;
+            }
+            listContainer.innerHTML = `
+                <div class="empty-state-card">
+                    <div class="empty-state-icon">🔍</div>
+                    <p class="empty-state-title">No questions match your filter selection</p>
+                    <p class="empty-state-subtitle">No questions found for this chapter with the chosen subtopic or paper component. Try selecting "All Subtopics" or "All Paper Types".</p>
+                </div>
+            `;
+            return;
+        }
+
         const noChaptersSelected = appState.selectedChapters.length === 0 && appState.selectedSubtopics.length === 0;
         if (noChaptersSelected) {
             listContainer.innerHTML = `
@@ -1730,56 +2169,82 @@ function renderQuestionsList(questions) {
 
     listContainer.innerHTML = "";
 
+    const isTopical = appState.mode === "topical";
+
     questions.forEach(q => {
         const isInTest = appState.testPaperQuestions.some(t => t.id === q.id);
 
         const card = document.createElement("div");
-        card.className = `question-card ${isInTest ? "in-test" : ""}`;
+        card.className = `question-card ${isInTest && !isTopical ? "in-test" : ""}`;
         card.id = `card_${q.id}`;
 
         const paperInfo = `${q.year} ${q.month} • Paper ${q.component}`;
         const marksLabel = q.marks > 0 ? `[${q.marks} Mark${q.marks > 1 ? "s" : ""}]` : "";
 
         let msContentHtml = "";
-        if (q.is_mc) {
-            const ans = q.ms_answer || "A";
-            msContentHtml = `
-                <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
-                    <div class="ms-panel-header">
-                        <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
-                    </div>
-                    <div class="ms-mcq-badge">
-                        <span>Correct Answer:</span>
-                        <span class="ms-mcq-letter" style="${ans.length > 2 ? "width:auto; padding:0 0.6rem; font-size:0.85rem;" : ""}">${ans}</span>
-                        <span style="font-size:0.8rem; color:#64748b; font-weight:600;">[1 Mark]</span>
-                    </div>
-                </div>
-            `;
-        } else if (q.ms_rows && q.ms_rows.length > 0) {
-            msContentHtml = `
-                <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
-                    <div class="ms-panel-header">
-                        <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
-                        <span style="font-size:0.78rem; font-weight:700; color:#166534;">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
-                    </div>
-                    ${renderMsRowsTableHtml(q.ms_rows)}
-                </div>
-            `;
-        } else if (q.ms_image_url) {
-            msContentHtml = `
-                <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
-                    <div class="ms-panel-header">
-                        <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
-                        <span style="font-size:0.78rem; font-weight:700; color:#166534;">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
-                    </div>
-                    <div class="ms-theory-img-wrap">
-                        <img src="${q.ms_image_url}" alt="Mark Scheme Q${q.q_num}" class="ms-theory-img" loading="lazy">
+        let topicalAnswerHtml = "";
+
+        if (isTopical) {
+            topicalAnswerHtml = `
+                <div class="topical-answer-bar">
+                    <button type="button" class="btn btn-sm btn-outline topical-ans-btn" data-qid="${q.id}">
+                        💡 Answer
+                    </button>
+                    <div style="display:flex; align-items:center; gap:0.5rem;">
+                        ${q.is_mc ? '<span class="topical-mcq-tag">📝 Multiple Choice</span>' : '<span class="topical-theory-tag">📄 Structured / Theory</span>'}
+                        <span style="font-size:0.78rem; color:#64748b; font-weight:600;">Q${q.q_num}</span>
                     </div>
                 </div>
+                <div class="topical-answer-panel" id="topical_ans_${q.id}" style="display:none;">
+                    ${renderTopicalAnswerContent(q)}
+                </div>
             `;
+        } else {
+            if (q.is_mc) {
+                const ans = q.ms_answer || "A";
+                msContentHtml = `
+                    <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
+                        <div class="ms-panel-header">
+                            <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
+                        </div>
+                        <div class="ms-mcq-badge">
+                            <span>Correct Answer:</span>
+                            <span class="ms-mcq-letter" style="${ans.length > 2 ? "width:auto; padding:0 0.6rem; font-size:0.85rem;" : ""}">${ans}</span>
+                            <span style="font-size:0.8rem; color:#64748b; font-weight:600;">[1 Mark]</span>
+                        </div>
+                    </div>
+                `;
+            } else if (q.ms_rows && q.ms_rows.length > 0) {
+                msContentHtml = `
+                    <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
+                        <div class="ms-panel-header">
+                            <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
+                            <span style="font-size:0.78rem; font-weight:700; color:#166534;">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
+                        </div>
+                        ${renderMsRowsTableHtml(q.ms_rows)}
+                    </div>
+                `;
+            } else if (q.ms_image_url) {
+                msContentHtml = `
+                    <div class="question-ms-panel" style="display: ${appState.showMarkScheme ? "block" : "none"};">
+                        <div class="ms-panel-header">
+                            <span class="ms-panel-title">✅ Official Mark Scheme (${paperInfo} • Q${q.q_num})</span>
+                            <span style="font-size:0.78rem; font-weight:700; color:#166534;">[Total: ${q.marks} Mark${q.marks > 1 ? "s" : ""}]</span>
+                        </div>
+                        <div class="ms-theory-img-wrap">
+                            <img src="${q.ms_image_url}" alt="Mark Scheme Q${q.q_num}" class="ms-theory-img" loading="lazy">
+                        </div>
+                    </div>
+                `;
+            }
         }
 
         const questionContentHtml = renderQuestionContentHtml(q);
+        const addBtnHtml = isTopical ? "" : `
+            <button class="btn btn-sm ${isInTest ? "btn-outline" : "btn-accent"} toggle-add-btn" data-qid="${q.id}">
+                ${isInTest ? "✓ In Test Paper" : "+ Add to Test"}
+            </button>
+        `;
 
         card.innerHTML = `
             <div class="question-header">
@@ -1789,13 +2254,12 @@ function renderQuestionsList(questions) {
                     <span class="meta-pill pill-tier">${q.tier}</span>
                     ${marksLabel ? `<span class="meta-pill pill-marks">${marksLabel}</span>` : ""}
                 </div>
-                <button class="btn btn-sm ${isInTest ? "btn-outline" : "btn-accent"} toggle-add-btn" data-qid="${q.id}">
-                    ${isInTest ? "✓ In Test Paper" : "+ Add to Test"}
-                </button>
+                ${addBtnHtml}
             </div>
             <div class="question-content">
                 ${questionContentHtml}
             </div>
+            ${topicalAnswerHtml}
             ${msContentHtml}
             <div class="question-footer">
                 <span class="question-subtopic">📌 <strong>${q.subtopic_name}</strong></span>
@@ -1803,10 +2267,31 @@ function renderQuestionsList(questions) {
             </div>
         `;
 
-        card.querySelector(".toggle-add-btn").addEventListener("click", (e) => {
-            e.stopPropagation();
-            toggleQuestionInTest(q);
-        });
+        if (!isTopical) {
+            const addBtn = card.querySelector(".toggle-add-btn");
+            if (addBtn) {
+                addBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    toggleQuestionInTest(q);
+                });
+            }
+        } else {
+            const ansBtn = card.querySelector(".topical-ans-btn");
+            if (ansBtn) {
+                ansBtn.addEventListener("click", (e) => {
+                    e.stopPropagation();
+                    const panel = document.getElementById(`topical_ans_${q.id}`);
+                    if (!panel) return;
+                    const isHidden = panel.style.display === "none";
+                    panel.style.display = isHidden ? "block" : "none";
+                    ansBtn.classList.toggle("active", isHidden);
+                    ansBtn.innerHTML = isHidden ? "🔒 Hide Answer" : "💡 Answer";
+                    if (isHidden) {
+                        triggerKaTeX(panel);
+                    }
+                });
+            }
+        }
 
         listContainer.appendChild(card);
     });
