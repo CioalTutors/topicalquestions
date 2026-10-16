@@ -345,6 +345,13 @@ body {
   border-left: 4px solid #db2777;
 }
 
+.tier-group-applied {
+  background: #f0fdf4;
+  color: #15803d;
+  border-color: #bbf7d0;
+  border-left: 4px solid #16a34a;
+}
+
 .tier-group-tag {
   font-size: 0.65rem;
   font-weight: 600;
@@ -374,6 +381,12 @@ body {
   background: #fce7f3;
   color: #9d174d;
   border: 1px solid #f9a8d4;
+}
+
+.pill-applied {
+  background: #dcfce7;
+  color: #166534;
+  border: 1px solid #86efac;
 }
 
 /* Main Content Area */

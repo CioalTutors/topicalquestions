@@ -5,31 +5,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 3,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.2",
-    "subtopic_name": "1.2 Indices, surds, quadratics & inequalities",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
     "all_subtopic_ids": [
-      "1.2"
+      "1.1"
     ],
     "summary": "1. g(x) = x x",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2024_QP_q01.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q01.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2024_QP_q01_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q01_ms.webp",
     "qp_slices": [
       [
         0,
@@ -65,31 +65,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 3,
-    "chapter_name": "[AS] Topic 3: Pure - Binomial Expansion (n in N)",
-    "subtopic_id": "3.1",
-    "subtopic_name": "3.1 Pascal's triangle, nCr & binomial expansion",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
-      3
+      1
     ],
     "all_subtopic_ids": [
-      "3.1"
+      "1.1"
     ],
     "summary": "2.\t (a)\t Find, in ascending powers of x, the first four terms of the binomial expansion of x giving each term in simplest form.",
-    "image_rel_path": "Topic 3 - Pure - Binomial Expansion (n in N)/9MA0_P1_June_2024_QP_q02.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q02.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 3 - Pure - Binomial Expansion (n in N)/9MA0_P1_June_2024_QP_q02_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q02_ms.webp",
     "qp_slices": [
       [
         0,
@@ -161,31 +161,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 18,
-    "chapter_name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
-    "subtopic_id": "18.1",
-    "subtopic_name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.8",
+    "subtopic_name": "P3.8 Numerical methods & 3D vectors",
     "all_chapter_ids": [
-      18
+      3
     ],
     "all_subtopic_ids": [
-      "18.1"
+      "3.8"
     ],
     "summary": "3. f(x) = tan 2",
-    "image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2024_QP_q03.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q03.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2024_QP_q03_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q03_ms.webp",
     "qp_slices": [
       [
         0,
@@ -233,31 +233,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 3,
-    "chapter_id": 6,
-    "chapter_name": "[AS] Topic 6: Pure - Basic Differentiation & Integration",
-    "subtopic_id": "6.1",
-    "subtopic_name": "6.1 Differentiation from first principles & tangents",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.5",
+    "subtopic_name": "P1.5 Differentiation & tangents/normals",
     "all_chapter_ids": [
-      6
+      1
     ],
     "all_subtopic_ids": [
-      "6.1"
+      "1.5"
     ],
     "summary": "4.\t Given that  y = x 2, use differentiation from first principles to show that  d d",
-    "image_rel_path": "Topic 6 - Pure - Basic Differentiation & Integration/9MA0_P1_June_2024_QP_q04.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q04.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 6 - Pure - Basic Differentiation & Integration/9MA0_P1_June_2024_QP_q04_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q04_ms.webp",
     "qp_slices": [
       [
         0,
@@ -293,21 +293,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -315,9 +315,9 @@
       "1.1"
     ],
     "summary": "5.\t The function f is defined by f(x) = x",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2024_QP_q05.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q05.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2024_QP_q05_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q05_ms.webp",
     "qp_slices": [
       [
         0,
@@ -359,21 +359,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -381,9 +381,9 @@
       "1.1"
     ],
     "summary": "6. O P",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2024_QP_q06.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q06.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2024_QP_q06_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q06_ms.webp",
     "qp_slices": [
       [
         0,
@@ -419,31 +419,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 8,
-    "chapter_id": 17,
-    "chapter_name": "[A2] Topic 17: Pure - Advanced Integration & Differential Equations",
-    "subtopic_id": "17.2",
-    "subtopic_name": "17.2 Differential equations & separation of variables",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.7",
+    "subtopic_name": "P3.7 Differential equations & modeling",
     "all_chapter_ids": [
-      17
+      3
     ],
     "all_subtopic_ids": [
-      "17.2"
+      "3.7"
     ],
     "summary": "7. Diagram not drawn to scale. L",
-    "image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2024_QP_q07.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q07.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2024_QP_q07_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q07_ms.webp",
     "qp_slices": [
       [
         0,
@@ -485,21 +485,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 11,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -507,9 +507,9 @@
       "1.1"
     ],
     "summary": "8.\t The functions f and g are defined by f(x) ,",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2024_QP_q08.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q08.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2024_QP_q08_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q08_ms.webp",
     "qp_slices": [
       [
         0,
@@ -545,31 +545,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
-    "tier": "A Level",
+    "component": "P1",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 14,
-    "chapter_name": "[A2] Topic 14: Pure - Sequences, Series & Binomial",
-    "subtopic_id": "14.1",
-    "subtopic_name": "14.1 Arithmetic & geometric progressions",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
-      14
+      1
     ],
     "all_subtopic_ids": [
-      "14.1"
+      "1.1"
     ],
     "summary": "9.\t The first 3 terms of a geometric sequence are 7 2 k",
-    "image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P1_June_2024_QP_q09.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q09.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P1_June_2024_QP_q09_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q09_ms.webp",
     "qp_slices": [
       [
         0,
@@ -605,31 +605,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
-    "tier": "A Level",
+    "component": "P1",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 9,
-    "chapter_id": 16,
-    "chapter_name": "[A2] Topic 16: Pure - Advanced Differentiation",
-    "subtopic_id": "16.1",
-    "subtopic_name": "16.1 Chain rule, product rule & quotient rule",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.5",
+    "subtopic_name": "P1.5 Differentiation & tangents/normals",
     "all_chapter_ids": [
-      16
+      1
     ],
     "all_subtopic_ids": [
-      "16.1"
+      "1.5"
     ],
     "summary": "10. A l1",
-    "image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P1_June_2024_QP_q10.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q10.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P1_June_2024_QP_q10_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q10_ms.webp",
     "qp_slices": [
       [
         0,
@@ -671,31 +671,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 2,
-    "chapter_name": "[AS] Topic 2: Pure - Coordinate Geometry & Circles",
-    "subtopic_id": "2.2",
-    "subtopic_name": "2.2 Circles, tangents & chords",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.3",
+    "subtopic_name": "P1.3 Circles & coordinate geometry",
     "all_chapter_ids": [
-      2
+      1
     ],
     "all_subtopic_ids": [
-      "2.2"
+      "1.3"
     ],
     "summary": "11. A O",
-    "image_rel_path": "Topic 2 - Pure - Coordinate Geometry & Circles/9MA0_P1_June_2024_QP_q11.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q11.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 2 - Pure - Coordinate Geometry & Circles/9MA0_P1_June_2024_QP_q11_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2024_QP_q11_ms.webp",
     "qp_slices": [
       [
         0,
@@ -731,31 +731,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 11,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "12.\t(a)\t Express  140 cos θ – 480 sin θ  in the form  K cos(θ + α) where  K > 0  and  0 < α < 90° State the value of K and give the value of α, in degrees, to 2",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2024_QP_q12.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q12.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2024_QP_q12_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q12_ms.webp",
     "qp_slices": [
       [
         0,
@@ -791,31 +791,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 8,
-    "chapter_id": 17,
-    "chapter_name": "[A2] Topic 17: Pure - Advanced Integration & Differential Equations",
-    "subtopic_id": "17.1",
-    "subtopic_name": "17.1 Standard forms, substitution & parts",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.6",
+    "subtopic_name": "P3.6 Advanced integration (substitution, parts, partial fractions)",
     "all_chapter_ids": [
-      17
+      3
     ],
     "all_subtopic_ids": [
-      "17.1"
+      "3.6"
     ],
     "summary": "13.\t(a)\t Given that a is a positive constant, use the substitution  x = a sin 2 θ  to show that d",
-    "image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2024_QP_q13.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q13.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2024_QP_q13_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q13_ms.webp",
     "qp_slices": [
       [
         0,
@@ -845,31 +845,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 9,
-    "chapter_id": 17,
-    "chapter_name": "[A2] Topic 17: Pure - Advanced Integration & Differential Equations",
-    "subtopic_id": "17.2",
-    "subtopic_name": "17.2 Differential equations & separation of variables",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.7",
+    "subtopic_name": "P3.7 Differential equations & modeling",
     "all_chapter_ids": [
-      17
+      3
     ],
     "all_subtopic_ids": [
-      "17.2"
+      "3.7"
     ],
     "summary": "14.\tA balloon is being inflated. In a simple model, •",
-    "image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2024_QP_q14.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q14.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2024_QP_q14_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q14_ms.webp",
     "qp_slices": [
       [
         0,
@@ -899,31 +899,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2024 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 12,
-    "chapter_name": "[A2] Topic 12: Pure - Proof by Contradiction & Partial Fractions",
-    "subtopic_id": "12.1",
-    "subtopic_name": "12.1 Proof by contradiction",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.1",
+    "subtopic_name": "P3.1 Proof by contradiction & partial fractions",
     "all_chapter_ids": [
-      12
+      3
     ],
     "all_subtopic_ids": [
-      "12.1"
+      "3.1"
     ],
     "summary": "15.\t(i)\t Show that  k 2 – 4k + 5  is positive for all real values of k. (2)",
-    "image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P1_June_2024_QP_q15.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q15.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P1_June_2024_QP_q15_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2024_QP_q15_ms.webp",
     "qp_slices": [
       [
         0,
@@ -959,31 +959,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "1. y x",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q01.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q01.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q01_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q01_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1037,31 +1037,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
-    "tier": "A Level",
+    "component": "P2",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 14,
-    "chapter_name": "[A2] Topic 14: Pure - Sequences, Series & Binomial",
-    "subtopic_id": "14.1",
-    "subtopic_name": "14.1 Arithmetic & geometric progressions",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.3",
+    "subtopic_name": "P2.3 Sequences & series (AP & GP)",
     "all_chapter_ids": [
-      14
+      2
     ],
     "all_subtopic_ids": [
-      "14.1"
+      "2.3"
     ],
     "summary": "2.\t Jamie takes out an interest‑free loan of £8100 Jamie makes a payment every month to pay back the loan. Jamie repays £400 in month 1, £390 in month 2, £380 i",
-    "image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P2_June_2024_QP_q02.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q02.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P2_June_2024_QP_q02_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q02_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1121,31 +1121,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "3.\t The point P(3, –2) lies on the curve with equation  y = f(x), x ∈  Find the coordinates of the point to which P is mapped when the curve with equation  y =",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q03.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q03.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q03_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q03_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1199,31 +1199,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.3",
+    "subtopic_name": "P2.3 Sequences & series (AP & GP)",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.3"
     ],
     "summary": "4.\t A sequence u1, u2, u3, ... is defined by u ku",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q04.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q04.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q04_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q04_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1259,31 +1259,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 3,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "5.\t Given that θ is small and in radians, use the small angle approximations to find an approximate numerical value of tan 2",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P2_June_2024_QP_q05.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2024_QP_q05.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P2_June_2024_QP_q05_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2024_QP_q05_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1319,31 +1319,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 5,
-    "chapter_name": "[AS] Topic 5: Pure - Exponentials & Logarithms",
-    "subtopic_id": "5.1",
-    "subtopic_name": "5.1 Exponential function e^x & natural logarithm ln(x)",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.5",
+    "subtopic_name": "P2.5 Exponentials & logarithms",
     "all_chapter_ids": [
-      5
+      2
     ],
     "all_subtopic_ids": [
-      "5.1"
+      "2.5"
     ],
     "summary": "6. O y = f(x)",
-    "image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P2_June_2024_QP_q06.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q06.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P2_June_2024_QP_q06_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q06_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1379,31 +1379,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 18,
-    "chapter_name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
-    "subtopic_id": "18.1",
-    "subtopic_name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.8",
+    "subtopic_name": "P3.8 Numerical methods & 3D vectors",
     "all_chapter_ids": [
-      18
+      3
     ],
     "all_subtopic_ids": [
-      "18.1"
+      "3.8"
     ],
     "summary": "7. A B",
-    "image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P2_June_2024_QP_q07.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2024_QP_q07.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P2_June_2024_QP_q07_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2024_QP_q07_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1439,31 +1439,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "8. In this question you must show all stages of your working. Solutions relying entirely on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q08.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q08.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q08_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q08_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1499,31 +1499,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.2",
-    "subtopic_name": "1.2 Indices, surds, quadratics & inequalities",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.6",
+    "subtopic_name": "P2.6 Differentiation & stationary points",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.2"
+      "2.6"
     ],
     "summary": "9. O B(20, 0.8)",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q09.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q09.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q09_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q09_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1559,31 +1559,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 16,
-    "chapter_name": "[A2] Topic 16: Pure - Advanced Differentiation",
-    "subtopic_id": "16.1",
-    "subtopic_name": "16.1 Chain rule, product rule & quotient rule",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.5",
+    "subtopic_name": "P3.5 Advanced differentiation (chain, product, quotient, parametric, implicit)",
     "all_chapter_ids": [
-      16
+      3
     ],
     "all_subtopic_ids": [
-      "16.1"
+      "3.5"
     ],
     "summary": "10. O C",
-    "image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P2_June_2024_QP_q10.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2024_QP_q10.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P2_June_2024_QP_q10_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2024_QP_q10_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1619,31 +1619,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "11. O R",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q11.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q11.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q11_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q11_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1673,31 +1673,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 12,
-    "chapter_id": 12,
-    "chapter_name": "[A2] Topic 12: Pure - Proof by Contradiction & Partial Fractions",
-    "subtopic_id": "12.2",
-    "subtopic_name": "12.2 Algebraic division & partial fractions",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.1",
+    "subtopic_name": "P3.1 Proof by contradiction & partial fractions",
     "all_chapter_ids": [
-      12
+      3
     ],
     "all_subtopic_ids": [
-      "12.2"
+      "3.1"
     ],
     "summary": "12.\t(a)\t Express V V",
-    "image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P2_June_2024_QP_q12.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2024_QP_q12.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P2_June_2024_QP_q12_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2024_QP_q12_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1727,31 +1727,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 9,
-    "chapter_id": 5,
-    "chapter_name": "[AS] Topic 5: Pure - Exponentials & Logarithms",
-    "subtopic_id": "5.1",
-    "subtopic_name": "5.1 Exponential function e^x & natural logarithm ln(x)",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      5
+      2
     ],
     "all_subtopic_ids": [
-      "5.1"
+      "2.1"
     ],
     "summary": "13.\tThe world human population, P billions, is modelled by the equation P = ab t",
-    "image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P2_June_2024_QP_q13.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q13.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P2_June_2024_QP_q13_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q13_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1781,31 +1781,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 8,
     "chapter_id": 2,
-    "chapter_name": "[AS] Topic 2: Pure - Coordinate Geometry & Circles",
-    "subtopic_id": "2.2",
-    "subtopic_name": "2.2 Circles, tangents & chords",
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
       2
     ],
     "all_subtopic_ids": [
-      "2.2"
+      "2.1"
     ],
     "summary": "14.\tThe circle C1 has equation x y",
-    "image_rel_path": "Topic 2 - Pure - Coordinate Geometry & Circles/9MA0_P2_June_2024_QP_q14.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q14.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 2 - Pure - Coordinate Geometry & Circles/9MA0_P2_June_2024_QP_q14_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q14_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1841,31 +1841,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2024 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2024,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 12,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "15.\tThe curve C has equation ( )",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q15.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q15.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2024_QP_q15_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2024_QP_q15_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1895,21 +1895,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -1917,9 +1917,9 @@
       "1.1"
     ],
     "summary": "1.\t Find x x",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2023_QP_q01.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q01.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2023_QP_q01_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q01_ms.webp",
     "qp_slices": [
       [
         0,
@@ -1967,31 +1967,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.2",
-    "subtopic_name": "1.2 Indices, surds, quadratics & inequalities",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
     "all_subtopic_ids": [
-      "1.2"
+      "1.1"
     ],
     "summary": "2. In this question you must show all stages of your working. Solutions relying entirely on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2023_QP_q02.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q02.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2023_QP_q02_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q02_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2057,31 +2057,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 3,
-    "chapter_id": 18,
-    "chapter_name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
-    "subtopic_id": "18.1",
-    "subtopic_name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.8",
+    "subtopic_name": "P3.8 Numerical methods & 3D vectors",
     "all_chapter_ids": [
-      18
+      3
     ],
     "all_subtopic_ids": [
-      "18.1"
+      "3.8"
     ],
     "summary": "3.\t Relative to a fixed origin O • the point A has position vector  5i + 3j + 2k",
-    "image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2023_QP_q03.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q03.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2023_QP_q03_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q03_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2129,31 +2129,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "4. In this question you must show all stages of your working. Solutions relying entirely on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2023_QP_q04.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q04.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2023_QP_q04_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q04_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2183,31 +2183,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
-    "tier": "A Level",
+    "component": "P1",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 18,
-    "chapter_name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
-    "subtopic_id": "18.1",
-    "subtopic_name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
-      18
+      1
     ],
     "all_subtopic_ids": [
-      "18.1"
+      "1.1"
     ],
     "summary": "5.\t A continuous curve has equation  y = f(x). The table shows corresponding values of x and y for this curve, where a and b are constants.",
-    "image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2023_QP_q05.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q05.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2023_QP_q05_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q05_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2243,31 +2243,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 5,
-    "chapter_name": "[AS] Topic 5: Pure - Exponentials & Logarithms",
-    "subtopic_id": "5.1",
-    "subtopic_name": "5.1 Exponential function e^x & natural logarithm ln(x)",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
-      5
+      1
     ],
     "all_subtopic_ids": [
-      "5.1"
+      "1.1"
     ],
     "summary": "6. a = log2 x b = log2(x + 8)",
-    "image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P1_June_2023_QP_q06.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q06.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P1_June_2023_QP_q06_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q06_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2297,31 +2297,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 8,
-    "chapter_id": 13,
-    "chapter_name": "[A2] Topic 13: Pure - Functions & Transformations",
-    "subtopic_id": "13.1",
-    "subtopic_name": "13.1 Modulus, composite & inverse functions",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.2",
+    "subtopic_name": "P3.2 Functions, modulus & transformations",
     "all_chapter_ids": [
-      13
+      3
     ],
     "all_subtopic_ids": [
-      "13.1"
+      "3.2"
     ],
     "summary": "7.\t The function f is defined by f(x) = 3 + x −2",
-    "image_rel_path": "Topic 13 - Pure - Functions & Transformations/9MA0_P1_June_2023_QP_q07.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q07.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 13 - Pure - Functions & Transformations/9MA0_P1_June_2023_QP_q07_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q07_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2363,31 +2363,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 10,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "8. FRONT OF STAGE Diagram NOT",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2023_QP_q08.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q08.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2023_QP_q08_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q08_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2423,31 +2423,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
-    "tier": "A Level",
+    "component": "P1",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 14,
-    "chapter_name": "[A2] Topic 14: Pure - Sequences, Series & Binomial",
-    "subtopic_id": "14.1",
-    "subtopic_name": "14.1 Arithmetic & geometric progressions",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
-      14
+      1
     ],
     "all_subtopic_ids": [
-      "14.1"
+      "1.1"
     ],
     "summary": "9.\t The first three terms of a geometric sequence are 3k + 4         12 – 3k         k + 16 where k is a constant.",
-    "image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P1_June_2023_QP_q09.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q09.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P1_June_2023_QP_q09_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q09_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2477,31 +2477,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 9,
-    "chapter_id": 2,
-    "chapter_name": "[AS] Topic 2: Pure - Coordinate Geometry & Circles",
-    "subtopic_id": "2.2",
-    "subtopic_name": "2.2 Circles, tangents & chords",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.3",
+    "subtopic_name": "P1.3 Circles & coordinate geometry",
     "all_chapter_ids": [
-      2
+      1
     ],
     "all_subtopic_ids": [
-      "2.2"
+      "1.3"
     ],
     "summary": "10.\tA circle C has equation x 2 + y",
-    "image_rel_path": "Topic 2 - Pure - Coordinate Geometry & Circles/9MA0_P1_June_2023_QP_q10.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q10.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 2 - Pure - Coordinate Geometry & Circles/9MA0_P1_June_2023_QP_q10_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q10_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2537,31 +2537,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 5,
-    "chapter_name": "[AS] Topic 5: Pure - Exponentials & Logarithms",
-    "subtopic_id": "5.1",
-    "subtopic_name": "5.1 Exponential function e^x & natural logarithm ln(x)",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
-      5
+      1
     ],
     "all_subtopic_ids": [
-      "5.1"
+      "1.1"
     ],
     "summary": "11. O log10 V",
-    "image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P1_June_2023_QP_q11.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q11.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P1_June_2023_QP_q11_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q11_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2591,31 +2591,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "12. y = sin x where x is measured in radians.",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2023_QP_q12.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q12.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2023_QP_q12_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q12_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2651,31 +2651,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "13.\tOn a roller coaster ride, passengers travel in carriages around a track. On the ride, carriages complete multiple circuits of the track such that •",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2023_QP_q13.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q13.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2023_QP_q13_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q13_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2705,21 +2705,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -2727,9 +2727,9 @@
       "1.1"
     ],
     "summary": "14.\tProve, using algebra, that (n + 1) 3 – n",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2023_QP_q14.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q14.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2023_QP_q14_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2023_QP_q14_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2759,31 +2759,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2023 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 13,
-    "chapter_id": 18,
-    "chapter_name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
-    "subtopic_id": "18.1",
-    "subtopic_name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.8",
+    "subtopic_name": "P3.8 Numerical methods & 3D vectors",
     "all_chapter_ids": [
-      18
+      3
     ],
     "all_subtopic_ids": [
-      "18.1"
+      "3.8"
     ],
     "summary": "15.\tA curve has equation  y = f(x), where f(x) = x x",
-    "image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2023_QP_q15.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q15.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2023_QP_q15_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2023_QP_q15_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2825,31 +2825,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "1. f(x) = x 3 + 2x",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q01.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q01.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q01_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q01_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2903,31 +2903,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.3",
+    "subtopic_name": "P2.3 Sequences & series (AP & GP)",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.3"
     ],
     "summary": "2.\t A sequence  u1, u2, u3 ...  is defined by u1 = 35 1 =",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q02.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q02.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q02_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q02_ms.webp",
     "qp_slices": [
       [
         0,
@@ -2981,31 +2981,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 5,
-    "chapter_name": "[AS] Topic 5: Pure - Exponentials & Logarithms",
-    "subtopic_id": "5.1",
-    "subtopic_name": "5.1 Exponential function e^x & natural logarithm ln(x)",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.5",
+    "subtopic_name": "P2.5 Exponentials & logarithms",
     "all_chapter_ids": [
-      5
+      2
     ],
     "all_subtopic_ids": [
-      "5.1"
+      "2.5"
     ],
     "summary": "3.\t Given that log2(x + 3) + log2(x + 10) = 2 + 2 log2 x (a)\t show that",
-    "image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P2_June_2023_QP_q03.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q03.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P2_June_2023_QP_q03_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q03_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3083,31 +3083,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "4.\t Coffee is poured into a cup. The temperature of the coffee, H  °C, t minutes after being poured into the cup is modelled by the equation",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q04.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q04.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q04_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q04_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3149,31 +3149,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "5.\t The curve C has equation  y = f (x) The curve •",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q05.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q05.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q05_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q05_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3215,31 +3215,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 18,
-    "chapter_name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
-    "subtopic_id": "18.1",
-    "subtopic_name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.8",
+    "subtopic_name": "P3.8 Numerical methods & 3D vectors",
     "all_chapter_ids": [
-      18
+      3
     ],
     "all_subtopic_ids": [
-      "18.1"
+      "3.8"
     ],
     "summary": "6.\t Relative to a fixed origin O, • A is the point with position vector 12i",
-    "image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P2_June_2023_QP_q06.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q06.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P2_June_2023_QP_q06_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q06_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3293,31 +3293,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
-    "tier": "A Level",
+    "component": "P2",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 16,
-    "chapter_name": "[A2] Topic 16: Pure - Advanced Differentiation",
-    "subtopic_id": "16.1",
-    "subtopic_name": "16.1 Chain rule, product rule & quotient rule",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      16
+      2
     ],
     "all_subtopic_ids": [
-      "16.1"
+      "2.1"
     ],
     "summary": "7. In this question you must show all stages of your working. Solutions relying on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P2_June_2023_QP_q07.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q07.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P2_June_2023_QP_q07_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q07_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3359,31 +3359,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 14,
-    "chapter_name": "[A2] Topic 14: Pure - Sequences, Series & Binomial",
-    "subtopic_id": "14.1",
-    "subtopic_name": "14.1 Arithmetic & geometric progressions",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      14
+      3
     ],
     "all_subtopic_ids": [
-      "14.1"
+      "3.4"
     ],
     "summary": "8.\t (a)\t Express  2 cos θ + 8 sin θ  in the form  R cos(θ – α) , where R and α are constants, R > 0  and  0 < α < 2 π",
-    "image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P2_June_2023_QP_q08.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q08.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P2_June_2023_QP_q08_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q08_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3437,31 +3437,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 16,
-    "chapter_name": "[A2] Topic 16: Pure - Advanced Differentiation",
-    "subtopic_id": "16.1",
-    "subtopic_name": "16.1 Chain rule, product rule & quotient rule",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.5",
+    "subtopic_name": "P3.5 Advanced differentiation (chain, product, quotient, parametric, implicit)",
     "all_chapter_ids": [
-      16
+      3
     ],
     "all_subtopic_ids": [
-      "16.1"
+      "3.5"
     ],
     "summary": "9.\t The curve C has parametric equations x = t 2 + 6t – 16            y = 6 ln(t + 3)            t > –3",
-    "image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P2_June_2023_QP_q09.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q09.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P2_June_2023_QP_q09_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q09_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3509,31 +3509,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 12,
-    "chapter_name": "[A2] Topic 12: Pure - Proof by Contradiction & Partial Fractions",
-    "subtopic_id": "12.2",
-    "subtopic_name": "12.2 Algebraic division & partial fractions",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.1",
+    "subtopic_name": "P3.1 Proof by contradiction & partial fractions",
     "all_chapter_ids": [
-      12
+      3
     ],
     "all_subtopic_ids": [
-      "12.2"
+      "3.1"
     ],
     "summary": "10. f ( ) (",
-    "image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P2_June_2023_QP_q10.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q10.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P2_June_2023_QP_q10_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q10_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3587,31 +3587,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 10,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "11. h m 10 m",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q11.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q11.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q11_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q11_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3665,31 +3665,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 10,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "12. O t",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q12.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q12.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q12_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q12_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3737,31 +3737,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
-    "tier": "A Level",
+    "component": "P2",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 13,
-    "chapter_id": 17,
-    "chapter_name": "[A2] Topic 17: Pure - Advanced Integration & Differential Equations",
-    "subtopic_id": "17.1",
-    "subtopic_name": "17.1 Standard forms, substitution & parts",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.5",
+    "subtopic_name": "P2.5 Exponentials & logarithms",
     "all_chapter_ids": [
-      17
+      2
     ],
     "all_subtopic_ids": [
-      "17.1"
+      "2.5"
     ],
     "summary": "13. In this question you must show all stages of your working. Solutions relying entirely on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P2_June_2023_QP_q13.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q13.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P2_June_2023_QP_q13_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q13_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3809,31 +3809,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "14. In this question you must show all stages of your working. Solutions relying entirely on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q14.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q14.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2023_QP_q14_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2023_QP_q14_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3881,31 +3881,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2023 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2023,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 3,
-    "chapter_id": 12,
-    "chapter_name": "[A2] Topic 12: Pure - Proof by Contradiction & Partial Fractions",
-    "subtopic_id": "12.1",
-    "subtopic_name": "12.1 Proof by contradiction",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.1",
+    "subtopic_name": "P3.1 Proof by contradiction & partial fractions",
     "all_chapter_ids": [
-      12
+      3
     ],
     "all_subtopic_ids": [
-      "12.1"
+      "3.1"
     ],
     "summary": "15.\tA student attempts to answer the following question: Given that x is an obtuse angle, use algebra to prove by contradiction that sin x – cos x  1",
-    "image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P2_June_2023_QP_q15.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q15.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P2_June_2023_QP_q15_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2023_QP_q15_ms.webp",
     "qp_slices": [
       [
         0,
@@ -3953,21 +3953,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -3975,9 +3975,9 @@
       "1.1"
     ],
     "summary": "1.\t The point  P (−2, −5)  lies on the curve with equation  y = f (x),    x ∈  Find the point to which P is mapped, when the curve with equation  y = f (x) is ",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q01.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q01.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q01_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q01_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4013,31 +4013,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 3,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.2",
-    "subtopic_name": "1.2 Indices, surds, quadratics & inequalities",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
     "all_subtopic_ids": [
-      "1.2"
+      "1.1"
     ],
     "summary": "2. f (x) = (x − 4)(x2 − 3x + k) − 42  where k is a constant Given that  (x + 2)  is a factor of  f (x) ,  find the value of k.",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q02.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q02.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q02_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q02_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4091,31 +4091,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 2,
-    "chapter_name": "[AS] Topic 2: Pure - Coordinate Geometry & Circles",
-    "subtopic_id": "2.2",
-    "subtopic_name": "2.2 Circles, tangents & chords",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.3",
+    "subtopic_name": "P1.3 Circles & coordinate geometry",
     "all_chapter_ids": [
-      2
+      1
     ],
     "all_subtopic_ids": [
-      "2.2"
+      "1.3"
     ],
     "summary": "3.\t A circle has equation x2 + y2 − 10x + 16y = 80 (a)\t Find",
-    "image_rel_path": "Topic 2 - Pure - Coordinate Geometry & Circles/9MA0_P1_June_2022_QP_q03.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q03.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 2 - Pure - Coordinate Geometry & Circles/9MA0_P1_June_2022_QP_q03_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q03_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4151,31 +4151,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
-    "tier": "A Level",
+    "component": "P1",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 3,
-    "chapter_id": 17,
-    "chapter_name": "[A2] Topic 17: Pure - Advanced Integration & Differential Equations",
-    "subtopic_id": "17.1",
-    "subtopic_name": "17.1 Standard forms, substitution & parts",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.6",
+    "subtopic_name": "P1.6 Integration & area under curve",
     "all_chapter_ids": [
-      17
+      1
     ],
     "all_subtopic_ids": [
-      "17.1"
+      "1.6"
     ],
     "summary": "4.\t (a)\t Express 6.3 δ",
-    "image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2022_QP_q04.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q04.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2022_QP_q04_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q04_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4205,21 +4205,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -4227,9 +4227,9 @@
       "1.1"
     ],
     "summary": "5.\t The height, h metres, of a tree, t years after being planted, is modelled by the equation h 2 = at + b        0  t < 25",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q05.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q05.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q05_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q05_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4259,21 +4259,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -4281,9 +4281,9 @@
       "1.1"
     ],
     "summary": "6. (2, 8) C",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q06.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q06.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q06_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q06_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4319,31 +4319,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 12,
-    "chapter_name": "[A2] Topic 12: Pure - Proof by Contradiction & Partial Fractions",
-    "subtopic_id": "12.1",
-    "subtopic_name": "12.1 Proof by contradiction",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.1",
+    "subtopic_name": "P3.1 Proof by contradiction & partial fractions",
     "all_chapter_ids": [
-      12
+      3
     ],
     "all_subtopic_ids": [
-      "12.1"
+      "3.1"
     ],
     "summary": "7.\t (i)\t Given that p and q are integers such that pq is even use algebra to prove by contradiction that at least one of p or q is even.",
-    "image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P1_June_2022_QP_q07.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2022_QP_q07.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P1_June_2022_QP_q07_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2022_QP_q07_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4379,31 +4379,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 8,
-    "chapter_id": 18,
-    "chapter_name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
-    "subtopic_id": "18.1",
-    "subtopic_name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.8",
+    "subtopic_name": "P3.8 Numerical methods & 3D vectors",
     "all_chapter_ids": [
-      18
+      3
     ],
     "all_subtopic_ids": [
-      "18.1"
+      "3.8"
     ],
     "summary": "8. v t",
-    "image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2022_QP_q08.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2022_QP_q08.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P1_June_2022_QP_q08_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2022_QP_q08_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4445,21 +4445,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -4467,9 +4467,9 @@
       "1.1"
     ],
     "summary": "9. P S",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q09.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q09.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q09_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q09_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4499,21 +4499,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 8,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -4521,9 +4521,9 @@
       "1.1"
     ],
     "summary": "10.\tA scientist is studying the number of bees and the number of wasps on an island. The number of bees, measured in thousands, Nb , is modelled by the equation",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q10.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q10.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q10_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q10_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4559,21 +4559,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -4581,9 +4581,9 @@
       "1.1"
     ],
     "summary": "11. y x",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q11.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q11.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q11_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q11_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4613,31 +4613,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 5,
-    "chapter_name": "[AS] Topic 5: Pure - Exponentials & Logarithms",
-    "subtopic_id": "5.1",
-    "subtopic_name": "5.1 Exponential function e^x & natural logarithm ln(x)",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
-      5
+      1
     ],
     "all_subtopic_ids": [
-      "5.1"
+      "1.1"
     ],
     "summary": "12. In this question you must show all stages of your working. Solutions relying on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P1_June_2022_QP_q12.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q12.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 5 - Pure - Exponentials & Logarithms/9MA0_P1_June_2022_QP_q12_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q12_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4667,31 +4667,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
-    "tier": "A Level",
+    "component": "P1",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 14,
-    "chapter_name": "[A2] Topic 14: Pure - Sequences, Series & Binomial",
-    "subtopic_id": "14.1",
-    "subtopic_name": "14.1 Arithmetic & geometric progressions",
+    "chapter_id": 1,
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
+    "subtopic_id": "1.1",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
-      14
+      1
     ],
     "all_subtopic_ids": [
-      "14.1"
+      "1.1"
     ],
     "summary": "13.\t(i)\t In an arithmetic series, the first term is a and the common difference is d. Show that Sn = n",
-    "image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P1_June_2022_QP_q13.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q13.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P1_June_2022_QP_q13_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q13_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4727,21 +4727,21 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P1",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 8,
     "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
+    "chapter_name": "[AS] P1: Pure Mathematics 1",
     "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "subtopic_name": "P1.1 Algebra, quadratics & simultaneous equations",
     "all_chapter_ids": [
       1
     ],
@@ -4749,9 +4749,9 @@
       "1.1"
     ],
     "summary": "14. In this question you must show all stages of your working. Solutions relying entirely on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q14.webp",
+    "image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q14.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P1_June_2022_QP_q14_ms.webp",
+    "ms_image_rel_path": "P1 - Pure Mathematics 1/9MA0_P1_June_2022_QP_q14_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4787,31 +4787,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 10,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "15. A 0.8 rad",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2022_QP_q15.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2022_QP_q15.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P1_June_2022_QP_q15_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2022_QP_q15_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4853,31 +4853,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P1_June 2022 QP.pdf",
-    "paper_desc": "Paper 1",
+    "paper_desc": "Paper P3",
     "paper_num": 1,
-    "paper_type": "1",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "1",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 9,
-    "chapter_id": 17,
-    "chapter_name": "[A2] Topic 17: Pure - Advanced Integration & Differential Equations",
-    "subtopic_id": "17.1",
-    "subtopic_name": "17.1 Standard forms, substitution & parts",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.5",
+    "subtopic_name": "P3.5 Advanced differentiation (chain, product, quotient, parametric, implicit)",
     "all_chapter_ids": [
-      17
+      3
     ],
     "all_subtopic_ids": [
-      "17.1"
+      "3.5"
     ],
     "summary": "16. y C",
-    "image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2022_QP_q16.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2022_QP_q16.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P1_June_2022_QP_q16_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P1_June_2022_QP_q16_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4913,31 +4913,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "1. In this question you must show all stages of your working. Solutions relying entirely on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q01.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q01.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q01_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q01_ms.webp",
     "qp_slices": [
       [
         0,
@@ -4973,31 +4973,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "2.\t (a)\t Sketch the curve with equation y = 4 x",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q02.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q02.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q02_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q02_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5057,31 +5057,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.3",
+    "subtopic_name": "P2.3 Sequences & series (AP & GP)",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.3"
     ],
     "summary": "3.\t A sequence of terms  a1, a2, a3, …  is defined by a1 = 3 an+1 = 8 − an",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q03.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q03.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q03_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q03_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5117,31 +5117,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 3,
-    "chapter_id": 6,
-    "chapter_name": "[AS] Topic 6: Pure - Basic Differentiation & Integration",
-    "subtopic_id": "6.1",
-    "subtopic_name": "6.1 Differentiation from first principles & tangents",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.6",
+    "subtopic_name": "P2.6 Differentiation & stationary points",
     "all_chapter_ids": [
-      6
+      2
     ],
     "all_subtopic_ids": [
-      "6.1"
+      "2.6"
     ],
     "summary": "4.\t Given that y = 2x use differentiation from first principles to show that",
-    "image_rel_path": "Topic 6 - Pure - Basic Differentiation & Integration/9MA0_P2_June_2022_QP_q04.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q04.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 6 - Pure - Basic Differentiation & Integration/9MA0_P2_June_2022_QP_q04_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q04_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5177,31 +5177,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
-    "tier": "A Level",
+    "component": "P2",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 17,
-    "chapter_name": "[A2] Topic 17: Pure - Advanced Integration & Differential Equations",
-    "subtopic_id": "17.1",
-    "subtopic_name": "17.1 Standard forms, substitution & parts",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.7",
+    "subtopic_name": "P2.7 Integration & trapezium rule",
     "all_chapter_ids": [
-      17
+      2
     ],
     "all_subtopic_ids": [
-      "17.1"
+      "2.7"
     ],
     "summary": "5.\t The table below shows corresponding values of x and y for  y = log3 2x The values of y are given to 2 decimal places as appropriate. x",
-    "image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P2_June_2022_QP_q05.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q05.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 17 - Pure - Advanced Integration & Differential Equations/9MA0_P2_June_2022_QP_q05_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q05_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5231,31 +5231,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "6. y x",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P2_June_2022_QP_q06.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q06.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P2_June_2022_QP_q06_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q06_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5291,31 +5291,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 3,
-    "chapter_name": "[AS] Topic 3: Pure - Binomial Expansion (n in N)",
-    "subtopic_id": "3.1",
-    "subtopic_name": "3.1 Pascal's triangle, nCr & binomial expansion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.2",
+    "subtopic_name": "P2.2 The binomial expansion (positive integer n)",
     "all_chapter_ids": [
-      3
+      2
     ],
     "all_subtopic_ids": [
-      "3.1"
+      "2.2"
     ],
     "summary": "7.\t (a)\t Find the first four terms, in ascending powers of x, of the binomial expansion of − x",
-    "image_rel_path": "Topic 3 - Pure - Binomial Expansion (n in N)/9MA0_P2_June_2022_QP_q07.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q07.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 3 - Pure - Binomial Expansion (n in N)/9MA0_P2_June_2022_QP_q07_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q07_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5345,31 +5345,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "8. In this question you must show all stages of your working. Solutions relying on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q08.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q08.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q08_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q08_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5399,31 +5399,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 5,
-    "chapter_id": 15,
-    "chapter_name": "[A2] Topic 15: Pure - Radians & Advanced Trigonometry",
-    "subtopic_id": "15.1",
-    "subtopic_name": "15.1 Radians, arcs, sectors & small angles",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      15
+      3
     ],
     "all_subtopic_ids": [
-      "15.1"
+      "3.4"
     ],
     "summary": "9. H O",
-    "image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P2_June_2022_QP_q09.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q09.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 15 - Pure - Radians & Advanced Trigonometry/9MA0_P2_June_2022_QP_q09_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q09_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5453,31 +5453,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 8,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "10.\tThe function f is defined by f(x) = 8 x",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q10.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q10.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q10_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q10_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5507,29 +5507,29 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 4,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "11.\tProve, using algebra, that n(n 2 + 5)",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q11.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q11.webp",
     "ms_answer": null,
     "ms_image_rel_path": null,
     "qp_slices": [
@@ -5554,31 +5554,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P2",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P2",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P2",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 1,
-    "chapter_name": "[AS] Topic 1: Pure - Proof, Algebra & Functions",
-    "subtopic_id": "1.1",
-    "subtopic_name": "1.1 Proof by deduction & exhaustion",
+    "chapter_id": 2,
+    "chapter_name": "[AS] P2: Pure Mathematics 2",
+    "subtopic_id": "2.1",
+    "subtopic_name": "P2.1 Proof & algebraic methods",
     "all_chapter_ids": [
-      1
+      2
     ],
     "all_subtopic_ids": [
-      "1.1"
+      "2.1"
     ],
     "summary": "12.\tThe function f is defined by f(x) = e3",
-    "image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q12.webp",
+    "image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q12.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 1 - Pure - Proof, Algebra & Functions/9MA0_P2_June_2022_QP_q12_ms.webp",
+    "ms_image_rel_path": "P2 - Pure Mathematics 2/9MA0_P2_June_2022_QP_q12_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5608,31 +5608,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 18,
-    "chapter_name": "[A2] Topic 18: Pure - Numerical Methods & 3D Vectors",
-    "subtopic_id": "18.1",
-    "subtopic_name": "18.1 Numerical methods (Sign change, iteration, Newton-Raphson & trapezium rule)",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.8",
+    "subtopic_name": "P3.8 Numerical methods & 3D vectors",
     "all_chapter_ids": [
-      18
+      3
     ],
     "all_subtopic_ids": [
-      "18.1"
+      "3.8"
     ],
     "summary": "13.\tRelative to a fixed origin O • the point A has position vector  4i − 3j + 5k",
-    "image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P2_June_2022_QP_q13.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q13.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 18 - Pure - Numerical Methods & 3D Vectors/9MA0_P2_June_2022_QP_q13_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q13_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5668,31 +5668,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 10,
-    "chapter_id": 12,
-    "chapter_name": "[A2] Topic 12: Pure - Proof by Contradiction & Partial Fractions",
-    "subtopic_id": "12.2",
-    "subtopic_name": "12.2 Algebraic division & partial fractions",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.1",
+    "subtopic_name": "P3.1 Proof by contradiction & partial fractions",
     "all_chapter_ids": [
-      12
+      3
     ],
     "all_subtopic_ids": [
-      "12.2"
+      "3.1"
     ],
     "summary": "14.\t(a)\t Express ( )(",
-    "image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P2_June_2022_QP_q14.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q14.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 12 - Pure - Proof by Contradiction & Partial Fractions/9MA0_P2_June_2022_QP_q14_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q14_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5728,31 +5728,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 10,
-    "chapter_id": 14,
-    "chapter_name": "[A2] Topic 14: Pure - Sequences, Series & Binomial",
-    "subtopic_id": "14.1",
-    "subtopic_name": "14.1 Arithmetic & geometric progressions",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.4",
+    "subtopic_name": "P3.4 Reciprocal trig, compound angles & R-addition",
     "all_chapter_ids": [
-      14
+      3
     ],
     "all_subtopic_ids": [
-      "14.1"
+      "3.4"
     ],
     "summary": "15. In this question you must show all stages of your working. Solutions relying on calculator technology are not acceptable.",
-    "image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P2_June_2022_QP_q15.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q15.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 14 - Pure - Sequences, Series & Binomial/9MA0_P2_June_2022_QP_q15_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q15_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5788,31 +5788,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P2_June 2022 QP.pdf",
-    "paper_desc": "Paper 2",
+    "paper_desc": "Paper P3",
     "paper_num": 2,
-    "paper_type": "2",
+    "paper_type": "P3",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "2",
+    "component": "P3",
     "tier": "A Level",
     "is_mc": false,
     "marks": 12,
-    "chapter_id": 16,
-    "chapter_name": "[A2] Topic 16: Pure - Advanced Differentiation",
-    "subtopic_id": "16.1",
-    "subtopic_name": "16.1 Chain rule, product rule & quotient rule",
+    "chapter_id": 3,
+    "chapter_name": "[A2] P3: Pure Mathematics 3",
+    "subtopic_id": "3.5",
+    "subtopic_name": "P3.5 Advanced differentiation (chain, product, quotient, parametric, implicit)",
     "all_chapter_ids": [
-      16
+      3
     ],
     "all_subtopic_ids": [
-      "16.1"
+      "3.5"
     ],
     "summary": "16. y l",
-    "image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P2_June_2022_QP_q16.webp",
+    "image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q16.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 16 - Pure - Advanced Differentiation/9MA0_P2_June_2022_QP_q16_ms.webp",
+    "ms_image_rel_path": "P3 - Pure Mathematics 3/9MA0_P2_June_2022_QP_q16_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5848,31 +5848,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Stats).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper S1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "S1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "S1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 8,
-    "chapter_name": "[AS] Topic 8: Statistics - Data Presentation & Sampling",
-    "subtopic_id": "8.2",
-    "subtopic_name": "8.2 Measures of location, spread & representations",
+    "chapter_id": 5,
+    "chapter_name": "S1: Statistics 1",
+    "subtopic_id": "5.1",
+    "subtopic_name": "S1.1 Statistical sampling & data representation",
     "all_chapter_ids": [
-      8
+      5
     ],
     "all_subtopic_ids": [
-      "8.2"
+      "5.1"
     ],
     "summary": "1.\t George throws a ball at a target 15 times. Each time George throws the ball, the probability of the ball hitting the target is 0.48 The random variable X re",
-    "image_rel_path": "Topic 8 - Statistics - Data Presentation & Sampling/9MA0_P3_June_2022_QP_Stats__q01.webp",
+    "image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q01.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 8 - Statistics - Data Presentation & Sampling/9MA0_P3_June_2022_QP_Stats__q01_ms.webp",
+    "ms_image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q01_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5902,31 +5902,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Mech).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper M1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "M1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "M1",
     "tier": "A Level",
     "is_mc": false,
     "marks": 8,
-    "chapter_id": 21,
-    "chapter_name": "[A2] Topic 21: Mechanics - 2D Projectiles & Vector Kinematics",
-    "subtopic_id": "21.2",
-    "subtopic_name": "21.2 2D kinematics with calculus & vectors",
+    "chapter_id": 4,
+    "chapter_name": "M1: Mechanics 1",
+    "subtopic_id": "4.3",
+    "subtopic_name": "M1.3 2D Projectiles & vector kinematics",
     "all_chapter_ids": [
-      21
+      4
     ],
     "all_subtopic_ids": [
-      "21.2"
+      "4.3"
     ],
     "summary": "1. [In this question, position vectors are given relative to a fixed origin.] At time t seconds, where  t > 0 , a particle P has velocity v m s",
-    "image_rel_path": "Topic 21 - Mechanics - 2D Projectiles & Vector Kinematics/9MA0_P3_June_2022_QP_Mech__q01.webp",
+    "image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q01.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 21 - Mechanics - 2D Projectiles & Vector Kinematics/9MA0_P3_June_2022_QP_Mech__q01_ms.webp",
+    "ms_image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q01_ms.webp",
     "qp_slices": [
       [
         0,
@@ -5962,31 +5962,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Stats).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper S1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "S1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
-    "tier": "A Level",
+    "component": "S1",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 12,
-    "chapter_id": 19,
-    "chapter_name": "[A2] Topic 19: Statistics - Conditional Probability & Normal Distribution",
-    "subtopic_id": "19.1",
-    "subtopic_name": "19.1 Conditional probability & modelling",
+    "chapter_id": 5,
+    "chapter_name": "S1: Statistics 1",
+    "subtopic_id": "5.2",
+    "subtopic_name": "S1.2 Probability, Venn diagrams & tree diagrams",
     "all_chapter_ids": [
-      19
+      5
     ],
     "all_subtopic_ids": [
-      "19.1"
+      "5.2"
     ],
     "summary": "2.\t A manufacturer uses a machine to make metal rods. The length of a metal rod, L cm, is normally distributed with •",
-    "image_rel_path": "Topic 19 - Statistics - Conditional Probability & Normal Distribution/9MA0_P3_June_2022_QP_Stats__q02.webp",
+    "image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q02.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 19 - Statistics - Conditional Probability & Normal Distribution/9MA0_P3_June_2022_QP_Stats__q02_ms.webp",
+    "ms_image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q02_ms.webp",
     "qp_slices": [
       [
         0,
@@ -6016,31 +6016,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Mech).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper M1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "M1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "M1",
     "tier": "A Level",
     "is_mc": false,
     "marks": 10,
-    "chapter_id": 22,
-    "chapter_name": "[A2] Topic 22: Mechanics - Friction, Slopes & Static Equilibrium",
-    "subtopic_id": "22.1",
-    "subtopic_name": "22.1 Friction & limiting equilibrium on inclined planes",
+    "chapter_id": 4,
+    "chapter_name": "M1: Mechanics 1",
+    "subtopic_id": "4.4",
+    "subtopic_name": "M1.4 Friction & equilibrium on inclined planes",
     "all_chapter_ids": [
-      22
+      4
     ],
     "all_subtopic_ids": [
-      "22.1"
+      "4.4"
     ],
     "summary": "2. α B",
-    "image_rel_path": "Topic 22 - Mechanics - Friction, Slopes & Static Equilibrium/9MA0_P3_June_2022_QP_Mech__q02.webp",
+    "image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q02.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 22 - Mechanics - Friction, Slopes & Static Equilibrium/9MA0_P3_June_2022_QP_Mech__q02_ms.webp",
+    "ms_image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q02_ms.webp",
     "qp_slices": [
       [
         0,
@@ -6076,31 +6076,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Stats).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper S1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "S1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "S1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 7,
-    "chapter_id": 8,
-    "chapter_name": "[AS] Topic 8: Statistics - Data Presentation & Sampling",
-    "subtopic_id": "8.1",
-    "subtopic_name": "8.1 Sampling methods & large data set",
+    "chapter_id": 5,
+    "chapter_name": "S1: Statistics 1",
+    "subtopic_id": "5.1",
+    "subtopic_name": "S1.1 Statistical sampling & data representation",
     "all_chapter_ids": [
-      8
+      5
     ],
     "all_subtopic_ids": [
-      "8.1"
+      "5.1"
     ],
     "summary": "3.\t Dian uses the large data set to investigate the Daily Total Rainfall, r mm, for Camborne. (a)\t Write down how a value of 0 < r  0.05 is recorded in the lar",
-    "image_rel_path": "Topic 8 - Statistics - Data Presentation & Sampling/9MA0_P3_June_2022_QP_Stats__q03.webp",
+    "image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q03.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 8 - Statistics - Data Presentation & Sampling/9MA0_P3_June_2022_QP_Stats__q03_ms.webp",
+    "ms_image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q03_ms.webp",
     "qp_slices": [
       [
         0,
@@ -6136,31 +6136,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Mech).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper M1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "M1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "M1",
     "tier": "A Level",
     "is_mc": false,
     "marks": 9,
-    "chapter_id": 21,
-    "chapter_name": "[A2] Topic 21: Mechanics - 2D Projectiles & Vector Kinematics",
-    "subtopic_id": "21.2",
-    "subtopic_name": "21.2 2D kinematics with calculus & vectors",
+    "chapter_id": 4,
+    "chapter_name": "M1: Mechanics 1",
+    "subtopic_id": "4.3",
+    "subtopic_name": "M1.3 2D Projectiles & vector kinematics",
     "all_chapter_ids": [
-      21
+      4
     ],
     "all_subtopic_ids": [
-      "21.2"
+      "4.3"
     ],
     "summary": "3. [In this question, i and j are horizontal unit vectors.] A particle P of mass 4 kg is at rest at the point A on a smooth horizontal plane.",
-    "image_rel_path": "Topic 21 - Mechanics - 2D Projectiles & Vector Kinematics/9MA0_P3_June_2022_QP_Mech__q03.webp",
+    "image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q03.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 21 - Mechanics - 2D Projectiles & Vector Kinematics/9MA0_P3_June_2022_QP_Mech__q03_ms.webp",
+    "ms_image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q03_ms.webp",
     "qp_slices": [
       [
         0,
@@ -6196,31 +6196,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Stats).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper S1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "S1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "S1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 6,
-    "chapter_id": 9,
-    "chapter_name": "[AS] Topic 9: Statistics - Probability & Binomial Distribution",
-    "subtopic_id": "9.2",
-    "subtopic_name": "9.2 Binomial distribution & hypothesis testing",
+    "chapter_id": 5,
+    "chapter_name": "S1: Statistics 1",
+    "subtopic_id": "5.3",
+    "subtopic_name": "S1.3 Statistical distributions & hypothesis testing",
     "all_chapter_ids": [
-      9
+      5
     ],
     "all_subtopic_ids": [
-      "9.2"
+      "5.3"
     ],
     "summary": "4.\t A dentist knows from past records that 10% of customers arrive late for their appointment. A new manager believes that there has been a change in the propor",
-    "image_rel_path": "Topic 9 - Statistics - Probability & Binomial Distribution/9MA0_P3_June_2022_QP_Stats__q04.webp",
+    "image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q04.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 9 - Statistics - Probability & Binomial Distribution/9MA0_P3_June_2022_QP_Stats__q04_ms.webp",
+    "ms_image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q04_ms.webp",
     "qp_slices": [
       [
         0,
@@ -6256,31 +6256,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Mech).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper M1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "M1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "M1",
     "tier": "A Level",
     "is_mc": false,
     "marks": 11,
-    "chapter_id": 23,
-    "chapter_name": "[A2] Topic 23: Mechanics - Moments & Rigid Bodies",
-    "subtopic_id": "23.1",
-    "subtopic_name": "23.1 Moment of a force & parallel forces",
+    "chapter_id": 4,
+    "chapter_name": "M1: Mechanics 1",
+    "subtopic_id": "4.5",
+    "subtopic_name": "M1.5 Moments of forces & rigid bodies",
     "all_chapter_ids": [
-      23
+      4
     ],
     "all_subtopic_ids": [
-      "23.1"
+      "4.5"
     ],
     "summary": "4. θ B",
-    "image_rel_path": "Topic 23 - Mechanics - Moments & Rigid Bodies/9MA0_P3_June_2022_QP_Mech__q04.webp",
+    "image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q04.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 23 - Mechanics - Moments & Rigid Bodies/9MA0_P3_June_2022_QP_Mech__q04_ms.webp",
+    "ms_image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q04_ms.webp",
     "qp_slices": [
       [
         0,
@@ -6322,31 +6322,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Stats).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper S1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "S1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
-    "tier": "A Level",
+    "component": "S1",
+    "tier": "AS Level",
     "is_mc": false,
     "marks": 10,
-    "chapter_id": 19,
-    "chapter_name": "[A2] Topic 19: Statistics - Conditional Probability & Normal Distribution",
-    "subtopic_id": "19.1",
-    "subtopic_name": "19.1 Conditional probability & modelling",
+    "chapter_id": 5,
+    "chapter_name": "S1: Statistics 1",
+    "subtopic_id": "5.2",
+    "subtopic_name": "S1.2 Probability, Venn diagrams & tree diagrams",
     "all_chapter_ids": [
-      19
+      5
     ],
     "all_subtopic_ids": [
-      "19.1"
+      "5.2"
     ],
     "summary": "5.\t A company has 1825 employees. The employees are classified as professional, skilled or elementary. The following table shows",
-    "image_rel_path": "Topic 19 - Statistics - Conditional Probability & Normal Distribution/9MA0_P3_June_2022_QP_Stats__q05.webp",
+    "image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q05.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 19 - Statistics - Conditional Probability & Normal Distribution/9MA0_P3_June_2022_QP_Stats__q05_ms.webp",
+    "ms_image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q05_ms.webp",
     "qp_slices": [
       [
         0,
@@ -6388,31 +6388,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Mech).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper M1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "M1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "M1",
     "tier": "AS Level",
     "is_mc": false,
     "marks": 12,
-    "chapter_id": 10,
-    "chapter_name": "[AS] Topic 10: Mechanics - Kinematics (1D)",
-    "subtopic_id": "10.1",
-    "subtopic_name": "10.1 Constant acceleration in 1D (SUVAT)",
+    "chapter_id": 4,
+    "chapter_name": "M1: Mechanics 1",
+    "subtopic_id": "4.1",
+    "subtopic_name": "M1.1 Kinematics in 1D (SUVAT & calculus)",
     "all_chapter_ids": [
-      10
+      4
     ],
     "all_subtopic_ids": [
-      "10.1"
+      "4.1"
     ],
     "summary": "5. α B",
-    "image_rel_path": "Topic 10 - Mechanics - Kinematics (1D)/9MA0_P3_June_2022_QP_Mech__q05.webp",
+    "image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q05.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 10 - Mechanics - Kinematics (1D)/9MA0_P3_June_2022_QP_Mech__q05_ms.webp",
+    "ms_image_rel_path": "M1 - Mechanics 1/9MA0_P3_June_2022_QP_Mech__q05_ms.webp",
     "qp_slices": [
       [
         0,
@@ -6448,31 +6448,31 @@
     "board": "edexcel",
     "subject": "Edexcel_Alevel_Math",
     "paper_file": "P3_June 2022 QP (Stats).pdf",
-    "paper_desc": "Paper 3",
+    "paper_desc": "Paper S1",
     "paper_num": 3,
-    "paper_type": "3",
+    "paper_type": "S1",
     "variant": 1,
     "year": 2022,
     "month": "May/June",
     "series": "s",
-    "component": "3",
+    "component": "S1",
     "tier": "A Level",
     "is_mc": false,
     "marks": 9,
-    "chapter_id": 20,
-    "chapter_name": "[A2] Topic 20: Statistics - Hypothesis Testing & Correlation",
-    "subtopic_id": "20.2",
-    "subtopic_name": "20.2 Correlation coefficients & hypothesis testing",
+    "chapter_id": 5,
+    "chapter_name": "S1: Statistics 1",
+    "subtopic_id": "5.4",
+    "subtopic_name": "S1.4 The normal distribution & correlation",
     "all_chapter_ids": [
-      20
+      5
     ],
     "all_subtopic_ids": [
-      "20.2"
+      "5.4"
     ],
     "summary": "6.\t Anna is investigating the relationship between exercise and resting heart rate. She takes a random sample of 19 people in her year at school and records for",
-    "image_rel_path": "Topic 20 - Statistics - Hypothesis Testing & Correlation/9MA0_P3_June_2022_QP_Stats__q06.webp",
+    "image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q06.webp",
     "ms_answer": null,
-    "ms_image_rel_path": "Topic 20 - Statistics - Hypothesis Testing & Correlation/9MA0_P3_June_2022_QP_Stats__q06_ms.webp",
+    "ms_image_rel_path": "S1 - Statistics 1/9MA0_P3_June_2022_QP_Stats__q06_ms.webp",
     "qp_slices": [
       [
         0,

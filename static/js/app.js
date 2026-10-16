@@ -366,9 +366,11 @@ const SUBJECT_CONFIG = {
         catDir: "Categorized_Questions_Edexcel_Alevel_Math",
         tiers: ["AS Level", "A Level"],
         papers: [
-            { value: "1", label: "Paper 1 (Pure Mathematics 1)", tier: "Both" },
-            { value: "2", label: "Paper 2 (Pure Mathematics 2)", tier: "Both" },
-            { value: "3", label: "Paper 3 (Statistics & Mechanics)", tier: "Both" }
+            { value: "P1", label: "P1 (Pure Mathematics 1)", tier: "AS Level" },
+            { value: "P2", label: "P2 (Pure Mathematics 2)", tier: "AS Level" },
+            { value: "P3", label: "P3 (Pure Mathematics 3)", tier: "A Level" },
+            { value: "M1", label: "M1 (Mechanics 1)", tier: "Both" },
+            { value: "S1", label: "S1 (Statistics 1)", tier: "Both" }
         ]
     }
 };
@@ -743,7 +745,7 @@ function renderTierCheckboxes(subject) {
             document.querySelectorAll(".chapter-accordion-item").forEach(item => {
                 const chTier = item.dataset.tier;
                 if (chTier) {
-                    const shouldBeChecked = checkedTiers.has(chTier);
+                    const shouldBeChecked = (chTier === "Both") ? (checkedTiers.size > 0) : checkedTiers.has(chTier);
                     const chBox = item.querySelector(".chapter-checkbox");
                     if (chBox) {
                         chBox.checked = shouldBeChecked;
@@ -844,8 +846,8 @@ async function switchSubject(subject) {
     await loadSyllabusAndFilters();
     await loadSavedTestPaperForSubject(subject);
 
-    appState.selectedChapters = [];
-    appState.selectedSubtopics = [];
+    appState.selectedChapters = Array.from(document.querySelectorAll(".chapter-checkbox:checked")).map(cb => parseInt(cb.dataset.chapter));
+    appState.selectedSubtopics = Array.from(document.querySelectorAll(".subtopic-checkbox:checked")).map(cb => cb.dataset.subtopic);
     appState.selectedYears = Array.from(document.querySelectorAll(".year-checkbox:checked")).map(cb => parseInt(cb.value));
     appState.selectedMonths = Array.from(document.querySelectorAll(".month-checkbox:checked")).map(cb => cb.value);
     appState.selectedTiers = Array.from(document.querySelectorAll(".tier-checkbox:checked")).map(cb => cb.value);
@@ -1019,16 +1021,29 @@ function renderSyllabusCheckboxes(syllabus) {
     let currentTierGroup = null;
 
     syllabus.forEach(ch => {
-        // Render section divider headers when chapters declare a tier (AS Level vs A Level)
+        // Render section divider headers when chapters declare a tier (AS Level vs A Level vs Both)
         if (ch.tier && ch.tier !== currentTierGroup) {
             currentTierGroup = ch.tier;
             const groupHeader = document.createElement("div");
-            const isAS = ch.tier === "AS Level";
-            groupHeader.className = `syllabus-tier-group-header ${isAS ? 'tier-group-as' : 'tier-group-a2'}`;
-            groupHeader.innerHTML = `
-                <span>${isAS ? '📘 AS Level (Year 1)' : '🔬 A Level (Year 2)'}</span>
-                <span class="tier-group-tag">${isAS ? 'Foundational' : 'Advanced'}</span>
-            `;
+            if (ch.tier === "AS Level") {
+                groupHeader.className = "syllabus-tier-group-header tier-group-as";
+                groupHeader.innerHTML = `
+                    <span>📘 AS Level (Year 1)</span>
+                    <span class="tier-group-tag">Foundational</span>
+                `;
+            } else if (ch.tier === "A Level") {
+                groupHeader.className = "syllabus-tier-group-header tier-group-a2";
+                groupHeader.innerHTML = `
+                    <span>🔬 A Level (Year 2)</span>
+                    <span class="tier-group-tag">Advanced</span>
+                `;
+            } else if (ch.tier === "Both") {
+                groupHeader.className = "syllabus-tier-group-header tier-group-applied";
+                groupHeader.innerHTML = `
+                    <span>📊 Applied Mathematics (Mechanics & Statistics)</span>
+                    <span class="tier-group-tag">M1 & S1</span>
+                `;
+            }
             container.appendChild(groupHeader);
         }
 
@@ -1047,9 +1062,13 @@ function renderSyllabusCheckboxes(syllabus) {
         } else if (ch.name.startsWith("[A2]")) {
             pillBadge = `<span class="pill-tier pill-a2">A2</span>`;
             displayName = ch.name.replace(/^\[A2\]\s*/, '');
+        } else if (ch.name.startsWith("M1") || ch.name.startsWith("S1")) {
+            const prefix = ch.name.substring(0, 2);
+            pillBadge = `<span class="pill-tier pill-applied">${prefix}</span>`;
+            displayName = ch.name.replace(/^(M1|S1):\s*/, '');
         }
 
-        const isChecked = ch.tier ? (checkedTiers.size === 0 || checkedTiers.has(ch.tier)) : true;
+        const isChecked = ch.tier ? (ch.tier === "Both" ? checkedTiers.size > 0 : (checkedTiers.size === 0 || checkedTiers.has(ch.tier))) : true;
         if (ch.tier && !isChecked) {
             item.style.opacity = "0.45";
         }
