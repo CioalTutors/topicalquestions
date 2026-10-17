@@ -678,7 +678,7 @@ async function ensureSubjectDatabaseLoaded(subject) {
             questionsData = window.CIOAL_STATIC_DB[subjKey].questions;
         }
     } else {
-        const cacheBuster = "?v=24";
+        const cacheBuster = "?v=25";
         try {
             [syllabusData, questionsData] = await Promise.all([
                 fetch(`${cfg.syllabusUrl}${cacheBuster}`).then(r => {
