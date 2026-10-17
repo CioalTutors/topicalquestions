@@ -584,9 +584,14 @@ function initTopicalSidebar() {
 function renderTopicalAnswerContent(q) {
     if (q.is_mc) {
         const ans = q.ms_answer || "A";
-        const explanation = (typeof window.getMcqExplanation === "function")
-            ? window.getMcqExplanation(q, appState.subject)
-            : (q.explanation || `Option ${ans} is the correct response verified by the official mark scheme.`);
+        const rawExplanation = (q.explanation && q.explanation.trim().length > 10)
+            ? q.explanation
+            : ((typeof window.getMcqExplanation === "function")
+                ? window.getMcqExplanation(q, appState.subject)
+                : `${ans}, because Option ${ans} is the correct answer according to the official mark scheme.`);
+
+        const paragraphs = rawExplanation.split(/\n\s*\n/).filter(p => p.trim().length > 0);
+        const explanationHtml = paragraphs.map(p => `<p class="topical-explanation-p">${p.trim()}</p>`).join("");
 
         const msImgHtml = q.ms_image_url
             ? `<div class="ms-theory-img-wrap" style="margin-top:0.75rem;"><img src="${q.ms_image_url}" alt="Mark Scheme Q${q.q_num}" class="ms-theory-img" loading="lazy"></div>`
@@ -600,7 +605,7 @@ function renderTopicalAnswerContent(q) {
             </div>
             <div class="topical-explanation-box">
                 <div class="topical-explanation-label">💡 Why is this the answer?</div>
-                <p class="topical-explanation-text">${explanation}</p>
+                <div class="topical-explanation-body">${explanationHtml}</div>
             </div>
             ${msImgHtml}
         `;
@@ -673,7 +678,7 @@ async function ensureSubjectDatabaseLoaded(subject) {
             questionsData = window.CIOAL_STATIC_DB[subjKey].questions;
         }
     } else {
-        const cacheBuster = "?v=18";
+        const cacheBuster = "?v=24";
         try {
             [syllabusData, questionsData] = await Promise.all([
                 fetch(`${cfg.syllabusUrl}${cacheBuster}`).then(r => {
