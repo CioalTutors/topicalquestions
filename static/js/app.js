@@ -790,32 +790,10 @@ function searchQuestionsStatic(db, payload) {
         const pComp = String(q.component ?? "");
         if (!paperTypes.includes(pNum) && !paperTypes.includes(pComp)) continue;
 
-        let matchedSub = null;
         if (subtopicSet.size > 0) {
-            const qSubs = (q.all_subtopic_ids && q.all_subtopic_ids.length > 0)
-                ? q.all_subtopic_ids.map(String)
-                : [String(q.subtopic_id)];
-            const matchingSubs = qSubs.filter(s => subtopicSet.has(s));
-            if (matchingSubs.length === 0) continue;
-            matchedSub = matchingSubs.includes(String(q.subtopic_id))
-                ? String(q.subtopic_id)
-                : matchingSubs[0];
+            if (!subtopicSet.has(String(q.subtopic_id))) continue;
         } else if (chapterSet.size > 0) {
-            const qChs = (q.all_chapter_ids && q.all_chapter_ids.length > 0)
-                ? q.all_chapter_ids.map(Number)
-                : [Number(q.chapter_id)];
-            const matchingChs = qChs.filter(c => chapterSet.has(c));
-            if (matchingChs.length === 0) continue;
-            if (!matchingChs.includes(Number(q.chapter_id))) {
-                const qSubs = (q.all_subtopic_ids || []).map(String);
-                for (const sId of qSubs) {
-                    const meta = db.subMetaMap[sId];
-                    if (meta && chapterSet.has(Number(meta.chapter_id))) {
-                        matchedSub = sId;
-                        break;
-                    }
-                }
-            }
+            if (!chapterSet.has(Number(q.chapter_id))) continue;
         }
 
         if (searchQuery) {
@@ -823,17 +801,7 @@ function searchQuestionsStatic(db, payload) {
             if (!hay.includes(searchQuery)) continue;
         }
 
-        let qOut = q;
-        if (matchedSub && matchedSub !== String(q.subtopic_id) && db.subMetaMap[matchedSub]) {
-            const meta = db.subMetaMap[matchedSub];
-            qOut = Object.assign({}, q, {
-                chapter_id: meta.chapter_id,
-                chapter_name: meta.chapter_name,
-                subtopic_id: meta.subtopic_id,
-                subtopic_name: meta.subtopic_name
-            });
-        }
-        results.push(qOut);
+        results.push(q);
     }
 
     const total = results.length;
@@ -1836,18 +1804,12 @@ async function fetchQuestions() {
             const searchQuery = (appState.searchQuery || "").trim().toLowerCase();
 
             let matched = db.questions.filter(q => {
-                // Chapter match
-                const qChs = (q.all_chapter_ids && q.all_chapter_ids.length > 0)
-                    ? q.all_chapter_ids.map(Number)
-                    : [Number(q.chapter_id)];
-                if (!qChs.includes(chId)) return false;
+                // Chapter match: strictly match the question's primary syllabus chapter
+                if (Number(q.chapter_id) !== chId) return false;
 
-                // Subtopic match
+                // Subtopic match: strictly match the question's primary subtopic
                 if (subId !== "all") {
-                    const qSubs = (q.all_subtopic_ids && q.all_subtopic_ids.length > 0)
-                        ? q.all_subtopic_ids.map(String)
-                        : [String(q.subtopic_id)];
-                    if (!qSubs.includes(subId)) return false;
+                    if (String(q.subtopic_id) !== String(subId)) return false;
                 }
 
                 // Paper match
